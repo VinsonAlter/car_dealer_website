@@ -89,7 +89,7 @@
       // Navbar dropdown function 
 
       $(document).ready(function(){
-        $('.models-click').click(function(){
+        $('.models-click').click(function(e){
           $(this).children('ul').toggleClass('visible-scroll-model');
           $('.layanan-click').find('ul').removeClass('visible-scroll-layanan');
           $('.info-click').find('ul').removeClass('visible-scroll-info');

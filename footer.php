@@ -16,7 +16,7 @@
     </div> -->
     <div class="d-flex flex-column no-padding">
         <p class="footer-header">
-            <a href="#">Models</a>
+            <a href="javascript:void(0)">Models</a>
         </p>
         <ul>
             <li>
@@ -29,42 +29,42 @@
     </div>
     <div class="d-flex flex-column no-padding">
         <p class="footer-header">
-            <a href="#">Price List</a>
+            <a href="javascript:void(0)">Price List</a>
         </p>
     </div>
     <div class="d-flex flex-column no-padding">
         <p class="footer-header">
-            <a href="#">Promo</a>
+            <a href="javascript:void(0)">Promo</a>
         </p>
     </div>
     <div class="d-flex flex-column no-padding">
         <p class="footer-header">
-            <a href="#">Layanan</a>
+            <a href="javascript:void(0)">Layanan</a>
         </p>
         <ul>
             <li>
-                <a href="#">Cari Dealer</a>
+                <a href="javascript:void(0)">Cari Dealer</a>
             </li>
             <li>
-                <a href="#">Sparepart</a>
+                <a href="javascript:void(0)">Sparepart</a>
             </li>
         </ul>
     </div>
     <div class="d-flex flex-column no-padding">
         <p class="footer-header">
-            <a href="#">Berita</a>
+            <a href="javascript:void(0)">Berita</a>
         </p>
     </div>
     <div class="d-flex flex-column no-padding">
         <p class="footer-header">
-            <a href="#">Tentang Kami</a>
+            <a href="javascript:void(0)">Tentang Kami</a>
         </p>
         <ul>
             <li>
-                <a href="#">With Chery with love</a>
+                <a href="javascript:void(0)">With Chery with love</a>
             </li>
             <li>
-                <a href="#">Tentang Chery</a>
+                <a href="javascript:void(0)">Tentang Chery</a>
             </li>
         </ul>
     </div>
@@ -80,7 +80,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="javascript:void(0)">
                 <span class="fa-stack">
                     <i class="fa-solid fa-circle fa-stack-2x"></i>
                     <i class="fa-solid fa-brands fa-facebook-f fa-stack-1x fa-inverse"></i>
