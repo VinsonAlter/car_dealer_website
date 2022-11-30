@@ -146,7 +146,8 @@
                 );
                 $(date).eq(i).append().html(data[i].date);
                 $(content).eq(i).append().html(data[i].content);
-                $(news).eq(i).attr('href', data[i].ref);
+                // $(news).eq(i).attr('href', data[i].ref);
+                $(news).eq(i).append().attr('href', "/chery_template/berita/detail.php?title=" + data[i].slug);
             }
         }
         

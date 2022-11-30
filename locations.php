@@ -15,9 +15,9 @@
                         <p class="ml-4">Jl. Sisingamangaraja Km. 6,5 Harjosari II, Kota Medan 20147</p>
                     </div>
                     <div class="card-item mt-3">
-                        <a class="d-flex" href="tel:+62617862000" target="_blank">
+                        <a class="d-flex" href="tel:+62617853300" target="_blank">
                             <i class="fa-solid fa-phone"></i>
-                            <p class="ml-4">061-7862000</p>
+                            <p class="ml-4">061-7853300</p>
                         </a>
                     </div>
                 </div>
