@@ -176,6 +176,10 @@ html,
         }
       }
 
+      .fs-bold-400 {
+        font-weight: 400;
+      }
+
       .fs-bold-700 {
         font-weight: 700;
       }

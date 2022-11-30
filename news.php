@@ -10,7 +10,10 @@
                 </div>
                 <div class="card-body">
                     <!-- Insert title here -->
-                    <p class="card-text font-work">
+                    <p class="card-text card-date fs-bold-700">
+                        <!-- Insert date here -->
+                    </p>
+                    <p class="card-text card-content font-work">
                         <!-- Insert text content here -->
                     </p>
                     <a class="btn news-button text-center font-work">
@@ -30,7 +33,10 @@
                         <!-- Insert title here -->
                     <!-- </div> -->
                     <!-- <h5 class="card-title">Card title</h5> -->
-                    <p class="card-text font-work">
+                    <p class="card-text card-date fs-bold-700 font-work">
+                        <!-- Insert date here -->
+                    </p>
+                    <p class="card-text card-content font-work">
                         <!-- Insert text content here -->
                     </p>
                     <a class="btn news-button text-center font-work">
@@ -50,7 +56,10 @@
                         <!-- Insert title here -->
                     <!-- </div> -->
                     <!-- <h5 class="card-title">Card title</h5> -->
-                    <p class="card-text font-work">
+                    <p class="card-text card-date fs-bold-700 font-work">
+                        <!-- Insert date here -->
+                    </p>
+                    <p class="card-text card-content font-work">
                         <!-- Insert text content here -->
                     </p>
                     <a class="btn news-button text-center font-work">

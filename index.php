@@ -126,7 +126,9 @@
 
             var title = document.getElementsByClassName("card-body");
 
-            var content = document.getElementsByClassName("card-text");
+            var content = document.getElementsByClassName("card-content");
+
+            var date = document.getElementsByClassName("card-date");
 
             var news = document.getElementsByClassName("news-button");
 
@@ -136,12 +138,13 @@
                     class: 'card-img-top',
                     src: data[i].img,
                   })
-                )
+                );
                 $(title).eq(i).prepend(
                   $('<h5>').attr({
                     class: 'card-title font-work',
                   }).html(data[i].title)
                 );
+                $(date).eq(i).append().html(data[i].date);
                 $(content).eq(i).append().html(data[i].content);
                 $(news).eq(i).attr('href', data[i].ref);
             }
