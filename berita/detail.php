@@ -1,3 +1,7 @@
+<?php
+    $title = $_GET['title'];
+?>
+
 <!-- Berita pages -->
 <!DOCTYPE html>
 <html lang="id">
@@ -34,6 +38,14 @@
         <link rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
+        <style>
+            @media (max-width:768px) {
+                .news-text {
+                    font-size: 13.5px;
+                }
+            }
+        </style>
+
     </head>
 
     <body>
@@ -44,20 +56,19 @@
         <section class="relative container mx-auto mt-top-header">
             <div class="row centered">
                 <div class="col-12 col-md-8">
-                    <h1 class="text-capitalize">
-                        Konferensi Dealer Chery Perdana
+                    <h1 class="text-capitalize news-title">
                         <!-- Insert title here -->
                     </h1>
-                    <p class="text-muted">
-                        11 Oktober 2022
+                    <p class="text-muted news-date">
                         <!-- Insert date here -->
                     </p>
-                    <img class="w-100" src="/chery_template/berita/img/konferensi-dealer-chery-perdana.webp">
+                    <img class="w-100 news-img">
                         <!-- Insert img here -->
                     </img>
                 </div>
-                <div class="col-12 col-md-8 mt-4 font-work">
-                    <p>
+                <div class="col-11 col-md-8 mt-4 font-work text-justify news-content">
+                    <!-- Insert News Content here -->
+                    <p>  
                         PT Chery Sales Indonesia, prinsipal dari brand mobil Chery, 
                         melaksanakan konferensi dealer perdananya bersama dengan perwakilan 20 
                         outlet dealer dari sepuluh grup dealer yang tersebar di Jakarta, 
@@ -151,7 +162,10 @@
       
         // Navbar dropdown function 
 
+        var get_title = "<?php echo $title?>";
+
         $(document).ready(function(){
+            
             $('.models-click').click(function(){
             $(this).children('ul').toggleClass('visible-scroll-model');
             $('.layanan-click').find('ul').removeClass('visible-scroll-layanan');
@@ -169,6 +183,61 @@
             $('.models-click').find('ul').removeClass('visible-scroll-model');
             $('.layanan-click').find('ul').removeClass('visible-scroll-layanan');
             })
+
+            fetch('../news.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+
+            // console.log(get_title);
+
+        function appendData(data) {
+
+            // var img = document.getElementById('img');
+
+            var title = document.getElementsByClassName("news-title");
+
+            var date = document.getElementsByClassName("news-date");
+
+            var img = document.getElementsByClassName("news-img");
+
+            var content = document.getElementsByClassName('news-content');
+
+            // var content = document.getElementsByClassName("card-content");
+
+            // var news = document.getElementsByClassName("news-button");
+
+            for (var i = 0; i < data.length; i++) {
+                if(data[i].slug === get_title) {
+                    $(title).append().html(data[i].title);
+                    $(date).append().html(data[i].date);
+                    $(img).attr("src", data[i].img);
+                    $(content).append().html(data[i].content);
+                }
+                // $(img).eq(i).append(
+                //   $('<img>').attr({
+                //     class: 'card-img-top',
+                //     src: data[i].img,
+                //   })
+                // );
+                // $(title).eq(i).prepend(
+                //   $('<h5>').attr({
+                //     class: 'card-title font-work',
+                //   }).html(data[i].title)
+                // );
+                // $(date).eq(i).append().html(data[i].date);
+                // $(content).eq(i).append().html(data[i].content);
+                // // $(news).eq(i).attr('href', data[i].ref);
+                // $(news).eq(i).append().attr('href', "/chery_template/berita/detail.php?title=" + data[i].slug);
+            }
+        }
+        
         })
 
         $(document).click(function(e){

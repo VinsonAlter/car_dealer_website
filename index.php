@@ -107,6 +107,8 @@
           $('.layanan-click').find('ul').removeClass('visible-scroll-layanan');
         })
 
+        // fetch json data for news letter 
+
         fetch('news.json')
             .then(function (response) {
                 return response.json();
@@ -145,7 +147,7 @@
                   }).html(data[i].title)
                 );
                 $(date).eq(i).append().html(data[i].date);
-                $(content).eq(i).append().html(data[i].content);
+                $(content).eq(i).append().html(data[i].preview);
                 // $(news).eq(i).attr('href', data[i].ref);
                 $(news).eq(i).append().attr('href', "/chery_template/berita/detail.php?title=" + data[i].slug);
             }
