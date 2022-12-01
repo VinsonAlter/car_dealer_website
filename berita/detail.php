@@ -68,7 +68,7 @@
                 </div>
                 <div class="col-11 col-md-8 mt-4 font-work text-justify news-content">
                     <!-- Insert News Content here -->
-                    <p>  
+                    <!-- <p>  
                         PT Chery Sales Indonesia, prinsipal dari brand mobil Chery, 
                         melaksanakan konferensi dealer perdananya bersama dengan perwakilan 20 
                         outlet dealer dari sepuluh grup dealer yang tersebar di Jakarta, 
@@ -140,7 +140,7 @@
                         <br><em>“Konsumen adalah prioritas kami dan kami akan berusaha untuk 
                             membangun hubungan jangka panjang dengan menyediakan layanan terbaik 
                             serta melalui program-program yang banyak melibatkan mereka, sehingga 
-                            interaksi yang terjadi lebih humanis dan memberikan kenyamanan,”&nbsp;</em>tutup Tao Yong.</p>
+                            interaksi yang terjadi lebih humanis dan memberikan kenyamanan,”&nbsp;</em>tutup Tao Yong.</p> -->
                 </div>
             </div>
         </section>
