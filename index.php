@@ -121,35 +121,61 @@
             });
 
         function appendData(data) {
-
-            // var img = document.getElementById('img');
-
-            var img = document.getElementsByClassName("user-img");
-
-            var title = document.getElementsByClassName("card-body");
-
-            var content = document.getElementsByClassName("card-content");
-
-            var date = document.getElementsByClassName("card-date");
-
-            var news = document.getElementsByClassName("news-button");
-
+            var news = document.getElementsByClassName('news');
             for (var i = 0; i < data.length; i++) {
-                $(img).eq(i).append(
-                  $('<img>').attr({
-                    class: 'card-img-top',
-                    src: data[i].img,
-                  })
-                );
-                $(title).eq(i).prepend(
-                  $('<h5>').attr({
-                    class: 'card-title font-work',
-                  }).html(data[i].title)
-                );
-                $(date).eq(i).append().html(data[i].date);
-                $(content).eq(i).append().html(data[i].preview);
-                // $(news).eq(i).attr('href', data[i].ref);
-                $(news).eq(i).append().attr('href', "/chery_template/berita/detail.php?title=" + data[i].slug);
+                $($('<div>').attr({
+                  class: 'col col-news'
+                  }).append(
+                    $($('<div>').attr({
+                      class: 'card card-news text-dark mb-3 shadow-lg h-100'
+                    })).append(
+                      ($('<div>').attr({
+                        class: 'user-img'
+                      })).append(
+                      $('<img>').attr({
+                        class: 'card-img-top',
+                        src: data[i].img,
+                      })),   
+                      ($('<div>').attr({
+                        class: 'card-body'
+                      })).append(
+                        ($('<p>').attr({
+                          class: 'card-title'
+                        })).append(
+                          $('<h5>').attr({
+                            class: 'card-title font-work',
+                          }).html(data[i].title)
+                        ),
+                        ($('<p>').attr({
+                          class: 'card-text card-date fs-bold-700'
+                        })).append().html(data[i].date),
+                        ($('<p>').attr({
+                          class: 'card-text card-content font-work'
+                        })).append().html(data[i].preview),
+                        $('<a>').attr({
+                          class: 'btn news-button text-center font-work',
+                          href: "/chery_template/berita/detail.php?title=" + data[i].slug
+                        }).html("Lebih lanjut...")
+                      )
+                    )
+                  )
+                ).appendTo(news);
+                // for (var i = 0; i < data.length; i++) {
+                // $(img).eq(i).append(
+                //   $('<img>').attr({
+                //     class: 'card-img-top',
+                //     src: data[i].img,
+                //   })
+                // );
+                // $(title).eq(i).prepend(
+                // $('<h5>').attr({
+                //   class: 'card-title font-work',
+                // }).html(data[i].title)
+                // );
+                // $(date).eq(i).append().html(data[i].date);
+                // $(content).eq(i).append().html(data[i].preview);
+                // // $(news).eq(i).attr('href', data[i].ref);
+                // $(news).eq(i).append().attr('href', "/chery_template/berita/detail.php?title=" + data[i].slug);
             }
         }
         

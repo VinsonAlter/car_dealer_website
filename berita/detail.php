@@ -195,48 +195,25 @@
                 console.log('error: ' + err);
             });
 
-            // console.log(get_title);
+            function appendData(data) {
 
-        function appendData(data) {
+                var title = document.getElementsByClassName("news-title");
 
-            // var img = document.getElementById('img');
+                var date = document.getElementsByClassName("news-date");
 
-            var title = document.getElementsByClassName("news-title");
+                var img = document.getElementsByClassName("news-img");
 
-            var date = document.getElementsByClassName("news-date");
+                var content = document.getElementsByClassName('news-content');
 
-            var img = document.getElementsByClassName("news-img");
-
-            var content = document.getElementsByClassName('news-content');
-
-            // var content = document.getElementsByClassName("card-content");
-
-            // var news = document.getElementsByClassName("news-button");
-
-            for (var i = 0; i < data.length; i++) {
-                if(data[i].slug === get_title) {
-                    $(title).append().html(data[i].title);
-                    $(date).append().html(data[i].date);
-                    $(img).attr("src", data[i].img);
-                    $(content).append().html(data[i].content);
+                for (var i = 0; i < data.length; i++) {
+                    if(data[i].slug === get_title) {
+                        $(title).append().html(data[i].title);
+                        $(date).append().html(data[i].date);
+                        $(img).attr("src", data[i].img);
+                        $(content).append().html(data[i].content);
+                    }
                 }
-                // $(img).eq(i).append(
-                //   $('<img>').attr({
-                //     class: 'card-img-top',
-                //     src: data[i].img,
-                //   })
-                // );
-                // $(title).eq(i).prepend(
-                //   $('<h5>').attr({
-                //     class: 'card-title font-work',
-                //   }).html(data[i].title)
-                // );
-                // $(date).eq(i).append().html(data[i].date);
-                // $(content).eq(i).append().html(data[i].content);
-                // // $(news).eq(i).attr('href', data[i].ref);
-                // $(news).eq(i).append().attr('href', "/chery_template/berita/detail.php?title=" + data[i].slug);
             }
-        }
         
         })
 
