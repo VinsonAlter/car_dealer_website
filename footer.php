@@ -32,7 +32,7 @@
             <a href="javascript:void(0)">Price List</a>
         </p>
     </div>
-    <div class="d-flex flex-column no-padding">
+    <!-- <div class="d-flex flex-column no-padding">
         <p class="footer-header">
             <a href="javascript:void(0)">Promo</a>
         </p>
@@ -49,7 +49,7 @@
                 <a href="javascript:void(0)">Sparepart</a>
             </li>
         </ul>
-    </div>
+    </div> -->
     <div class="d-flex flex-column no-padding">
         <p class="footer-header">
             <a href="/chery_template/berita/">Berita</a>
@@ -57,7 +57,7 @@
     </div>
     <div class="d-flex flex-column no-padding">
         <p class="footer-header">
-            <a href="javascript:void(0)">Tentang Kami</a>
+            <a href="javascript:void(0)">Mengenal Chery</a>
         </p>
         <ul>
             <li>

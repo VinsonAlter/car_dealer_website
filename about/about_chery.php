@@ -1,9 +1,9 @@
-<!-- Models pages -->
+<!-- Berita pages -->
 <!DOCTYPE html>
 <html lang="id">
     <head>
         <meta charset="utf-8">
-        <title>Chery Model Page</title>
+        <title>Chery Berita Page</title>
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
@@ -25,6 +25,14 @@
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
             crossorigin="anonymous"
         />
+
+        <!-- Simple Pagination CSS -->
+        <link 
+            rel="stylesheet"
+            type="text/css"
+            href="../assets/css/simplePagination.css"
+        />
+
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,6 +41,18 @@
         <!-- Font Awesome Version 6 Plugins -->
         <link rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+        <style>
+            .simple-pagination {
+                display: flex;
+            }
+
+            .light-theme a,
+            .light-theme .current,
+            .light-them span {
+                padding: .125rem .5rem;
+            }
+        </style>
 
     </head>
 
@@ -43,10 +63,15 @@
 
         <main>
             <section>
-                <div>
-                    <?php require_once "../cars.php"; ?>
+                <div class="py-3 mt-4">
+                    <?php require_once "../news.php"; ?>
                 </div>
             </section>
+            <div class="mt-up-65 py-3">
+                <div id = "pagination-container" class="simple-pagination justify-content-center"> 
+                    
+                </div>
+            </div>
         </main>
 
         <footer class="relative footer-border px-5 py-4">
@@ -60,11 +85,15 @@
         <script src="../assets/js/popper.js"></script>
         <script src="../assets/js/bootstrap.min.js"></script>
         
+        <!-- Lazyload Plugins -->
         <script src=" https://cdn.jsdelivr.net/gh/aFarkas/lazysizes/lazysizes.min.js" async=""></script>
 
+        <!-- Bootpag for Pagination -->
+        <script src="../assets/js/jquery.simplePagination.js"></script>
+
         <script>
-      
-        // Navbar dropdown function 
+        
+        var news = document.getElementsByClassName('news');
 
         $(document).ready(function(){
             $('.models-click').click(function(){
@@ -84,23 +113,24 @@
             $('.models-click').find('ul').removeClass('visible-scroll-model');
             $('.layanan-click').find('ul').removeClass('visible-scroll-layanan');
             })
+        
         })
 
         $(document).click(function(e){
             var clickover = $(e.target);
-            if(!clickover.closest('nav').length){
-            $('.models-click').find('ul').removeClass('visible-scroll-model');
-            $('.layanan-click').find('ul').removeClass('visible-scroll-layanan');
-            $('.info-click').find('ul').removeClass('visible-scroll-info');
+                if(!clickover.closest('nav').length){
+                $('.models-click').find('ul').removeClass('visible-scroll-model');
+                $('.layanan-click').find('ul').removeClass('visible-scroll-layanan');
+                $('.info-click').find('ul').removeClass('visible-scroll-info');
 
-            // slideup dropdown if user clicked outside of navbar
-            var opened_nav = $('.nav').css('display') == 'block';
+                // slideup dropdown if user clicked outside of navbar
+                var opened_nav = $('.nav').css('display') == 'block';
 
-            // close the mobile navbar if user clicks outside of it
-            if (opened_nav === true && !$(clickover).closest('nav').length) {
-                $('.menu-trigger').toggleClass('active');
-                $('.header-area .nav').slideToggle(200);
-            }
+                // close the mobile navbar if user clicks outside of it
+                if (opened_nav === true && !$(clickover).closest('nav').length) {
+                    $('.menu-trigger').toggleClass('active');
+                    $('.header-area .nav').slideToggle(200);
+                }
             } 
         })
 
@@ -111,16 +141,6 @@
             });
         }
 
-        // PLay Button Function
-        $('.teaser-video').parent().click(function () {
-            if($(this).children(".teaser-video").get(0).paused){
-                $(this).children(".teaser-video").get(0).play();
-                $(this).children(".playpause").fadeOut();
-            }else{
-            $(this).children(".teaser-video").get(0).pause();
-                $(this).children(".playpause").fadeIn();
-            }
-        });
         </script>
 
     </body>

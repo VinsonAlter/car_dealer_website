@@ -402,7 +402,7 @@
             })
 
             $('.info-click').click(function(){
-            $(this).children('ul').addClass('visible-scroll-info');
+            $(this).children('ul').toggleClass('visible-scroll-info');
             $('.models-click').find('ul').removeClass('visible-scroll-model');
             $('.layanan-click').find('ul').removeClass('visible-scroll-layanan');
             })

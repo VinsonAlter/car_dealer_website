@@ -93,17 +93,7 @@
 
         <script>
         
-        var news = document.getElementsByClassName('news');
-
-        
-
-        // Pagination functions
-        // var limitCard = 3;
-        // var totalCard = 0;
-        // var totalPages = Math.floor(totalCard/limitCard);
-        // console.log(content.length);
-
-        // Navbar dropdown function 
+        var news = document.getElementsByClassName('news'); 
 
         $(document).ready(function(){
             $('.models-click').click(function(){
@@ -119,7 +109,7 @@
             })
 
             $('.info-click').click(function(){
-            $(this).children('ul').addClass('visible-scroll-info');
+            $(this).children('ul').toggleClass('visible-scroll-info');
             $('.models-click').find('ul').removeClass('visible-scroll-model');
             $('.layanan-click').find('ul').removeClass('visible-scroll-layanan');
             })
@@ -132,6 +122,7 @@
                 })
                 .then(function (data) {
                     appendData(data);
+                    /* pagination part */
                     var items = $(".list-wrapper .list-item");
                     var numItems = items.length;
                     var perPage = 3;
@@ -152,14 +143,9 @@
                 .catch(function (err) {
                     console.log('error: ' + err);
                 });
-        
-                function appendData(data) {
-
-                    // var count = data.length;
-                    // var limitpage = 3;
-                    // var totalpage = Math.floor(count / limitpage);
-                    // console.log(totalpage);
-                    
+                
+                /* Dynamic JSON data append */
+                function appendData(data) {                    
                     for (var i = 0; i < data.length; i++) {
                         $($('<div>').attr({
                             class: 'col col-news mb-3 list-item',
@@ -186,7 +172,7 @@
                                 }).html(data[i].title)
                                 ),
                                 ($('<p>').attr({
-                                class: 'card-text card-date fs-bold-700'
+                                class: 'card-text card-date fs-bold-700 text-muted'
                                 })).append().html(data[i].date),
                                 ($('<p>').attr({
                                 class: 'card-text card-content font-work'
@@ -227,17 +213,6 @@
             $('.header-area .nav').slideToggle(200);
             });
         }
-
-        // PLay Button Function
-        $('.teaser-video').parent().click(function () {
-            if($(this).children(".teaser-video").get(0).paused){
-                $(this).children(".teaser-video").get(0).play();
-                $(this).children(".playpause").fadeOut();
-            }else{
-            $(this).children(".teaser-video").get(0).pause();
-                $(this).children(".playpause").fadeIn();
-            }
-        });
         </script>
 
     </body>
