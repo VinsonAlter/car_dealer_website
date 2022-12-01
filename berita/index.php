@@ -25,6 +25,14 @@
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
             crossorigin="anonymous"
         />
+
+        <!-- Simple Pagination CSS -->
+        <link 
+            rel="stylesheet"
+            type="text/css"
+            href="../assets/css/simplePagination.css"
+        />
+
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,6 +41,18 @@
         <!-- Font Awesome Version 6 Plugins -->
         <link rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+        <style>
+            .simple-pagination {
+                display: flex;
+            }
+
+            .light-theme a,
+            .light-theme .current,
+            .light-them span {
+                padding: .125rem .5rem;
+            }
+        </style>
 
     </head>
 
@@ -43,10 +63,15 @@
 
         <main>
             <section>
-                <div>
-                    <?php require_once "../cars.php"; ?>
+                <div class="py-3 mt-4">
+                    <?php require_once "../news.php"; ?>
                 </div>
             </section>
+            <div class="mt-up-65 py-3">
+                <div id = "pagination-container" class="simple-pagination justify-content-center"> 
+                    
+                </div>
+            </div>
         </main>
 
         <footer class="relative footer-border px-5 py-4">
@@ -60,10 +85,24 @@
         <script src="../assets/js/popper.js"></script>
         <script src="../assets/js/bootstrap.min.js"></script>
         
+        <!-- Lazyload Plugins -->
         <script src=" https://cdn.jsdelivr.net/gh/aFarkas/lazysizes/lazysizes.min.js" async=""></script>
 
+        <!-- Bootpag for Pagination -->
+        <script src="../assets/js/jquery.simplePagination.js"></script>
+
         <script>
-      
+        
+        var news = document.getElementsByClassName('news');
+
+        
+
+        // Pagination functions
+        // var limitCard = 3;
+        // var totalCard = 0;
+        // var totalPages = Math.floor(totalCard/limitCard);
+        // console.log(content.length);
+
         // Navbar dropdown function 
 
         $(document).ready(function(){
@@ -84,6 +123,84 @@
             $('.models-click').find('ul').removeClass('visible-scroll-model');
             $('.layanan-click').find('ul').removeClass('visible-scroll-layanan');
             })
+
+            // fetch json data for news letter 
+
+            fetch('../news.json')
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    appendData(data);
+                    var items = $(".list-wrapper .list-item");
+                    var numItems = items.length;
+                    var perPage = 3;
+                    items.slice(perPage).hide();
+                    $('#pagination-container').pagination({
+                        cssStyle: 'light-theme',
+                        items: numItems,
+                        itemsOnPage: perPage,
+                        prevText: "&laquo;",
+                        nextText: "&raquo;",
+                        onPageClick: function (pageNumber) {
+                            var showFrom = perPage * (pageNumber - 1);
+                            var showTo = showFrom + perPage;
+                            items.hide().slice(showFrom, showTo).show();
+                        }
+                    });
+                })
+                .catch(function (err) {
+                    console.log('error: ' + err);
+                });
+        
+                function appendData(data) {
+
+                    // var count = data.length;
+                    // var limitpage = 3;
+                    // var totalpage = Math.floor(count / limitpage);
+                    // console.log(totalpage);
+                    
+                    for (var i = 0; i < data.length; i++) {
+                        $($('<div>').attr({
+                            class: 'col col-news mb-3 list-item',
+                            id: 'news-content'
+                        }).append(
+                            $($('<div>').attr({
+                            class: 'card card-news text-dark mb-3 shadow-lg h-100'
+                            })).append(
+                            ($('<div>').attr({
+                                class: 'user-img'
+                            })).append(
+                            $('<img>').attr({
+                                class: 'card-img-top',
+                                src: data[i].img,
+                            })),   
+                            ($('<div>').attr({
+                                class: 'card-body'
+                            })).append(
+                                ($('<p>').attr({
+                                class: 'card-title'
+                                })).append(
+                                $('<h5>').attr({
+                                    class: 'card-title font-work',
+                                }).html(data[i].title)
+                                ),
+                                ($('<p>').attr({
+                                class: 'card-text card-date fs-bold-700'
+                                })).append().html(data[i].date),
+                                ($('<p>').attr({
+                                class: 'card-text card-content font-work'
+                                })).append().html(data[i].preview),
+                                $('<a>').attr({
+                                class: 'btn news-button text-center font-work',
+                                href: "/chery_template/berita/detail.php?title=" + data[i].slug
+                                }).html("Lebih lanjut..."))
+                            )
+                        )
+                    ).appendTo(news);
+                }
+            }
+        
         })
 
         $(document).click(function(e){

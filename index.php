@@ -119,12 +119,14 @@
             .catch(function (err) {
                 console.log('error: ' + err);
             });
+        
+        // data.length
 
         function appendData(data) {
             var news = document.getElementsByClassName('news');
-            for (var i = 0; i < data.length; i++) {
+            for (var i = 0; i < 3; i++) {
                 $($('<div>').attr({
-                  class: 'col col-news'
+                  class: 'col col-news mb-3'
                   }).append(
                     $($('<div>').attr({
                       class: 'card card-news text-dark mb-3 shadow-lg h-100'

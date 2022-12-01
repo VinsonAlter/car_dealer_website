@@ -2,7 +2,7 @@
     <div>
         <h1 class="models-font fs40-scaled">Berita</h1>
     </div>
-    <div class="row row-cols-1 row-cols-md-3 mt-4 news">
+    <div class="row row-cols-1 row-cols-md-3 mt-4 news list-wrapper">
         <!-- Insert card content here -->
         <!-- <div class="col col-news">
             <div class="card card-news text-dark mb-3 shadow-lg h-100">

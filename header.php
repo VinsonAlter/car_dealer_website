@@ -31,7 +31,7 @@
                         </ul>
                     </li>
                     <li class="scroll-to-section">
-                        <a href="#">Berita</a>
+                        <a href="/chery_template/berita/">Berita</a>
                     </li>
                     <li class="scroll-to-section info-click">
                         <a href="javascript:void(0)" class="dropdown-icon">Tentang Kami</a>

@@ -52,7 +52,7 @@
     </div>
     <div class="d-flex flex-column no-padding">
         <p class="footer-header">
-            <a href="javascript:void(0)">Berita</a>
+            <a href="/chery_template/berita/">Berita</a>
         </p>
     </div>
     <div class="d-flex flex-column no-padding">

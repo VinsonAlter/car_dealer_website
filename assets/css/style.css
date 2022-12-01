@@ -75,6 +75,10 @@ html,
         margin-top: -25px;
       }
 
+      .mt-up-65 {
+        margin-top: -65px;
+      }
+
       .p-0 {
         padding: 0 !important;
       }
@@ -123,6 +127,10 @@ html,
 
       .w-full {
         width: 100%;
+      }
+
+      .text-black {
+        color: #000;
       }
 
       .text-white {
