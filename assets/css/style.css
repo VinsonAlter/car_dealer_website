@@ -87,6 +87,10 @@ html,
         padding: 2.5rem;
       }
 
+      .pt-24 {
+        padding-top: 6rem; 
+      }
+
       .pr-10 {
         padding-right: 2.5rem;
       }
@@ -197,6 +201,11 @@ html,
       .border-red-80 {
         border-bottom:5px solid rgb(192, 11, 32);
         width: 20rem;
+      }
+
+      .border-red-100 {
+        border-bottom:5px solid rgb(192, 11, 32);
+        width: 25rem;
       }
 
       .border-left-red {
