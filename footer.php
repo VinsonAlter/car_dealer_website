@@ -64,7 +64,7 @@
                 <a href="javascript:void(0)">With Chery with love</a>
             </li>
             <li>
-                <a href="javascript:void(0)">Tentang Chery</a>
+                <a href="/chery_template/about/about-chery.php">Tentang Chery</a>
             </li>
         </ul>
     </div>

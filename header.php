@@ -37,7 +37,7 @@
                         <a href="javascript:void(0)" class="dropdown-icon">Mengenal Chery</a>
                         <ul class="sub-scroll-info">
                             <li class="sub-li"><a href="javascript:void(0)">With Chery with love</a></li>
-                            <li class="sub-li"><a href="javascript:void(0)">Tentang Chery</a></li>
+                            <li class="sub-li"><a href="/chery_template/about/about-chery.php">Tentang Chery</a></li>
                         </ul>
                     </li>
                 </ul>

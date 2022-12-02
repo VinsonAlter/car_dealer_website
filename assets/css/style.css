@@ -87,6 +87,10 @@ html,
         padding: 2.5rem;
       }
 
+      .pr-10 {
+        padding-right: 2.5rem;
+      }
+
       .bg-black {
         background-color: #000;
       }
@@ -186,9 +190,26 @@ html,
         font-size: 25px;
       }
 
+      .fs50-scaled {
+        font-size: 30px;
+      }
+
+      .border-red-80 {
+        border-bottom:5px solid rgb(192, 11, 32);
+        width: 20rem;
+      }
+
+      .border-left-red {
+        border-right: .275rem solid rgb(192, 11, 32);
+      }
+
       @media (min-width: 576px) {
         .fs40-scaled {
           font-size: 40px;
+        }
+
+        .fs50-scaled {
+          font-size: 50px;
         }
       }
 
@@ -912,7 +933,7 @@ html,
         .footer-wrapper {
           display: grid;
           grid-auto-flow: column;
-          grid-template-rows: repeat(4, auto);
+          grid-template-rows: repeat(2, auto);
           row-gap: .25rem;
           column-gap: .5rem;
         }
@@ -931,10 +952,15 @@ html,
 
         /* need to fix some change after commenting the styling */
 
-        /* .footer-wrapper > div:nth-of-type(odd) {
-          padding-left: .75rem;
+        .footer-wrapper > div:nth-of-type(4) {
+          padding-left: 3.5rem;
+        }
+
+        .footer-wrapper > div:nth-of-type(5) {
+          padding-left: 3.5rem;
         }
         
+        /*
         .footer-wrapper > div:nth-of-type(7) {
           padding-left: 1.25rem ;
         } */
