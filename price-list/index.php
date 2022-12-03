@@ -87,6 +87,19 @@
                 line-height: 1.5rem;
             }
 
+            .nav-pills .nav-link {
+                color: #000 !important;
+            }
+
+            .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+                background-color:rgb(192, 11, 32) !important;
+                color: #fff !important;
+            }
+
+            .nav-link {
+                padding: .875rem .875rem !important;
+            }
+
             @media (max-width:768px) {
                 .car-logo {
                     left: 0rem !important;
@@ -105,6 +118,11 @@
                     font-size: 50px !important;
                 }
 
+                .px-mobile-5 {
+                    padding-right: 3rem !important;
+                    padding-left: 3rem!important;
+                }
+
             }
 
         </style>
@@ -118,42 +136,109 @@
 
         <main>
             <section>
-                <div class="py-3 mt-5">
-                    <div class="container mt-5 pt-3 pb-5 ">
-                        <div class="row ">
-                            <div class="col-12 col-md-5 relative car-logo">
-                                <h1 class="models-font fs50-scaled chery-red">
-                                    TIGGO 
-                                </h1>
-                                <h1 class="models-font fs50-scaled">
-                                    7 PRO
-                                </h1>
-                                <div class="border-red-48 mt-5"></div>
-                            </div>
-                            <div class="col-12 col-md-7">
-                                <img class="img-fluid" src="assets/img/tiggo7pro.jpg">
-                                <div class="container gap-row row work-font mt-3">
-                                    <a class="col-12 col-md-5 button-padding border-rounded bg-light
-                                        btn centered" href="assets/brosur/Tiggo7Pro-brosur.pdf" target="_blank">
-                                        <p class="centered-p font-base">Unduh Brosur</p>
-                                    </a>
-                                    <a class="col-12 col-md-5 button-padding border-rounded bg-light
-                                        btn centered" href="assets/price-list/tiggo7pro-pricelist.png" target="_blank">
-                                        <p class="centered-p font-base">Unduh Pricelist</p>
-                                    </a>
+                <div class="mt-top-header">
+                    <div class = "nav centered">
+                        <ul class="relative nav nav-pills nav-fill ">
+                            <li class="nav-item px-4" role="presentation">
+                                <button class="nav-link active models-font" id="pills-t7-tab" 
+                                    data-bs-toggle="pill" data-bs-target="#pills-t7"
+                                    type="button" role="tab" aria-controls="pills-t7"
+                                    aria-selected="true">TIGGO 7 PRO</button>
+                            </li>
+                            <li class="nav-item px-4" role="presentation">
+                                <button class="nav-link models-font" id="pills-t8-tab"
+                                    data-bs-toggle="pill" data-bs-target="#pills-t8"
+                                    type="button" role="tab" aria-controls="pills-t8"
+                                    aria-selected="true">TIGGO 8 PRO</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane show active" id="pills-t7" role="tabpanel" aria-labelledby="pills-t7-tab">
+                        <div class="py-3">
+                            <div class="container mt-5 pt-3 pb-5 ">
+                                <div class="row ">
+                                    <div class="px-mobile-5 col-12 col-md-5 relative car-logo">
+                                        <h1 class="models-font fs50-scaled chery-red">
+                                            TIGGO 
+                                        </h1>
+                                        <h1 class="models-font fs50-scaled">
+                                            7 PRO
+                                        </h1>
+                                        <div class="border-red-48 mt-5"></div>
+                                    </div>
+                                    <div class="col-12 col-md-7">
+                                        <img class="img-fluid" src="assets/img/tiggo7pro.jpg">
+                                        <div class="container gap-row row work-font mt-3">
+                                            <a class="col-12 col-md-5 button-padding border-rounded bg-light
+                                                btn centered" href="assets/brosur/Tiggo7Pro-brosur.pdf" target="_blank">
+                                                <p class="centered-p font-base">Unduh Brosur</p>
+                                            </a>
+                                            <a class="col-12 col-md-5 button-padding border-rounded bg-light
+                                                btn centered" href="assets/price-list/tiggo7pro-pricelist.png" target="_blank">
+                                                <p class="centered-p font-base">Unduh Pricelist</p>
+                                            </a>
+                                        </div>
+                                        <div class="container gap-row-2 row work-font mt-4">
+                                            <div class="col-12 col-md-4">
+                                                <h5 class="chery-red">1.5L T</h5>
+                                                <h5>Engine</h5>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <h5 class="chery-red">4500 mm</h5>
+                                                <h5>Length</h5>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <h5 class="chery-red">2627 mm</h5>
+                                                <h5>Wheelbase</h5>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="container gap-row-2 row work-font mt-4">
-                                    <div class="col-12 col-md-4">
-                                        <h5 class="chery-red">1.5L T</h5>
-                                        <h5>Engine</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane show active" id="pills-t8" role="tabpanel" aria-labelledby="pills-t8-tab">
+                        <div class="py-3">
+                            <div class="container mt-5 pt-3 pb-5 ">
+                                <div class="row ">
+                                    <div class="px-mobile-5 col-12 col-md-5 relative car-logo">
+                                        <h1 class="models-font fs50-scaled chery-red">
+                                            TIGGO 
+                                        </h1>
+                                        <h1 class="models-font fs50-scaled">
+                                            8 PRO
+                                        </h1>
+                                        <div class="border-red-48 mt-5"></div>
                                     </div>
-                                    <div class="col-12 col-md-4">
-                                        <h5 class="chery-red">4500 mm</h5>
-                                        <h5>Length</h5>
-                                    </div>
-                                    <div class="col-12 col-md-4">
-                                        <h5 class="chery-red">2627 mm</h5>
-                                        <h5>Wheelbase</h5>
+                                    <div class="col-12 col-md-7">
+                                        <img class="img-fluid" src="assets/img/tiggo8pro.jpg">
+                                        <div class="container gap-row row work-font mt-3">
+                                            <a class="col-12 col-md-5 button-padding border-rounded bg-light
+                                                btn centered" href="assets/brosur/Tiggo8Pro-brosur.pdf" target="_blank">
+                                                <p class="centered-p font-base">Unduh Brosur</p>
+                                            </a>
+                                            <a class="col-12 col-md-5 button-padding border-rounded bg-light
+                                                btn centered" href="assets/price-list/tiggo8pro-pricelist.png" target="_blank">
+                                                <p class="centered-p font-base">Unduh Pricelist</p>
+                                            </a>
+                                        </div>
+                                        <div class="container gap-row-2 row work-font mt-4">
+                                            <div class="col-12 col-md-4">
+                                                <h5 class="chery-red">2.0L TGDI</h5>
+                                                <h5>Engine</h5>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <h5 class="chery-red">4722 mm</h5>
+                                                <h5>Length</h5>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <h5 class="chery-red">2710 mm</h5>
+                                                <h5>Wheelbase</h5>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
