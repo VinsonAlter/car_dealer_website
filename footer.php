@@ -80,7 +80,7 @@
             </a>
         </li>
         <li>
-            <a href="javascript:void(0)">
+            <a href="https://www.facebook.com/profile.php?id=100088285603591&mibextid=ZbWKwL" target="_blank">
                 <span class="fa-stack">
                     <i class="fa-solid fa-circle fa-stack-2x"></i>
                     <i class="fa-solid fa-brands fa-facebook-f fa-stack-1x fa-inverse"></i>
