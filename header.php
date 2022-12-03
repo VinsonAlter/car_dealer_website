@@ -18,7 +18,7 @@
                         </ul>
                     </li>
                     <li class="scroll-to-section">
-                        <a href="javascript:void(0)">Price List</a>
+                        <a href="/chery_template/price-list/">Price List</a>
                     </li>
                     <!-- <li class="scroll-to-section">
                         <a href="javascript:void(0)">Promo</a>

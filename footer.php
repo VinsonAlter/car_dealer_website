@@ -16,7 +16,7 @@
     </div> -->
     <div class="d-flex flex-column no-padding">
         <p class="footer-header">
-            <a href="javascript:void(0)">Models</a>
+            <a href="/chery_template/models/">Models</a>
         </p>
         <ul>
             <li>
@@ -29,7 +29,7 @@
     </div>
     <div class="d-flex flex-column no-padding">
         <p class="footer-header">
-            <a href="javascript:void(0)">Price List</a>
+            <a href="/chery_template/price-list/">Price List</a>
         </p>
     </div>
     <!-- <div class="d-flex flex-column no-padding">
@@ -57,7 +57,7 @@
     </div>
     <div class="d-flex flex-column no-padding">
         <p class="footer-header">
-            <a href="javascript:void(0)">Mengenal Chery</a>
+            <a href="/chery_template/about/">Mengenal Chery</a>
         </p>
         <ul>
             <li>

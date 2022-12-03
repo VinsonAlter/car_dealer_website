@@ -54,6 +54,10 @@ html,
         color:rgb(192, 11, 32);
       }
 
+      .button-padding {
+        padding: 2.5rem 2.5rem;
+      }
+
       .mt-top-header {
         margin-top: 120px;
       }
@@ -114,6 +118,10 @@ html,
 
       .text-justify {
         text-align: justify;
+      }
+
+      .centered-p {
+        margin: 0;
       }
 
       .centered {
@@ -202,6 +210,11 @@ html,
         font-size: 30px;
       }
 
+      .border-red-48 {
+        border-bottom:5px solid rgb(192, 11, 32);
+        width: 12rem;
+      }
+
       .border-red-80 {
         border-bottom:5px solid rgb(192, 11, 32);
         width: 20rem;
@@ -214,6 +227,11 @@ html,
 
       .border-left-red {
         border-right: .275rem solid rgb(192, 11, 32);
+      }
+
+      .border-rounded {
+        border-radius: 25px;
+        border: 2px solid grey;
       }
 
       @media (min-width: 576px) {
