@@ -25,7 +25,13 @@
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
             crossorigin="anonymous"
         />
-
+        <!-- Favicon Icon -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/chery_template/assets/logo/logo-chery-oriental-stars.png"
+        />
         <!-- Simple Pagination CSS -->
         <link 
             rel="stylesheet"

@@ -25,7 +25,13 @@
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
             crossorigin="anonymous"
         />
-
+        <!-- Favicon Icon -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/chery_template/assets/logo/logo-chery-oriental-stars.png"
+        />
         <!-- Simple Pagination CSS -->
         <link 
             rel="stylesheet"
@@ -69,7 +75,7 @@
             .border-rounded {
                 border-radius: 35px;
                 background-color: rgb(192, 11, 32) !important;
-                color: #000 !important;
+                color: #fff !important;
             }
 
             .border-rounded:hover {
@@ -200,7 +206,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane show active" id="pills-t8" role="tabpanel" aria-labelledby="pills-t8-tab">
+                    <div class="tab-pane show" id="pills-t8" role="tabpanel" aria-labelledby="pills-t8-tab">
                         <div class="py-3">
                             <div class="container mt-5 pt-3 pb-5 ">
                                 <div class="row ">
