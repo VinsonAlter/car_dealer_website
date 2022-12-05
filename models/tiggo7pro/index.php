@@ -378,7 +378,7 @@
             </div>
         </div>
 
-        <footer class="relative footer-border mt-up-8 px-5 py-4">
+        <footer class="relative footer-border mt-up-8 px-3 py-4">
             <?php readfile("../../footer.php"); ?>
         </footer>
 

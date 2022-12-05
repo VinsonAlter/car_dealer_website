@@ -170,7 +170,7 @@
             </section>
         </main>
 
-        <footer class="relative footer-border px-5 py-4">
+        <footer class="relative footer-border px-3 py-4">
             <?php readfile("../footer.php"); ?>
         </footer>
 
