@@ -98,6 +98,10 @@
             </div>
         </section>
 
+        <section class="relative mt-5">
+            <?php require_once '../news.php'?>
+        </section>
+
         <footer class="relative footer-border px-3 py-4">
             <?php readfile("../footer.php"); ?>
         </footer>
@@ -158,13 +162,80 @@
 
                 var content = document.getElementsByClassName('news-content');
 
+                var news = document.getElementsByClassName('news');
+
+                // var totalNews = 3;
+                // var showFrom = data.length - totalNews;
+
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].slug.includes(get_title)) {
+                        var slicedData = data[i].id;
+                        // items.hide().slice(showFrom, showTo).show();
+                    }
+                    var showData = data[i].id;
+                    var totalNews = 3;
+                    var showFrom = (totalNews * (slicedData - 1)) + 1;
+                    var showTo = showFrom + totalNews;
+                    // console.log(+arrayNews.slice(showFrom, showTo));
+                    // console.log(showData);
+                    console.log($(showData).slice(showFrom, showTo));
+                }
+
+                    // var result = arrayNews.slice(showFrom, showTo);
+                    // console.log(data.slice(showFrom, showTo));
+                    // var notEqual = data[i].slug !== get_title;
+                    // var showFrom = 3 * (data[i].slug - 1);
+                    // var showTo = showFrom + 3;
+                    // var slicedData = data.slice(showFrom, showTo);
+                    // console.log(showTo);
+                //     if(notEqual){
+                //         $($('<div>').attr({
+                //                 class: 'col col-news mb-3'
+                //             }).append(
+                //                 $($('<div>').attr({
+                //                 class: 'card card-news text-dark mb-3 shadow-lg h-100'
+                //                 })).append(
+                //                 ($('<div>').attr({
+                //                     class: 'user-img'
+                //                 })).append(
+                //                 $('<img>').attr({
+                //                     class: 'card-img-top',
+                //                     src: data[i].img,
+                //                 })),   
+                //                 ($('<div>').attr({
+                //                     class: 'card-body'
+                //                 })).append(
+                //                     ($('<p>').attr({
+                //                     class: 'card-title'
+                //                     })).append(
+                //                     $('<h5>').attr({
+                //                         class: 'card-title font-work',
+                //                     }).html(data[i].title)
+                //                     ),
+                //                     ($('<p>').attr({
+                //                     class: 'card-text text-muted card-date'
+                //                     })).append().html(data[i].date),
+                //                     ($('<p>').attr({
+                //                     class: 'card-text card-content font-work'
+                //                     })).append().html(data[i].preview),
+                //                     $('<a>').attr({
+                //                     class: 'btn news-button text-center font-work',
+                //                     href: "/chery_template/berita/detail.php?title=" + data[i].slug
+                //                     }).html("Lebih lanjut...")
+                //                 )
+                //                 )
+                //             )
+                //         ).appendTo(news);
+                //     }
+                // }
+
                 for (var i = 0; i < data.length; i++) {
                     if(data[i].slug === get_title) {
                         $(title).append().html(data[i].title);
                         $(date).append().html(data[i].date);
                         $(img).attr("src", data[i].img);
                         $(content).append().html(data[i].content);
-                    }
+                    }  
                 }
             }
         

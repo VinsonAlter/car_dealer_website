@@ -162,7 +162,7 @@
                           }).html(data[i].title)
                         ),
                         ($('<p>').attr({
-                          class: 'card-text text-muted card-date fs-bold-700'
+                          class: 'card-text text-muted card-date'
                         })).append().html(data[i].date),
                         ($('<p>').attr({
                           class: 'card-text card-content font-work'

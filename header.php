@@ -2,7 +2,7 @@
     <div class ="row">
         <div class = "col-12">
             <nav class="main-nav">
-                <a href = "/chery_template/">
+                <a href = "http://chery.co.id/id" target="_blank">
                     <img src="/chery_template/assets/logo/Chery_logo.png"
                      class="logo">
                 </a>

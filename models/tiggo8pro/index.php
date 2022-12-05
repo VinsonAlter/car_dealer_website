@@ -876,16 +876,16 @@
         <div class="bg-wireframe w-100">
             <div class = "d-flex flex-column relative tiggo8-text-bottom centered models-font">
                 <h1 class="chery-red text-center mb-4">Tiggo 8 Pro</h1>
-                    <div class="d-flex gap-row mb-5 centered">
-                        <a class="col-9 col-md-6 my-3 button-padding border-rounded bg-light
-                                models-font btn" href="../../price-list/assets/brosur/Tiggo8Pro-brosur.pdf" target="_blank">
-                            <h5 class="text-center">Unduh Brosur</h5>
-                        </a>                     
-                        <a class="col-9 col-md-6 my-3 button-padding border-rounded bg-light
-                                models-font btn" href="../../price-list/assets/price-list/tiggo8pro-pricelist.png" target="_blank">
-                            <h5 class="text-center">Unduh Price List</h5>
-                        </a>
-                    </div>
+                <div class="d-flex gap-row mb-5 centered">
+                    <a class="col-9 col-md-6 my-3 button-padding border-rounded bg-light
+                            models-font btn" href="../../price-list/assets/brosur/Tiggo8Pro-brosur.pdf" target="_blank">
+                        <h5 class="text-center">Unduh Brosur</h5>
+                    </a>                     
+                    <a class="col-9 col-md-6 my-3 button-padding border-rounded bg-light
+                            models-font btn" href="../../price-list/assets/price-list/tiggo8pro-pricelist.png" target="_blank">
+                        <h5 class="text-center">Unduh Price List</h5>
+                    </a>
+                </div>
             </div>
         </div>
 
