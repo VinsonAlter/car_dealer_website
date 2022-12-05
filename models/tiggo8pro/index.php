@@ -25,6 +25,13 @@
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
             crossorigin="anonymous"
         />
+        <!-- Favicon Icon -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/chery_template/assets/logo/favicon-32x32.png"
+        />
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,21 +47,54 @@
             }
 
             .bg-wireframe {
-                background: url('assets/img/wireframe.jpg') no-repeat center center;
+                background: url('../../assets/img/wireframe.jpg') no-repeat center center;
                 object-fit: cover;
                 height: 500px;
                 width: 100%;
             }
 
             .tiggo8-text-bottom {
-                top: 42.5%;
+                top: 35%;
                 font-size: 3rem !important;
+            }
+
+            .border-rounded {
+                border-radius: 25px;
+                border: 2px solid grey;
+            }
+
+            .button-padding {
+                padding: .5rem .5rem;
+            }
+
+            .button-padding h5 {
+                padding: 0;
+                margin: 0;
+            }
+
+            .gap-row {
+                flex-wrap: nowrap !important;
+                gap: 2rem;
+            }
+
+            .border-rounded:hover {
+                background-color: rgb(192, 11, 32) !important;
+                color: #fff;
             }
 
             @media (max-width: 768px) {
                 .tiggo8-text-bottom {
+                    top: 30%;
                     font-size: 1.875rem !important;
                 } 
+                .gap-row {
+                    flex-wrap: wrap !important;
+                    gap: .125rem;
+                }
+
+                .button-padding h5 {
+                    font-size: calc(1rem + .3vw);
+                }
             }
         </style>
         
@@ -833,15 +873,27 @@
             </div>
         </div>
         
-        <div class="bg-wireframe relative">
-            <h1 class="models-font tiggo8-text-bottom relative chery-red text-center">Tiggo 8 Pro</h1>
+        <div class="bg-wireframe w-100">
+            <div class = "d-flex flex-column relative tiggo8-text-bottom centered models-font">
+                <h1 class="chery-red text-center mb-4">Tiggo 8 Pro</h1>
+                <div class="d-flex gap-row mb-5 centered">
+                    <a class="col-9 col-md-6 my-3 button-padding border-rounded bg-light
+                            models-font btn" href="../../price-list/assets/brosur/Tiggo8Pro-brosur.pdf" target="_blank">
+                        <h5 class="text-center">Unduh Brosur</h5>
+                    </a>                     
+                    <a class="col-9 col-md-6 my-3 button-padding border-rounded bg-light
+                            models-font btn" href="../../price-list/assets/price-list/tiggo8pro-pricelist.png" target="_blank">
+                        <h5 class="text-center">Unduh Price List</h5>
+                    </a>
+                </div>
+            </div>
         </div>
 
         <div class="relative mt-up-25">
             <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-exterior.jpg">
         </div>
         
-        <footer class="relative footer-border px-5 py-4">
+        <footer class="relative footer-border px-3 py-4">
             <?php readfile("../../footer.php"); ?>
         </footer>
 
@@ -872,7 +924,7 @@
             })
 
             $('.info-click').click(function(){
-            $(this).children('ul').addClass('visible-scroll-info');
+            $(this).children('ul').toggleClass('visible-scroll-info');
             $('.models-click').find('ul').removeClass('visible-scroll-model');
             $('.layanan-click').find('ul').removeClass('visible-scroll-layanan');
             })

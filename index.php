@@ -25,6 +25,19 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
         crossorigin="anonymous"
     />
+    <!-- Favicon Icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/chery_template/assets/logo/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/chery_template/assets/logo/favicon-32x32.png"
+    />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,7 +74,7 @@
             </div>
         </section>    
     </main>
-    <footer class="relative footer-border px-5 py-4">
+    <footer class="relative footer-border px-3 py-4">
         <?php readfile("footer.php"); ?>
     </footer>
 
@@ -102,10 +115,12 @@
         })
 
         $('.info-click').click(function(){
-          $(this).children('ul').addClass('visible-scroll-info');
+          $(this).children('ul').toggleClass('visible-scroll-info');
           $('.models-click').find('ul').removeClass('visible-scroll-model');
           $('.layanan-click').find('ul').removeClass('visible-scroll-layanan');
         })
+
+        // fetch json data for news letter 
 
         fetch('news.json')
             .then(function (response) {
@@ -117,20 +132,65 @@
             .catch(function (err) {
                 console.log('error: ' + err);
             });
+        
+        // dynamic JSON data append 
 
         function appendData(data) {
-
-            var img = document.getElementById('img');
-
-            var div = document.getElementsByClassName("user-img");
-
-            for (var i = 0; i < data.length; i++) {
-                $(div).eq(i).append(
-                  $('<img>').attr({
-                    class: 'card-img-top',
-                    src: data[i].img,
-                  })
-                )
+            var news = document.getElementsByClassName('news');
+            for (var i = 0; i < 3; i++) {
+                $($('<div>').attr({
+                  class: 'col col-news mb-3'
+                  }).append(
+                    $($('<div>').attr({
+                      class: 'card card-news text-dark mb-3 shadow-lg h-100'
+                    })).append(
+                      ($('<div>').attr({
+                        class: 'user-img'
+                      })).append(
+                      $('<img>').attr({
+                        class: 'card-img-top',
+                        src: data[i].img,
+                      })),   
+                      ($('<div>').attr({
+                        class: 'card-body'
+                      })).append(
+                        ($('<p>').attr({
+                          class: 'card-title'
+                        })).append(
+                          $('<h5>').attr({
+                            class: 'card-title font-work',
+                          }).html(data[i].title)
+                        ),
+                        ($('<p>').attr({
+                          class: 'card-text text-muted card-date'
+                        })).append().html(data[i].date),
+                        ($('<p>').attr({
+                          class: 'card-text card-content font-work'
+                        })).append().html(data[i].preview),
+                        $('<a>').attr({
+                          class: 'btn news-button text-center font-work',
+                          href: "/chery_template/berita/detail.php?title=" + data[i].slug
+                        }).html("Lebih lanjut...")
+                      )
+                    )
+                  )
+                ).appendTo(news);
+                // for (var i = 0; i < data.length; i++) {
+                // $(img).eq(i).append(
+                //   $('<img>').attr({
+                //     class: 'card-img-top',
+                //     src: data[i].img,
+                //   })
+                // );
+                // $(title).eq(i).prepend(
+                // $('<h5>').attr({
+                //   class: 'card-title font-work',
+                // }).html(data[i].title)
+                // );
+                // $(date).eq(i).append().html(data[i].date);
+                // $(content).eq(i).append().html(data[i].preview);
+                // // $(news).eq(i).attr('href', data[i].ref);
+                // $(news).eq(i).append().attr('href', "/chery_template/berita/detail.php?title=" + data[i].slug);
             }
         }
         

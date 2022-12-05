@@ -54,6 +54,22 @@ html,
         color:rgb(192, 11, 32);
       }
 
+      .button-padding {
+        padding: 2.5rem 2.5rem;
+      }
+
+      .mt-top-header {
+        margin-top: 120px;
+      }
+
+      .mr-4 {
+        margin-right: 1rem;
+      }
+
+      .mr-10 {
+        margin-right: 2.5rem;
+      }
+
       .ml-4 {
         margin-left: 1rem;
       }
@@ -71,12 +87,24 @@ html,
         margin-top: -25px;
       }
 
+      .mt-up-65 {
+        margin-top: -65px;
+      }
+
       .p-0 {
         padding: 0 !important;
       }
 
       .p-10 {
         padding: 2.5rem;
+      }
+
+      .pt-24 {
+        padding-top: 6rem; 
+      }
+
+      .pr-10 {
+        padding-right: 2.5rem;
       }
 
       .bg-black {
@@ -90,6 +118,18 @@ html,
 
       .text-center {
         text-align: center;
+      }
+
+      .text-justify {
+        text-align: justify;
+      }
+
+      .align-center {
+        align-self:center;
+      }
+
+      .centered-p {
+        margin: 0;
       }
 
       .centered {
@@ -115,6 +155,10 @@ html,
 
       .w-full {
         width: 100%;
+      }
+
+      .text-black {
+        color: #000;
       }
 
       .text-white {
@@ -170,10 +214,50 @@ html,
         font-size: 25px;
       }
 
+      .fs50-scaled {
+        font-size: 30px;
+      }
+
+      .border-red-48 {
+        border-bottom:5px solid rgb(192, 11, 32);
+        width: 12rem;
+      }
+
+      .border-red-80 {
+        border-bottom:5px solid rgb(192, 11, 32);
+        width: 20rem;
+      }
+
+      .border-red-100 {
+        border-bottom:5px solid rgb(192, 11, 32);
+        width: 25rem;
+      }
+
+      .border-left-red {
+        border-right: .275rem solid rgb(192, 11, 32);
+      }
+
+      .border-rounded {
+        border-radius: 25px;
+        border: 2px solid grey;
+      }
+
+      .row-gap-4 {
+        row-gap: 1rem;
+      }
+
       @media (min-width: 576px) {
         .fs40-scaled {
           font-size: 40px;
         }
+
+        .fs50-scaled {
+          font-size: 50px;
+        }
+      }
+
+      .fs-bold-400 {
+        font-weight: 400;
       }
 
       .fs-bold-700 {
@@ -679,6 +763,21 @@ html,
         
       }
 
+      /* News card part */
+      .card-news {
+        min-height: 200px !important;
+      }
+
+      .news-button {
+        margin-top: 5px;
+        color: #fff !important;
+        background-color: rgb(192, 11, 32) !important;
+        border: .125rem solid rgb(192, 11, 32);
+        border-radius: 0.5rem;
+        font-weight: 600 !important;
+        cursor: pointer;
+      }
+
       /* Dealer Card part */
       .card {
         border-radius: .5rem !important;
@@ -747,6 +846,12 @@ html,
         grid-template-rows: repeat(1, minmax(0, 1fr));
       }
 
+      .mobile-flex-column {
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+      }
+
       .footer-header {
         font-weight: 600;
         margin-bottom: 0.5rem !important;
@@ -767,11 +872,11 @@ html,
           height: 150px;
         }
         
-        .footer-wrapper {
+        /* .footer-wrapper {
           grid-template-rows: repeat(2, auto) !important;
-        }
+        } */
 
-        .footer-wrapper div:nth-of-type(2) {
+        /* .footer-wrapper div:nth-of-type(2) {
           order: 2;
         }
 
@@ -794,13 +899,13 @@ html,
 
         .footer-wrapper div:nth-of-type(7) {
           order: 7 !important;
-        }
+        } */
 
         .footer-wrapper > div {
-          padding-left: 7rem !important;
+          padding-left: 12rem !important;
         }
 
-        .footer-wrapper > div:nth-of-type(4) {
+        /* .footer-wrapper > div:nth-of-type(4) {
           padding-left: 4.5rem !important;
         }
 
@@ -814,7 +919,7 @@ html,
         
         .footer-wrapper > div:nth-of-type(7) {
           padding-left: 4.5rem !important;
-        }
+        } */
 
       }
 
@@ -841,10 +946,11 @@ html,
 
       .footer-desktop-padding {
         padding-right: 2rem !important;
-        padding-left: 4rem !important;
+        padding-left: 2rem !important;
       }
       
       @media (max-width: 1024px) {
+
         .desktop-nav {
           display: none;
         }
@@ -874,12 +980,21 @@ html,
           display: block !important;
         }
 
-        .footer-wrapper {
+        /* .footer-wrapper {
           display: grid;
           grid-auto-flow: column;
-          grid-template-rows: repeat(4, auto);
+          grid-template-rows: repeat(2, auto);
           row-gap: .25rem;
           column-gap: .5rem;
+        } */
+
+        .mobile-flex-column {
+          display:flex;
+          flex-direction: column;
+        }
+
+        .footer-wrapper {
+          display: flex;
         }
 
         .footer-wrapper div p a {
@@ -894,15 +1009,23 @@ html,
           padding-left: 1.25rem;
         }
 
-        .footer-wrapper > div:nth-of-type(odd) {
-          padding-left: .75rem;
-        }
-        
-        .footer-wrapper > div:nth-of-type(7) {
-          padding-left: 1.25rem ;
+        /* need to fix some change after commenting the styling */
+
+        /* .footer-wrapper > div:nth-of-type(4) {
+          padding-left: 3.5rem;
         }
 
-        .mb-none {
+        .footer-wrapper > div:nth-of-type(5) {
+          padding-left: 3.5rem;
+        }
+         */
+
+        /*
+        .footer-wrapper > div:nth-of-type(7) {
+          padding-left: 1.25rem ;
+        } */
+
+        /* .mb-none {
           display: none !important;
         }
 
@@ -911,24 +1034,26 @@ html,
         }
 
         .footer-wrapper div:nth-of-type(3) {
-          order: 7;
-        }
-
-        .footer-wrapper div:nth-of-type(4) {
           order: 3;
         }
 
-        .footer-wrapper div:nth-of-type(5) {
-          order: 6;
+        .footer-wrapper div:nth-of-type(4) {
+          order: 4;
         }
 
-        .footer-wrapper div:nth-of-type(6) {
+        .footer-wrapper div:nth-of-type(5) {
+          order: 5;
+        } */
+
+        /* Comment this part because some navs aren't use yet */
+
+        /* .footer-wrapper div:nth-of-type(6) {
           order: 4;
         }
 
         .footer-wrapper div:nth-of-type(7) {
           order: 5;
-        }
+        } */
 
         .footer-desktop-padding {
           padding-right: 0rem !important;

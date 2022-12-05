@@ -25,6 +25,19 @@
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
             crossorigin="anonymous"
         />
+        <!-- Favicon Icon -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/chery_template/assets/logo/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/chery_template/assets/logo/favicon-32x32.png"
+        />
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,6 +47,44 @@
         <link rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
+        <style>
+            .bg-wireframe {
+                background-image: url("../assets/img/wireframe.jpg");
+                background-size: cover;
+                background-repeat:no-repeat;
+                background-position:center;
+            }
+
+            .border-rounded {
+                border-radius: 25px;
+                border: 2px solid grey;
+            }
+
+            .button-padding {
+                padding: 2.5rem 2.5rem;
+            }
+
+            .gap-row {
+                flex-wrap: nowrap !important;
+                gap: 1.5em;
+            }
+
+            .border-rounded:hover {
+                background-color: rgb(192, 11, 32) !important;
+                color: #fff;
+            }
+
+            @media (max-width: 768px) {
+                .gap-row {
+                    flex-wrap: wrap !important;
+                }
+
+                h4 {
+                    font-size: calc(1rem + .3vw);
+                }
+            }
+        </style>
+
     </head>
 
     <body>
@@ -41,15 +92,35 @@
             <?php readfile("../header.php"); ?>
         </header>
 
-        <main>
-            <section>
-                <div>
-                    <?php require_once "../cars.php"; ?>
-                </div>
-            </section>
-        </main>
+        <section>
+            <div class = "bg-wireframe">
+                <div class="container " style="height:600px;">
+                    <div class="py-3 mt-5">
+                        <div class="container mt-5 pt-3">
+                            <h1 class="models-font fs50-scaled chery-red ">
+                                MODELS
+                            </h1>
+                        </div>
+                    </div>
 
-        <footer class="relative footer-border px-5 py-4">
+                    <div class="px-4">
+                        <div class="row gap-row mb-5">
+                            <a class="col-12 col-md-6 button-padding border-rounded bg-light
+                                    models-font btn" href="tiggo7pro/">
+                                <h4>Tiggo 7 Pro</h4>
+                            </a>
+                                
+                            <a class="col-12 col-md-6 button-padding border-rounded bg-light
+                                    models-font btn" href="tiggo8pro/">
+                                <h4>Tiggo 8 Pro</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="relative footer-border px-3 py-4">
             <?php readfile("../footer.php"); ?>
         </footer>
 
@@ -80,7 +151,7 @@
             })
 
             $('.info-click').click(function(){
-            $(this).children('ul').addClass('visible-scroll-info');
+            $(this).children('ul').toggleClass('visible-scroll-info');
             $('.models-click').find('ul').removeClass('visible-scroll-model');
             $('.layanan-click').find('ul').removeClass('visible-scroll-layanan');
             })

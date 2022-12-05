@@ -2,7 +2,7 @@
     <div class ="row">
         <div class = "col-12">
             <nav class="main-nav">
-                <a href = "/chery_template/">
+                <a href = "http://chery.co.id/id" target="_blank">
                     <img src="/chery_template/assets/logo/Chery_logo.png"
                      class="logo">
                 </a>
@@ -18,26 +18,26 @@
                         </ul>
                     </li>
                     <li class="scroll-to-section">
-                        <a href="javascript:void(0)">Price List</a>
+                        <a href="/chery_template/price-list/">Price List</a>
                     </li>
-                    <li class="scroll-to-section">
+                    <!-- <li class="scroll-to-section">
                         <a href="javascript:void(0)">Promo</a>
-                    </li>
-                    <li class="scroll-to-section layanan-click">
+                    </li> -->
+                    <!-- <li class="scroll-to-section layanan-click">
                         <a class="dropdown-icon">Layanan</a>
                         <ul class="sub-scroll-layanan">
                             <li class="sub-li"><a href="javascript:void(0)">Cari Dealer</a></li>
                             <li class="sub-li"><a href="javascript:void(0)">Sparepart</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                     <li class="scroll-to-section">
-                        <a href="#">Berita</a>
+                        <a href="/chery_template/berita/">Berita</a>
                     </li>
                     <li class="scroll-to-section info-click">
-                        <a href="javascript:void(0)" class="dropdown-icon">Tentang Kami</a>
+                        <a href="javascript:void(0)" class="dropdown-icon">Mengenal Chery</a>
                         <ul class="sub-scroll-info">
-                            <li class="sub-li"><a href="javascript:void(0)">With Chery with love</a></li>
-                            <li class="sub-li"><a href="javascript:void(0)">Tentang Chery</a></li>
+                            <li class="sub-li"><a href="/chery_template/about/chery-love.php">With Chery with love</a></li>
+                            <li class="sub-li"><a href="/chery_template/about/about-chery.php">Tentang Chery</a></li>
                         </ul>
                     </li>
                 </ul>
