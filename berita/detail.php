@@ -67,7 +67,7 @@
         <div class="mx-auto mt-top-header relative container">
             <nav aria-label="breadcrumb">
                 <ol class="px-2 breadcrumb">
-                    <li class="breadcrumb-item"><a href="/chery_template/berita/">Back</a></li>
+                    <li class="breadcrumb-item"><a href="../berita/">Kembali</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Berita</li>
                 </ol>
             </nav>

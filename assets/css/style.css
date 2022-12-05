@@ -66,6 +66,10 @@ html,
         margin-right: 1rem;
       }
 
+      .mr-10 {
+        margin-right: 2.5rem;
+      }
+
       .ml-4 {
         margin-left: 1rem;
       }
@@ -118,6 +122,10 @@ html,
 
       .text-justify {
         text-align: justify;
+      }
+
+      .align-center {
+        align-self:center;
       }
 
       .centered-p {
@@ -232,6 +240,10 @@ html,
       .border-rounded {
         border-radius: 25px;
         border: 2px solid grey;
+      }
+
+      .row-gap-4 {
+        row-gap: 1rem;
       }
 
       @media (min-width: 576px) {
@@ -834,6 +846,12 @@ html,
         grid-template-rows: repeat(1, minmax(0, 1fr));
       }
 
+      .mobile-flex-column {
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+      }
+
       .footer-header {
         font-weight: 600;
         margin-bottom: 0.5rem !important;
@@ -854,11 +872,11 @@ html,
           height: 150px;
         }
         
-        .footer-wrapper {
+        /* .footer-wrapper {
           grid-template-rows: repeat(2, auto) !important;
-        }
+        } */
 
-        .footer-wrapper div:nth-of-type(2) {
+        /* .footer-wrapper div:nth-of-type(2) {
           order: 2;
         }
 
@@ -881,13 +899,13 @@ html,
 
         .footer-wrapper div:nth-of-type(7) {
           order: 7 !important;
-        }
+        } */
 
         .footer-wrapper > div {
-          padding-left: 7rem !important;
+          padding-left: 12rem !important;
         }
 
-        .footer-wrapper > div:nth-of-type(4) {
+        /* .footer-wrapper > div:nth-of-type(4) {
           padding-left: 4.5rem !important;
         }
 
@@ -901,7 +919,7 @@ html,
         
         .footer-wrapper > div:nth-of-type(7) {
           padding-left: 4.5rem !important;
-        }
+        } */
 
       }
 
@@ -928,10 +946,11 @@ html,
 
       .footer-desktop-padding {
         padding-right: 2rem !important;
-        padding-left: 4rem !important;
+        padding-left: 2rem !important;
       }
       
       @media (max-width: 1024px) {
+
         .desktop-nav {
           display: none;
         }
@@ -961,12 +980,21 @@ html,
           display: block !important;
         }
 
-        .footer-wrapper {
+        /* .footer-wrapper {
           display: grid;
           grid-auto-flow: column;
           grid-template-rows: repeat(2, auto);
           row-gap: .25rem;
           column-gap: .5rem;
+        } */
+
+        .mobile-flex-column {
+          display:flex;
+          flex-direction: column;
+        }
+
+        .footer-wrapper {
+          display: flex;
         }
 
         .footer-wrapper div p a {
@@ -983,20 +1011,21 @@ html,
 
         /* need to fix some change after commenting the styling */
 
-        .footer-wrapper > div:nth-of-type(4) {
+        /* .footer-wrapper > div:nth-of-type(4) {
           padding-left: 3.5rem;
         }
 
         .footer-wrapper > div:nth-of-type(5) {
           padding-left: 3.5rem;
         }
-        
+         */
+
         /*
         .footer-wrapper > div:nth-of-type(7) {
           padding-left: 1.25rem ;
         } */
 
-        .mb-none {
+        /* .mb-none {
           display: none !important;
         }
 
@@ -1014,7 +1043,7 @@ html,
 
         .footer-wrapper div:nth-of-type(5) {
           order: 5;
-        }
+        } */
 
         /* Comment this part because some navs aren't use yet */
 
