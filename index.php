@@ -30,7 +30,13 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/chery_template/assets/logo/logo-chery-oriental-stars.png"
+      href="/chery_template/assets/logo/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/chery_template/assets/logo/favicon-32x32.png"
     />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

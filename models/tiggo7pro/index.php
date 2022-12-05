@@ -30,7 +30,13 @@
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/chery_template/assets/logo/logo-chery-oriental-stars.png"
+            href="/chery_template/assets/logo/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/chery_template/assets/logo/favicon-32x32.png"
         />
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +47,60 @@
         <link rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     
+        <style>
+           .bg-wireframe {
+                background: url('../../assets/img/wireframe.jpg') no-repeat center center;
+                object-fit: cover;
+                height: 500px;
+                width: 100%;
+            }
+
+            .tiggo7-text-bottom {
+                top: 35%;
+                font-size: 3rem !important;
+            }
+
+            .border-rounded {
+                border-radius: 25px;
+                border: 2px solid grey;
+            }
+
+            .button-padding {
+                padding: .5rem .5rem;
+            }
+
+            .button-padding h5 {
+                padding: 0;
+                margin: 0;
+            }
+
+            .gap-row {
+                flex-wrap: nowrap !important;
+                gap: 2rem;
+            }
+
+            .border-rounded:hover {
+                background-color: rgb(192, 11, 32) !important;
+                color: #fff;
+            }
+
+            @media (max-width: 768px) {
+                .tiggo7-text-bottom {
+                    top: 30%;
+                    font-size: 1.875rem !important;
+                } 
+                .gap-row {
+                    flex-wrap: wrap !important;
+                    gap: .125rem;
+                }
+
+                .button-padding h5 {
+                    font-size: calc(1rem + .3vw);
+                }
+            } 
+
+        </style>
+
     </head>
 
 
@@ -375,6 +435,21 @@
                     <source src="assets/video/T7Pro2.mp4" type="video/mp4">
                 </video>
                 <div class="playpause"></div>
+            </div>
+            <div class="bg-wireframe w-100">
+                <div class = "d-flex flex-column relative tiggo7-text-bottom centered models-font">
+                    <h1 class="chery-red text-center mb-4">Tiggo 7 Pro</h1>
+                        <div class="d-flex gap-row mb-5 centered">
+                            <a class="col-9 col-md-6 my-3 button-padding border-rounded bg-light
+                                    models-font btn" href="../../price-list/assets/brosur/Tiggo7Pro-brosur.pdf" target="_blank">
+                                <h5 class="text-center">Unduh Brosur</h5>
+                            </a>                     
+                            <a class="col-9 col-md-6 my-3 button-padding border-rounded bg-light
+                                    models-font btn" href="../../price-list/assets/price-list/tiggo7pro-pricelist.png" target="_blank">
+                                <h5 class="text-center">Unduh Price List</h5>
+                            </a>
+                        </div>
+                </div>
             </div>
         </div>
 
