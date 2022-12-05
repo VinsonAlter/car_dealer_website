@@ -50,8 +50,10 @@
 
         <style>
             .bg-wireframe {
-                background-image: url(assets/img/wireframe.jpg);
+                background-image: url("../assets/img/wireframe.jpg");
                 background-size: cover;
+                background-repeat:no-repeat;
+                background-position:center;
             }
 
             .border-rounded {
@@ -91,28 +93,29 @@
         <header class="header-area header-sticky">
             <?php readfile("../header.php"); ?>
         </header>
-
             <section>
-                <div class="container">
-                    <div class="py-3 mt-5">
-                        <div class="container mt-5 pt-3">
-                            <h1 class="models-font fs50-scaled chery-red ">
-                                MENGENAL CHERY
-                            </h1>
+                <div class = "bg-wireframe">
+                    <div class="container " style="height:600px;">
+                        <div class="py-3 mt-5">
+                            <div class="container mt-5 pt-3">
+                                <h1 class="models-font fs50-scaled chery-red ">
+                                    MENGENAL CHERY
+                                </h1>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="px-4">
-                        <div class="row gap-row mb-5">
-                            <a class="col-12 col-md-6 button-padding border-rounded bg-light
-                                    models-font btn" href="chery-love.php">
-                                <h4>With Chery With Love</h4>
-                            </a>
-                            
-                            <a class="col-12 col-md-6 button-padding border-rounded bg-light
-                                    models-font btn" href="about-chery.php">
-                                <h4>Tentang Chery</h4>
-                            </a>
+                        <div class="px-4">
+                            <div class="row gap-row mb-5">
+                                <a class="col-12 col-md-6 button-padding border-rounded bg-light
+                                        models-font btn" href="chery-love.php">
+                                    <h4>With Chery With Love</h4>
+                                </a>
+                                
+                                <a class="col-12 col-md-6 button-padding border-rounded bg-light
+                                        models-font btn" href="about-chery.php">
+                                    <h4>Tentang Chery</h4>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
