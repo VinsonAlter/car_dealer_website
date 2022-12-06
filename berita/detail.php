@@ -99,7 +99,7 @@
         </section>
 
         <section class="relative mt-5">
-            <?php require_once '../news.php'?>
+            <?php require_once 'berita.php'?>
         </section>
 
         <footer class="relative footer-border px-3 py-4">
@@ -174,8 +174,6 @@
                         var totalNews = 3;
                         var showFrom = slicedData;
                         var showTo = showFrom + totalNews;
-                        // var showBerita = (data[showFrom].id);
-                        // var showBeritaTo = (data[showTo].id);
                         if(showFrom === 1) {
                             for(var j = showFrom; j <= totalNews; j++){
                                 $($('<div>').attr({
@@ -217,7 +215,7 @@
                                 ).appendTo(news);
                             }
                         }
-                        
+
                         for (var i = showFrom - 2; i < totalNews + showFrom - 1; i++) {
                             
                             if(data[i].id !== data[showFrom - 1].id) {
@@ -265,15 +263,6 @@
                         
                 }
 
-
-                // for (var i = 0; i < data.length; i++) {
-                //     if(data[i].slug === get_title) {
-                //         $(title).append().html(data[i].title);
-                //         $(date).append().html(data[i].date);
-                //         $(img).attr("src", data[i].img);
-                //         $(content).append().html(data[i].content);
-                //     }  
-                // }
             }
         
         })

@@ -137,7 +137,7 @@
                 </div>
 
                 <div class="relative mt-3">
-                    <img class="img-fluid" src="assets/img/withcherywithlove.jpeg">
+                    <img class="w-100" src="assets/img/withcherywithlove.jpeg">
                 </div>
 
                 <div class="bg-blue relative">
