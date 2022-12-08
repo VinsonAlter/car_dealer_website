@@ -5,7 +5,7 @@
     <div class="row row-cols-1 row-cols-md-3 mt-4">
         <div class="col ">
             <div class="card text-dark mb-3 shadow-lg border-none">
-                <img class="card-img" src="/chery_template/assets/img/opening-stamp.png">
+                <img class="card-img" src="<?= BASE_URL; ?>assets/img/opening-stamp.png">
                 <div class="opening-stamp">
                     <div class="card-header bg-transparent">
                         <p class="fs-bold-700 card-title-font">PT. MEDAN ORIENTAL STARS</p>
@@ -29,7 +29,7 @@
         </div>
         <div class="col">
             <div class="card text-dark mb-3 shadow-lg border-none">
-                <img class="card-img" src="/chery_template/assets/img/opening-stamp.png">
+                <img class="card-img" src="<?= BASE_URL; ?>assets/img/opening-stamp.png">
                 <div class="opening-stamp">
                     <div class="card-header bg-transparent">
                         <p class="fs-bold-700 card-title-font">PT. MEDAN ORIENTAL STARS</p>
@@ -53,7 +53,7 @@
         </div>
         <div class="col">
             <div class="card text-dark mb-3 shadow-lg border-none">
-                <img class="card-img" src="/chery_template/assets/img/opening-stamp.png">
+                <img class="card-img" src="<?= BASE_URL; ?>assets/img/opening-stamp.png">
                 <div class="opening-stamp">
                     <div class="card-header bg-transparent">
                         <p class="fs-bold-700 card-title-font">PT. RIAU ORIENTAL STAR</p>

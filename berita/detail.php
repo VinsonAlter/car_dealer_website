@@ -1,4 +1,5 @@
 <?php
+    require_once __DIR__ . '/../config.php';
     $title = $_GET['title'];
 ?>
 
@@ -42,13 +43,13 @@
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/chery_template/assets/logo/favicon-32x32.png"
+            href="../assets/logo/favicon-32x32.png"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/chery_template/assets/logo/favicon-32x32.png"
+            href="../assets/logo/favicon-32x32.png"
         />
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,7 +76,7 @@
 
     <body>
         <header class="header-area header-sticky">
-            <?php readfile("../header.php"); ?>
+            <?php require_once ("../header.php"); ?>
         </header>
         
         <div class="mx-auto mt-top-header relative container">
@@ -107,11 +108,11 @@
         </section>
 
         <section class="relative mt-5">
-            <?php require_once 'berita.php'?>
+            <?php require_once 'berita.php'; ?>
         </section>
 
         <footer class="relative footer-border px-3 py-4">
-            <?php readfile("../footer.php"); ?>
+            <?php require_once ("../footer.php"); ?>
         </footer>
 
         <!-- jQuery -->
@@ -215,7 +216,7 @@
                                             })).append().html(data[j].preview),
                                             $('<a>').attr({
                                             class: 'btn news-button text-center font-work',
-                                            href: "/chery_template/berita/detail.php?title=" + data[j].slug
+                                            href: "<?= BASE_URL; ?>berita/detail.php?title=" + data[j].slug
                                             }).html("Lebih lanjut...")
                                         )
                                         )
@@ -258,7 +259,7 @@
                                             })).append().html(data[i].preview),
                                             $('<a>').attr({
                                             class: 'btn news-button text-center font-work',
-                                            href: "/chery_template/berita/detail.php?title=" + data[i].slug
+                                            href: "<?= BASE_URL; ?>berita/detail.php?title=" + data[i].slug
                                             }).html("Lebih lanjut...")
                                         )
                                         )

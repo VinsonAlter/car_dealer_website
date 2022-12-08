@@ -13,7 +13,7 @@ html,
       }
 
       .bg-section {
-        background: url('/chery_template/assets/img/banner-desktop.png') no-repeat center center;
+        background: url('/assets/img/banner-desktop.png') no-repeat center center;
         background-size: cover;
         opacity: 1;
         background-blend-mode: darken;
@@ -1139,7 +1139,7 @@ html,
       
       /* the pause button */
       .playpause {
-          background-image:url('/chery_template/models/tiggo7pro/assets/img/play_video.png');
+          background-image:url('/models/tiggo7pro/assets/img/play_video.png');
           background-repeat:no-repeat;
           width:100px;
           height:100px;

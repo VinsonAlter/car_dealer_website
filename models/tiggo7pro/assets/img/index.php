@@ -1,3 +1,3 @@
 <?php
-    header("Location:/chery_template/");
+    header("Location:/");
 ?>

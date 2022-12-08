@@ -1,3 +1,6 @@
+<?php
+    require_once __DIR__ . '/../../config.php';
+?>
 <!-- Tiggo 8 Pro Pages -->
 <!DOCTYPE html>
 <html lang="id">
@@ -48,7 +51,13 @@
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/chery_template/assets/logo/favicon-32x32.png"
+            href="../../assets/logo/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="../../assets/logo/favicon-32x32.png"
         />
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -121,7 +130,7 @@
     <body>
 
         <header class="header-area header-sticky">
-            <?php readfile("../../header.php"); ?>
+            <?php require_once ("../../header.php"); ?>
         </header>
 
         <div class="relative mt-5">
@@ -912,7 +921,7 @@
         </div>
         
         <footer class="relative footer-border px-3 py-4">
-            <?php readfile("../../footer.php"); ?>
+            <?php require_once ("../../footer.php"); ?>
         </footer>
 
         <!-- jQuery -->
