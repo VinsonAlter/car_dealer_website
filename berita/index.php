@@ -62,7 +62,7 @@
             .light-theme a,
             .light-theme .current,
             .light-them span {
-                padding: .125rem .5rem;
+                padding: .225rem .625rem;
             }
         </style>
 

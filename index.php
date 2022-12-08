@@ -3,7 +3,7 @@
 <html lang="id">
   <head>
     <meta charset="utf-8"/>
-    <title>Chery Main Page</title>
+    <title>Chery Medan | Chery Oriental Group</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
