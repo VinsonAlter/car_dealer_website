@@ -3,11 +3,21 @@
 <html lang="id">
     <head>
         <meta charset="utf-8">
-        <title>About Chery Page</title>
+        <title>Tentang Chery</title>
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
         />
+        <meta name="keyword" content="Tentang Chery"/>
+        <meta name="description" content="Chery adalah brand otomotif di kelas premium yang sudah melayani lebih dari 10 juta 
+                                            pelanggan di seluruh dunia dengan tagline 'Fun to Drive'."/>
+        <meta name="robots" content="index, follow"/>
+        <meta property="og:site_name" content="Tentang Chery" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://cheryorientalgroup.co.id/about/about-chery.php" />
+        <meta property="og:title" content="Tentang Chery" />
+        <meta property="og:description" content="Chery adalah brand otomotif di kelas premium yang sudah melayani lebih dari 10 juta 
+                                            pelanggan di seluruh dunia dengan tagline 'Fun to Drive'."/>
         <!-- Link Swiper's CSS -->
         <link
             rel="stylesheet"

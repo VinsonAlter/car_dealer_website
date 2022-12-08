@@ -8,7 +8,25 @@
             name="viewport"
             content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
         />
-        <!-- Link Swiper's CSS -->
+        <meta name="keyword" content="Tiggo 7 Pro, Tiggo 7 Pro Medan, Tiggo 7 Pro Pekanbaru"/>
+        <meta name="description" content="Chery Tiggo 7 Pro 
+                                            memiliki keunggulan futuristik seperti ADAS (Advanced Driver Assistance System), 
+                                            360 camera dengan surround view, Chery intelligent Voice Assistant, dan 
+                                            panoramic sunroof ditambah sinergi antara desain, brand prestisius, 
+                                            dan harga terjangkau, 
+                                            membuat mobil Chery sangat relevan untuk Anda miliki."/>
+        <meta name="robots" content="index, follow"/>
+        <meta property="og:site_name" content="Chery Tiggo 7 Pro" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://cheryorientalgroup.co.id/models/tiggo7pro/" />
+        <meta property="og:title" content="Chery Tiggo 7 Pro" />
+        <meta property="og:description" content="Chery Tiggo 7 Pro 
+                                            memiliki keunggulan futuristik seperti ADAS (Advanced Driver Assistance System), 
+                                            360 camera dengan surround view, Chery intelligent Voice Assistant, dan 
+                                            panoramic sunroof ditambah sinergi antara desain, brand prestisius, 
+                                            dan harga terjangkau, 
+                                            membuat mobil Chery sangat relevan untuk Anda miliki."/> 
+        <!-- Link Swiper's CSS -->  
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
@@ -46,7 +64,7 @@
         <!-- Font Awesome Version 6 Plugins -->
         <link rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    
+        
         <style>
            .bg-wireframe {
                 background: url('../../assets/img/wireframe.jpg') no-repeat center center;

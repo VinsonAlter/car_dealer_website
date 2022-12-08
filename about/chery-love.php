@@ -3,11 +3,19 @@
 <html lang="id">
     <head>
         <meta charset="utf-8">
-        <title>About Chery Page</title>
+        <title>With Chery With Love</title>
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
         />
+        <meta name="keyword" content="With Chery With Love, gerakan WCWL"/>
+        <meta name="description" content="With Chery With Love adalah gerakan global yang dimulai dari grup pemilik Chery di seluruh dunia. Nantikan acara menarik, gathering dan banyak lagi yang akan datang."/>
+        <meta name="robots" content="index, follow"/>
+        <meta property="og:site_name" content="With Chery With Love" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://cheryorientalgroup.co.id/about/chery-love.php" />
+        <meta property="og:title" content="With Chery With Love" />
+        <meta property="og:description" content="With Chery With Love adalah gerakan global yang dimulai dari grup pemilik Chery di seluruh dunia. Nantikan acara menarik, gathering dan banyak lagi yang akan datang."/>
         <!-- Link Swiper's CSS -->
         <link
             rel="stylesheet"

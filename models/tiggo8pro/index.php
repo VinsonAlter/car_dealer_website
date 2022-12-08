@@ -8,6 +8,24 @@
             name="viewport"
             content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
         />
+        <meta name="keyword" content="Tiggo 8 Pro, Tiggo 8 Pro Medan, Tiggo 8 Pro Pekanbaru"/>
+        <meta name="description" content="Chery Tiggo 8 Pro 
+                                            memiliki keunggulan futuristik seperti ADAS (Advanced Driver Assistance System), 
+                                            360 camera dengan surround view, Chery intelligent Voice Assistant, dan 
+                                            panoramic sunroof ditambah sinergi antara desain, brand prestisius, 
+                                            dan harga terjangkau, 
+                                            membuat mobil Chery sangat relevan untuk Anda miliki."/>
+        <meta name="robots" content="index, follow"/>
+        <meta property="og:site_name" content="Chery Tiggo 8 Pro" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://cheryorientalgroup.co.id/models/tiggo7pro/" />
+        <meta property="og:title" content="Chery Tiggo 8 Pro" />
+        <meta property="og:description" content="Chery Tiggo 8 Pro 
+                                            memiliki keunggulan futuristik seperti ADAS (Advanced Driver Assistance System), 
+                                            360 camera dengan surround view, Chery intelligent Voice Assistant, dan 
+                                            panoramic sunroof ditambah sinergi antara desain, brand prestisius, 
+                                            dan harga terjangkau, 
+                                            membuat mobil Chery sangat relevan untuk Anda miliki."/>
         <!-- Link Swiper's CSS -->
         <link
             rel="stylesheet"
