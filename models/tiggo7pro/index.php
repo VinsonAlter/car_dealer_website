@@ -238,7 +238,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo7Pro-engine.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo7Pro-engine.jpg" 
                             alt="Tiggo 7 Pro engine">
                     </div>
                 </div>
@@ -260,7 +260,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo7Pro-chassis.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo7Pro-chassis.jpg" 
                             alt="Tiggo 7 Pro chassis">
                     </div>
                 </div>
@@ -293,7 +293,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo7Pro-voice-assistant.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo7Pro-voice-assistant.jpg" 
                             alt="Tiggo 7 Pro voice assistant">
                     </div>
                 </div>
@@ -313,7 +313,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo7Pro-wireless-charger.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo7Pro-wireless-charger.jpg" 
                             alt="Tiggo 7 Pro wireless charger">
                     </div>
                 </div>
@@ -332,7 +332,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo7Pro-driving-assist.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo7Pro-driving-assist.jpg" 
                             alt="Tiggo 7 Pro driving assistants">
                     </div>
                 </div>
@@ -352,7 +352,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo7Pro-panel-console.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo7Pro-panel-console.jpg" 
                             alt="Tiggo 7 Pro panel console">
                     </div>
                 </div>
@@ -368,7 +368,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo7Pro-dynamic-interior.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo7Pro-dynamic-interior.jpg" 
                             alt="Tiggo 7 Pro dynamic tech interior">
                     </div>
                 </div>
@@ -388,7 +388,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo7Pro-pano-cam.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo7Pro-pano-cam.jpg" 
                             alt="Tiggo 7 Pro 360 HD Panoramic Camera">
                     </div>
                 </div>
@@ -406,7 +406,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo7Pro-dual-ac.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo7Pro-dual-ac.jpg" 
                             alt="Tiggo 7 Pro 360 pendingin udara ganda">
                     </div>
                 </div>
@@ -425,7 +425,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo7Pro-airbags.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo7Pro-airbags.jpg" 
                             alt="Tiggo 7 Pro airbags">
                     </div>
                 </div>

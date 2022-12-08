@@ -17,12 +17,16 @@ html,
         background-size: cover;
         opacity: 1;
         background-blend-mode: darken;
-        background-color: rgb(192, 11, 32);
+        background-color: rgba(2, 18, 243, 0.5);
       }
 
       .bg-blue {
         opacity: 1;
         background-color: rgb(17 24 39);
+      }
+
+      .bg-transparent {
+        background-color: transparent !important;
       }
 
       @font-face {
@@ -157,6 +161,10 @@ html,
         width: 100%;
       }
 
+      .opacity-5 {
+        opacity: 0.5;
+      }
+
       .text-black {
         color: #000;
       }
@@ -216,6 +224,10 @@ html,
 
       .fs50-scaled {
         font-size: 30px;
+      }
+
+      .border-none {
+        border: 0 !important;
       }
 
       .border-red-48 {
@@ -831,6 +843,17 @@ html,
         padding: 0;
         font-family: 'Work Sans', sans-serif;
         font-size: 15px; 
+      }
+
+      /* Opening Stamp */
+      .opening-stamp {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 0 !important;
+        border-radius: calc(0.25rem - 1px);
       }
 
       /* Footer Part */

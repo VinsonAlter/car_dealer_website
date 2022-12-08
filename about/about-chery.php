@@ -168,7 +168,7 @@
                             </p>
                         </div>
                         <div class="mt-5">
-                            <img class="img-fluid lazyload" data-src="assets/img/chery-joint.jpeg"> 
+                            <img class="w-100 lazyload" data-src="assets/img/chery-joint.jpeg"> 
                         </div>
                     </div>
                 </div>

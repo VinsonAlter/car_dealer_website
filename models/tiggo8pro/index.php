@@ -107,7 +107,7 @@
         </header>
 
         <div class="relative mt-5">
-            <img class="img-fluid" src="assets/img/Tiggo8Pro.jpg">
+            <img class="w-100" src="assets/img/Tiggo8Pro.jpg">
         </div>
 
         <div class="relative mt-up-8">
@@ -255,7 +255,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-interior.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-interior.jpg" 
                             alt="Tiggo 8 Pro Interior">
                     </div>
                 </div>
@@ -278,7 +278,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-luxury-seat.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-luxury-seat.jpg" 
                             alt="Tiggo 8 Pro Luxury Seats">
                     </div>
                 </div>
@@ -299,7 +299,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-spacious-cabin.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-spacious-cabin.jpg" 
                             alt="Tiggo 8 Pro spacious cabin">
                     </div>
                 </div>
@@ -319,7 +319,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-air-conditioner.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-air-conditioner.jpg" 
                             alt="Tiggo 8 Pro Dual Zone Automatic Air Conditioner">
                     </div>
                 </div>
@@ -341,7 +341,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-air-purify.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-air-purify.jpg" 
                             alt="Tiggo 8 Pro Air Purification">
                     </div>
                 </div>
@@ -362,7 +362,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-ambient-light.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-ambient-light.jpg" 
                             alt="Tiggo 8 Pro Multi Color Ambient Light">
                     </div>
                 </div>
@@ -383,7 +383,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-steering-wheel.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-steering-wheel.jpg" 
                             alt="Tiggo 8 Pro Leather Steering Wheel">
                     </div>
                 </div>
@@ -403,7 +403,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-spacious-boot.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-spacious-boot.jpg" 
                             alt="Tiggo 8 Pro Flexible and Spacious Boot">
                     </div>
                 </div>
@@ -596,7 +596,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-engine.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-engine.jpg" 
                             alt="Tiggo 8 Pro engine">
                     </div>
                 </div>
@@ -618,7 +618,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-chassis.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-chassis.jpg" 
                             alt="Tiggo 8 Pro chassis">
                     </div>
                 </div>
@@ -639,7 +639,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-EPS.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-EPS.jpg" 
                             alt="Tiggo 8 Pro EPS">
                     </div>
                 </div>
@@ -658,7 +658,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-auto-start-stop.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-auto-start-stop.jpg" 
                             alt="Tiggo 8 Pro Auto Start Stop">
                     </div>
                 </div>
@@ -681,7 +681,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-NVH.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-NVH.jpg" 
                             alt="Tiggo 8 Pro NVH Levels">
                     </div>
                 </div>
@@ -845,7 +845,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-BSD.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-BSD.jpg" 
                             alt="Tiggo 8 Pro Blind Spot Detection">
                     </div>
                 </div>
@@ -866,7 +866,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-tail.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-tail.jpg" 
                             alt="Tiggo 8 Pro Tail Door">
                     </div>
                 </div>
@@ -890,7 +890,7 @@
         </div>
 
         <div class="relative mt-up-25">
-            <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-exterior.jpg">
+            <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-exterior.jpg">
         </div>
         
         <footer class="relative footer-border px-3 py-4">
