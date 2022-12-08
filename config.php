@@ -6,4 +6,4 @@
 		$uri = 'http://';
 	}
 	$uri .= $_SERVER['HTTP_HOST'];
-	define ('BASE_URL', $uri.'/cheryorientalgroup');
+	define ('BASE_URL', $uri.'/chery_template/');
