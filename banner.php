@@ -33,9 +33,9 @@
         <div class="swiper-slide">
             <picture>
                 <source media="(min-width: 920px)" 
-                    srcset="assets/img/banner-desktop.png">
+                    srcset="assets/img/opening-banner.png">
                 <img src="assets/img/banner-mobile.png" 
-                    alt="New Dealer Mobil Chery Coming Soon" class="bg-img">
+                    alt="Dealer Mobil Chery Opening Soon di Medan dan Pekanbaru" class="bg-img">
             </picture>
         </div>
         <div class="swiper-slide">

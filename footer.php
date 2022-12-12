@@ -1,14 +1,14 @@
 <!-- <div class="d-lg-none text-center px-3 py-3">
-    <a href = "/chery_template/">
-        <img src="/chery_template/assets/logo/logo chery oriental stars.png" class="footer-logo-small">
+    <a href = "<?= BASE_URL; ?>">
+        <img src="<?= BASE_URL; ?>assets/logo/logo chery oriental stars.png" class="footer-logo-small">
     </a>
 </div> -->
-<div class="row mx-auto py-3 footer-wrapper footer-desktop-padding">
+<div class="row container mx-auto py-3 footer-wrapper footer-desktop-padding">
     <div class="col-md-4 col-6 d-flex no-padding mr-sm-10">
         <div class="d-flex flex-column row-gap-4">
-            <a href = "/chery_template/">
+            <a href = "<?= BASE_URL; ?>">
                 <div class="d-flex flex-column centered row-gap-4">
-                    <img src="/chery_template/assets/logo/logo chery oriental stars.png" class="footer-logo-small">
+                    <img src="<?= BASE_URL; ?>assets/logo/logo chery oriental stars.png" class="footer-logo-small">
                     <p class="text-center fs-bold-700 card-title-font">MEDAN ORIENTAL STARS</p>
                 </div>
             </a>
@@ -40,20 +40,20 @@
     <div class="col-md-8 col-6 mobile-flex-column">
         <div class="d-flex flex-column no-padding">
             <p class="footer-header">
-                <a href="/chery_template/models/">Models</a>
+                <a href="<?= BASE_URL; ?>models/">Models</a>
             </p>
             <ul>
                 <li>
-                    <a href="/chery_template/models/tiggo7pro/">Tiggo 7 Pro</a>
+                    <a href="<?= BASE_URL; ?>models/tiggo7pro/">Tiggo 7 Pro</a>
                 </li>
                 <li>
-                    <a href="/chery_template/models/tiggo8pro/">Tiggo 8 Pro</a>
+                    <a href="<?= BASE_URL; ?>models/tiggo8pro/">Tiggo 8 Pro</a>
                 </li>
             </ul>
         </div>
         <div class="d-flex flex-column no-padding">
             <p class="footer-header">
-                <a href="/chery_template/price-list/">Price List</a>
+                <a href="<?= BASE_URL; ?>price-list/">Price List</a>
             </p>
         </div>
         <!-- <div class="d-flex flex-column no-padding">
@@ -76,21 +76,46 @@
         </div> -->
         <div class="d-flex flex-column no-padding">
             <p class="footer-header">
-                <a href="/chery_template/berita/">Berita</a>
+                <a href="<?= BASE_URL; ?>berita/">Berita</a>
             </p>
         </div>
         <div class="d-flex flex-column no-padding">
             <p class="footer-header">
-                <a href="/chery_template/about/">Mengenal Chery</a>
+                <a href="<?= BASE_URL; ?>about/">Mengenal Chery</a>
             </p>
             <ul>
                 <li>
-                    <a href="/chery_template/about/chery-love.php">With Chery with love</a>
+                    <a href="<?= BASE_URL; ?>about/chery-love.php">With Chery with love</a>
                 </li>
                 <li>
-                    <a href="/chery_template/about/about-chery.php">Tentang Chery</a>
+                    <a href="<?= BASE_URL; ?>about/about-chery.php">Tentang Chery</a>
                 </li>
-            </ul>   
+            </ul>
+        </div>
+    </div>
+    <div class="copyright text-center">
+        © 2022 Chery Oriental Group. All rights reserved
+    </div>
+</div>
+<div class="container-fluid media-mobile">
+    <div class="row work-font text-white cp">
+        <div class="col-4 text-center">
+            <i class="fas fa-dollar-sign"></i>
+            <p class="p-0 m-0 fs-bold-600">
+                Price List
+            </p>
+        </div>
+        <div class="col-4 text-center">
+            <i class="fas fa-book-reader"></i>
+            <p class="p-0 m-0 fs-bold-600">
+                Brosur
+            </p>
+        </div>
+        <div class="col-4 text-center">
+            <i class="fas fa-comments"></i>
+            <p class="p-0 m-0 fs-bold-600">
+                Contact Us
+            </p>
         </div>
     </div>
 </div>
@@ -114,6 +139,4 @@
         </li>
     </ul>
 </div> -->
-<div class="copyright text-center">
-    © 2022 Chery Oriental Group. All rights reserved
-</div>
+

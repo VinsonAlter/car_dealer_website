@@ -1,14 +1,35 @@
+<?php
+    require_once __DIR__ .'/../../config.php';
+?>
 <!-- Tiggo 7 Pro Pages -->
 <!DOCTYPE html>
 <html lang="id">
     <head>
         <meta charset="utf-8"/>
-        <title>Chery Tiggo 7 Pro Homepage</title>
+        <title>Chery Tiggo 7 Pro</title>
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
         />
-        <!-- Link Swiper's CSS -->
+        <meta name="keyword" content="Tiggo 7 Pro, Tiggo 7 Pro Medan, Tiggo 7 Pro Pekanbaru"/>
+        <meta name="description" content="Chery Tiggo 7 Pro 
+                                            memiliki keunggulan futuristik seperti ADAS (Advanced Driver Assistance System), 
+                                            360 camera dengan surround view, Chery intelligent Voice Assistant, dan 
+                                            panoramic sunroof ditambah sinergi antara desain, brand prestisius, 
+                                            dan harga terjangkau, 
+                                            membuat mobil Chery sangat relevan untuk Anda miliki."/>
+        <meta name="robots" content="index, follow"/>
+        <meta property="og:site_name" content="Chery Tiggo 7 Pro" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://cheryorientalgroup.co.id/models/tiggo7pro/" />
+        <meta property="og:title" content="Chery Tiggo 7 Pro" />
+        <meta property="og:description" content="Chery Tiggo 7 Pro 
+                                            memiliki keunggulan futuristik seperti ADAS (Advanced Driver Assistance System), 
+                                            360 camera dengan surround view, Chery intelligent Voice Assistant, dan 
+                                            panoramic sunroof ditambah sinergi antara desain, brand prestisius, 
+                                            dan harga terjangkau, 
+                                            membuat mobil Chery sangat relevan untuk Anda miliki."/> 
+        <!-- Link Swiper's CSS -->  
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
@@ -30,13 +51,13 @@
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/chery_template/assets/logo/favicon-32x32.png"
+            href="../../assets/logo/favicon-32x32.png"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/chery_template/assets/logo/favicon-32x32.png"
+            href="../../assets/logo/favicon-32x32.png"
         />
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,7 +67,7 @@
         <!-- Font Awesome Version 6 Plugins -->
         <link rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    
+        
         <style>
            .bg-wireframe {
                 background: url('../../assets/img/wireframe.jpg') no-repeat center center;
@@ -84,6 +105,11 @@
                 color: #fff;
             }
 
+            #tiggo7-iframe {
+                width: 100%;
+                height: 800px;
+            }
+
             @media (max-width: 768px) {
                 .tiggo7-text-bottom {
                     top: 30%;
@@ -97,6 +123,10 @@
                 .button-padding h5 {
                     font-size: calc(1rem + .3vw);
                 }
+
+                #tiggo7-iframe {
+                    height: 350px;
+                }   
             } 
 
         </style>
@@ -107,7 +137,7 @@
     <body>
 
         <header class="header-area header-sticky">
-            <?php readfile("../../header.php"); ?>
+            <?php require_once ("../../header.php"); ?>
         </header>
 
         <div class="relative mt-5">
@@ -116,9 +146,9 @@
             </video>
             <div class="playpause"></div>
         </div>
-        <!-- This cause ultra lag problem, comment this out first if you want to edit this page -->
+        <!-- Tiggo 7 Pro 360 -->
         <div class="relative mt-up-10">
-            <iframe seamless="seamless" title="chery" width="100%" height="800px" src="https://360.chery.co.id/tiggo7pro/"></iframe>
+            <iframe seamless="seamless" title="chery" id="tiggo7-iframe" width="100%" height="800px" src="https://360.chery.co.id/tiggo7pro/"></iframe>
         </div>
         <div class="relative mt-up-8">
             <!-- Desktop Tab View -->
@@ -238,7 +268,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo7Pro-engine.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo7Pro-engine.jpg" 
                             alt="Tiggo 7 Pro engine">
                     </div>
                 </div>
@@ -260,7 +290,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo7Pro-chassis.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo7Pro-chassis.jpg" 
                             alt="Tiggo 7 Pro chassis">
                     </div>
                 </div>
@@ -293,7 +323,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo7Pro-voice-assistant.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo7Pro-voice-assistant.jpg" 
                             alt="Tiggo 7 Pro voice assistant">
                     </div>
                 </div>
@@ -313,7 +343,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo7Pro-wireless-charger.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo7Pro-wireless-charger.jpg" 
                             alt="Tiggo 7 Pro wireless charger">
                     </div>
                 </div>
@@ -332,7 +362,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo7Pro-driving-assist.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo7Pro-driving-assist.jpg" 
                             alt="Tiggo 7 Pro driving assistants">
                     </div>
                 </div>
@@ -352,7 +382,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo7Pro-panel-console.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo7Pro-panel-console.jpg" 
                             alt="Tiggo 7 Pro panel console">
                     </div>
                 </div>
@@ -368,7 +398,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo7Pro-dynamic-interior.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo7Pro-dynamic-interior.jpg" 
                             alt="Tiggo 7 Pro dynamic tech interior">
                     </div>
                 </div>
@@ -388,7 +418,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo7Pro-pano-cam.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo7Pro-pano-cam.jpg" 
                             alt="Tiggo 7 Pro 360 HD Panoramic Camera">
                     </div>
                 </div>
@@ -406,7 +436,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo7Pro-dual-ac.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo7Pro-dual-ac.jpg" 
                             alt="Tiggo 7 Pro 360 pendingin udara ganda">
                     </div>
                 </div>
@@ -425,7 +455,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo7Pro-airbags.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo7Pro-airbags.jpg" 
                             alt="Tiggo 7 Pro airbags">
                     </div>
                 </div>
@@ -454,7 +484,7 @@
         </div>
 
         <footer class="relative footer-border mt-up-8 px-3 py-4">
-            <?php readfile("../../footer.php"); ?>
+            <?php require_once ("../../footer.php"); ?>
         </footer>
 
         <!-- jQuery -->

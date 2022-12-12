@@ -1,13 +1,24 @@
+<?php
+    require_once __DIR__ . '/../config.php'; 
+?>
 <!-- Chery Love pages -->
 <!DOCTYPE html>
 <html lang="id">
     <head>
         <meta charset="utf-8">
-        <title>About Chery Page</title>
+        <title>With Chery With Love</title>
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
         />
+        <meta name="keyword" content="With Chery With Love, gerakan WCWL"/>
+        <meta name="description" content="With Chery With Love adalah gerakan global yang dimulai dari grup pemilik Chery di seluruh dunia. Nantikan acara menarik, gathering dan banyak lagi yang akan datang."/>
+        <meta name="robots" content="index, follow"/>
+        <meta property="og:site_name" content="With Chery With Love" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://cheryorientalgroup.co.id/about/chery-love.php" />
+        <meta property="og:title" content="With Chery With Love" />
+        <meta property="og:description" content="With Chery With Love adalah gerakan global yang dimulai dari grup pemilik Chery di seluruh dunia. Nantikan acara menarik, gathering dan banyak lagi yang akan datang."/>
         <!-- Link Swiper's CSS -->
         <link
             rel="stylesheet"
@@ -37,13 +48,13 @@
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/chery_template/assets/logo/favicon-32x32.png"
+            href="../assets/logo/favicon-32x32.png"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/chery_template/assets/logo/favicon-32x32.png"
+            href="../assets/logo/favicon-32x32.png"
         />
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -112,7 +123,7 @@
 
     <body>
         <header class="header-area header-sticky">
-            <?php readfile("../header.php"); ?>
+            <?php require_once ("../header.php"); ?>
         </header>
 
         <main>
@@ -137,7 +148,7 @@
                 </div>
 
                 <div class="relative mt-3">
-                    <img class="img-fluid" src="assets/img/withcherywithlove.jpeg">
+                    <img class="w-100" src="assets/img/withcherywithlove.jpeg">
                 </div>
 
                 <div class="bg-blue relative">
@@ -206,7 +217,7 @@
         </main>
 
         <footer class="relative footer-border px-3 py-4">
-            <?php readfile("../footer.php"); ?>
+            <?php require_once ("../footer.php"); ?>
         </footer>
 
         <!-- jQuery -->

@@ -1,13 +1,34 @@
+<?php
+    require_once __DIR__ . '/../../config.php';
+?>
 <!-- Tiggo 8 Pro Pages -->
 <!DOCTYPE html>
 <html lang="id">
     <head>
         <meta charset="utf-8"/>
-        <title>Chery Tiggo 8 Pro Homepage</title>
+        <title>Chery Tiggo 8 Pro</title>
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
         />
+        <meta name="keyword" content="Tiggo 8 Pro, Tiggo 8 Pro Medan, Tiggo 8 Pro Pekanbaru"/>
+        <meta name="description" content="Chery Tiggo 8 Pro 
+                                            memiliki keunggulan futuristik seperti ADAS (Advanced Driver Assistance System), 
+                                            360 camera dengan surround view, Chery intelligent Voice Assistant, dan 
+                                            panoramic sunroof ditambah sinergi antara desain, brand prestisius, 
+                                            dan harga terjangkau, 
+                                            membuat mobil Chery sangat relevan untuk Anda miliki."/>
+        <meta name="robots" content="index, follow"/>
+        <meta property="og:site_name" content="Chery Tiggo 8 Pro" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://cheryorientalgroup.co.id/models/tiggo7pro/" />
+        <meta property="og:title" content="Chery Tiggo 8 Pro" />
+        <meta property="og:description" content="Chery Tiggo 8 Pro 
+                                            memiliki keunggulan futuristik seperti ADAS (Advanced Driver Assistance System), 
+                                            360 camera dengan surround view, Chery intelligent Voice Assistant, dan 
+                                            panoramic sunroof ditambah sinergi antara desain, brand prestisius, 
+                                            dan harga terjangkau, 
+                                            membuat mobil Chery sangat relevan untuk Anda miliki."/>
         <!-- Link Swiper's CSS -->
         <link
             rel="stylesheet"
@@ -30,7 +51,13 @@
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/chery_template/assets/logo/favicon-32x32.png"
+            href="../../assets/logo/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="../../assets/logo/favicon-32x32.png"
         />
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -103,11 +130,11 @@
     <body>
 
         <header class="header-area header-sticky">
-            <?php readfile("../../header.php"); ?>
+            <?php require_once ("../../header.php"); ?>
         </header>
 
         <div class="relative mt-5">
-            <img class="img-fluid" src="assets/img/Tiggo8Pro.jpg">
+            <img class="w-100" src="assets/img/Tiggo8Pro.jpg">
         </div>
 
         <div class="relative mt-up-8">
@@ -255,7 +282,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-interior.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-interior.jpg" 
                             alt="Tiggo 8 Pro Interior">
                     </div>
                 </div>
@@ -278,7 +305,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-luxury-seat.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-luxury-seat.jpg" 
                             alt="Tiggo 8 Pro Luxury Seats">
                     </div>
                 </div>
@@ -299,7 +326,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-spacious-cabin.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-spacious-cabin.jpg" 
                             alt="Tiggo 8 Pro spacious cabin">
                     </div>
                 </div>
@@ -319,7 +346,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-air-conditioner.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-air-conditioner.jpg" 
                             alt="Tiggo 8 Pro Dual Zone Automatic Air Conditioner">
                     </div>
                 </div>
@@ -341,7 +368,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-air-purify.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-air-purify.jpg" 
                             alt="Tiggo 8 Pro Air Purification">
                     </div>
                 </div>
@@ -362,7 +389,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-ambient-light.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-ambient-light.jpg" 
                             alt="Tiggo 8 Pro Multi Color Ambient Light">
                     </div>
                 </div>
@@ -383,7 +410,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-steering-wheel.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-steering-wheel.jpg" 
                             alt="Tiggo 8 Pro Leather Steering Wheel">
                     </div>
                 </div>
@@ -403,7 +430,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-spacious-boot.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-spacious-boot.jpg" 
                             alt="Tiggo 8 Pro Flexible and Spacious Boot">
                     </div>
                 </div>
@@ -596,7 +623,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-engine.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-engine.jpg" 
                             alt="Tiggo 8 Pro engine">
                     </div>
                 </div>
@@ -618,7 +645,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-chassis.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-chassis.jpg" 
                             alt="Tiggo 8 Pro chassis">
                     </div>
                 </div>
@@ -639,7 +666,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-EPS.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-EPS.jpg" 
                             alt="Tiggo 8 Pro EPS">
                     </div>
                 </div>
@@ -658,7 +685,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-auto-start-stop.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-auto-start-stop.jpg" 
                             alt="Tiggo 8 Pro Auto Start Stop">
                     </div>
                 </div>
@@ -681,7 +708,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-NVH.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-NVH.jpg" 
                             alt="Tiggo 8 Pro NVH Levels">
                     </div>
                 </div>
@@ -845,7 +872,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-1 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-BSD.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-BSD.jpg" 
                             alt="Tiggo 8 Pro Blind Spot Detection">
                     </div>
                 </div>
@@ -866,7 +893,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2 p-0">
                     <div>
-                        <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-tail.jpg" 
+                        <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-tail.jpg" 
                             alt="Tiggo 8 Pro Tail Door">
                     </div>
                 </div>
@@ -890,11 +917,11 @@
         </div>
 
         <div class="relative mt-up-25">
-            <img class="img-fluid lazyload" data-src="assets/img/Tiggo8Pro-exterior.jpg">
+            <img class="w-100 lazyload" data-src="assets/img/Tiggo8Pro-exterior.jpg">
         </div>
         
         <footer class="relative footer-border px-3 py-4">
-            <?php readfile("../../footer.php"); ?>
+            <?php require_once ("../../footer.php"); ?>
         </footer>
 
         <!-- jQuery -->

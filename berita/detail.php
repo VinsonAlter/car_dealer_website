@@ -1,4 +1,5 @@
 <?php
+    require_once __DIR__ . '/../config.php';
     $title = $_GET['title'];
 ?>
 
@@ -7,11 +8,19 @@
 <html lang="id">
     <head>
         <meta charset="utf-8">
-        <title>Chery Berita Page</title>
+        <title>Berita Chery</title>
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
         />
+        <meta name="keyword" content="Berita Seputar Chery, Berita Seputar Chery Medan, Berita Seputar Chery Pekanbaru"/>
+        <meta name="description" content="Dapatkan informasi seputar brand chery dan tips otomotif lainny"/>
+        <meta name="robots" content="index, follow"/>
+        <meta property="og:site_name" content="Berita Chery" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://cheryorientalgroup.co.id/berita/" />
+        <meta property="og:title" content="Berita Chery" />
+        <meta property="og:description" content="Dapatkan informasi seputar brand chery dan tips otomotif lainny"/>
         <!-- Link Swiper's CSS -->
         <link
             rel="stylesheet"
@@ -34,13 +43,13 @@
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/chery_template/assets/logo/favicon-32x32.png"
+            href="../assets/logo/favicon-32x32.png"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/chery_template/assets/logo/favicon-32x32.png"
+            href="../assets/logo/favicon-32x32.png"
         />
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,7 +76,7 @@
 
     <body>
         <header class="header-area header-sticky">
-            <?php readfile("../header.php"); ?>
+            <?php require_once ("../header.php"); ?>
         </header>
         
         <div class="mx-auto mt-top-header relative container">
@@ -99,11 +108,11 @@
         </section>
 
         <section class="relative mt-5">
-            <?php include '../news.php'?>
+            <?php require_once 'berita.php'; ?>
         </section>
 
         <footer class="relative footer-border px-3 py-4">
-            <?php readfile("../footer.php"); ?>
+            <?php require_once ("../footer.php"); ?>
         </footer>
 
         <!-- jQuery -->
@@ -141,9 +150,131 @@
             $('.layanan-click').find('ul').removeClass('visible-scroll-layanan');
             })
 
-            
-            
+            fetch('../news.json')
+            .then(function (response) {
+                return response.json();
             })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+
+            function appendData(data) {
+
+                var title = document.getElementsByClassName("news-title");
+
+                var date = document.getElementsByClassName("news-date");
+
+                var img = document.getElementsByClassName("news-img");
+
+                var content = document.getElementsByClassName('news-content');
+
+                var news = document.getElementsByClassName('news');
+
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].slug.includes(get_title)) {
+                        var slicedData = parseInt(data[i].id);
+                        $(title).append().html(data[i].title);
+                        $(date).append().html(data[i].date);
+                        $(img).attr("src", data[i].img);
+                        $(content).append().html(data[i].content);
+                        var totalNews = 3;
+                        var showFrom = slicedData;
+                        var showTo = showFrom + totalNews;
+                        if(showFrom === 1) {
+                            for(var j = showFrom; j <= totalNews; j++){
+                                $($('<div>').attr({
+                                    class: 'col col-news mb-3'
+                                }).append(
+                                $($('<div>').attr({
+                                    class: 'card card-news text-dark mb-3 shadow-lg h-100'
+                                        })).append(
+                                        ($('<div>').attr({
+                                            class: 'user-img'
+                                        })).append(
+                                        $('<img>').attr({
+                                            class: 'card-img-top',
+                                            src: data[j].img,
+                                        })),   
+                                        ($('<div>').attr({
+                                            class: 'card-body'
+                                        })).append(
+                                            ($('<p>').attr({
+                                            class: 'card-title'
+                                            })).append(
+                                            $('<h5>').attr({
+                                                class: 'card-title font-work',
+                                            }).html(data[j].title)
+                                            ),
+                                            ($('<p>').attr({
+                                            class: 'card-text text-muted card-date'
+                                            })).append().html(data[j].date),
+                                            ($('<p>').attr({
+                                            class: 'card-text card-content font-work'
+                                            })).append().html(data[j].preview),
+                                            $('<a>').attr({
+                                            class: 'btn news-button text-center font-work',
+                                            href: "<?= BASE_URL; ?>berita/detail.php?title=" + data[j].slug
+                                            }).html("Lebih lanjut...")
+                                        )
+                                        )
+                                    )
+                                ).appendTo(news);
+                            }
+                        }
+
+                        for (var i = showFrom - 2; i < totalNews + showFrom - 1; i++) {
+                            
+                            if(data[i].id !== data[showFrom - 1].id) {
+                                $($('<div>').attr({
+                                        class: 'col col-news mb-3'
+                                    }).append(
+                                        $($('<div>').attr({
+                                        class: 'card card-news text-dark mb-3 shadow-lg h-100'
+                                        })).append(
+                                        ($('<div>').attr({
+                                            class: 'user-img'
+                                        })).append(
+                                        $('<img>').attr({
+                                            class: 'card-img-top',
+                                            src: data[i].img,
+                                        })),   
+                                        ($('<div>').attr({
+                                            class: 'card-body'
+                                        })).append(
+                                            ($('<p>').attr({
+                                            class: 'card-title'
+                                            })).append(
+                                            $('<h5>').attr({
+                                                class: 'card-title font-work',
+                                            }).html(data[i].title)
+                                            ),
+                                            ($('<p>').attr({
+                                            class: 'card-text text-muted card-date'
+                                            })).append().html(data[i].date),
+                                            ($('<p>').attr({
+                                            class: 'card-text card-content font-work'
+                                            })).append().html(data[i].preview),
+                                            $('<a>').attr({
+                                            class: 'btn news-button text-center font-work',
+                                            href: "<?= BASE_URL; ?>berita/detail.php?title=" + data[i].slug
+                                            }).html("Lebih lanjut...")
+                                        )
+                                        )
+                                    )
+                                ).appendTo(news);
+                            } 
+                        }
+                            
+                    }
+                        
+                }
+
+            }
+        
+        })
 
         $(document).click(function(e){
             var clickover = $(e.target);
@@ -180,84 +311,6 @@
                 $(this).children(".playpause").fadeIn();
             }
         });
-
-        fetch('/chery_template/news.json')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                appendData(data);
-            })
-            .catch(function (err) {
-                console.log('error: ' + err);
-            });
-
-            function appendData(data) {
-                var title = document.getElementsByClassName("news-title");
-                var date = document.getElementsByClassName("news-date");
-                var img = document.getElementsByClassName("news-img");
-                var content = document.getElementsByClassName('news-content');
-                var news = document.getElementsByClassName('news');
-                // var totalNews = 3;
-                // var showFrom = data.length - totalNews;
-                for (var i = 0; i < data.length; i++) {
-                    if (data[i].slug.includes(get_title)) {
-                        var slicedData = parseInt(data[i].id);
-                        $(title).append().html(data[i].title);
-                        $(date).append().html(data[i].date);
-                        $(img).attr("src", data[i].img);
-                        $(content).append().html(data[i].content);
-                        var totalNews = 3;
-                        var showFrom = slicedData;
-                        var showTo = showFrom + totalNews;
-                        // var showBerita = (data[showFrom].id);
-                        // var showBeritaTo = (data[showTo].id);
-                        for (var i = showFrom; i <= showTo - 1; i++) {
-                            $($('<div>').attr({
-                                    class: 'col col-news mb-3'
-                                }).append(
-                                    $($('<div>').attr({
-                                    class: 'card card-news text-dark mb-3 shadow-lg h-100'
-                                    })).append(
-                                    ($('<div>').attr({
-                                        class: 'user-img'
-                                    })).append(
-                                    $('<img>').attr({
-                                        class: 'card-img-top',
-                                        src: data[i].img,
-                                    })),   
-                                    ($('<div>').attr({
-                                        class: 'card-body'
-                                    })).append(
-                                        ($('<p>').attr({
-                                        class: 'card-title'
-                                        })).append(
-                                        $('<h5>').attr({
-                                            class: 'card-title font-work',
-                                        }).html(data[i].title)
-                                        ),
-                                        ($('<p>').attr({
-                                        class: 'card-text text-muted card-date'
-                                        })).append().html(data[i].date),
-                                        ($('<p>').attr({
-                                        class: 'card-text card-content font-work'
-                                        })).append().html(data[i].preview),
-                                        $('<a>').attr({
-                                        class: 'btn news-button text-center font-work',
-                                        href: "/chery_template/berita/detail.php?title=" + data[i].slug
-                                        }).html("Lebih lanjut...")
-                                    )
-                                    )
-                                )
-                            ).appendTo(news);
-                        } console.log(slicedData);
-                            
-                        }
-                        
-                    }
-                    
-                }
-
         </script>
 
     </body>

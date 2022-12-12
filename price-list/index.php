@@ -1,13 +1,25 @@
+<?php
+    require_once __DIR__ . '/../../config.php'; 
+?>
 <!-- Chery Brosur & Price List pages -->
 <!DOCTYPE html>
 <html lang="id">
     <head>
         <meta charset="utf-8">
-        <title>Chery Brosur & Pricelist</title>
+        <title>Unduh Chery Brosur & Pricelist</title>
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
         />
+        <meta name="keyword" content="brosur mobil chery, brosur mobil chery medan, brosur mobil chery pekanbaru, harga mobil chery medan,
+                                        harga mobil chery pekanbaru, harga tiggo 7 pro medan, harga tiggo 7 pro pekanbaru, harga tiggo 8 pro medan, harga tiggo 8 pro pekanbaru"/>
+        <meta name="description" content="Dapatkan informasi mengenai harga, promo dan penawaran terbaru mobil chery di medan dan pekanbaru"/>
+        <meta name="robots" content="index, follow"/>
+        <meta property="og:site_name" content="Unduh Chery Brosur & Pricelist" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://cheryorientalgroup.co.id/price-list/" />
+        <meta property="og:title" content="Berita Chery" />
+        <meta property="og:description" content="Dapatkan informasi mengenai harga, promo dan penawaran terbaru mobil chery di medan dan pekanbaru"/>
         <!-- Link Swiper's CSS -->
         <link
             rel="stylesheet"
@@ -30,13 +42,13 @@
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/chery_template/assets/logo/favicon-32x32.png"
+            href="../assets/logo/favicon-32x32.png"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/chery_template/assets/logo/favicon-32x32.png"
+            href="../assets/logo/favicon-32x32.png"
         />
         <!-- Simple Pagination CSS -->
         <link 
@@ -143,7 +155,7 @@
 
     <body>
         <header class="header-area header-sticky">
-            <?php readfile("../header.php"); ?>
+            <?php require_once ("../header.php"); ?>
         </header>
 
         <main>
@@ -328,7 +340,7 @@
         </main>
 
         <footer class="relative footer-border px-3 py-4">
-            <?php readfile("../footer.php"); ?>
+            <?php require_once ("../footer.php"); ?>
         </footer>
 
         <!-- jQuery -->

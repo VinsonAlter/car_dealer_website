@@ -1,13 +1,27 @@
+<?php
+  require_once __DIR__ . '/config.php';
+?>
 <!-- Main Page -->
 <!DOCTYPE html>
 <html lang="id">
   <head>
     <meta charset="utf-8"/>
-    <title>Chery Main Page</title>
+    <title>Chery Official Medan | Chery Oriental Group</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
     />
+    <meta name="description" content="Selamat datang di situs resmi Chery Oriental Group.
+                                      Dealer resmi mobil chery di Medan & Pekanbaru, Dapatkan Chery Tiggo 7 & 8 Pro dengan jaminan bebas service mesin 1 juta km / 10 tahun" />  
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="chery motor indonesia , mobil chery, chery oriental group, chery medan, chery pekanbaru
+                                    opening dealer mobil baru, promo chery, harga chery, harga chery medan, harga chery pekanbaru"/>
+    <meta property="og:site_name" content="Opening soon dealer Mobil Chery di Medan & Pekanbaru, Dapatkan Chery Tiggo 7 & 8 Pro dengan jaminan bebas service mesin 1 juta km / 10 tahun" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://cheryorientalgroup.co.id/" />
+    <meta property="og:title" content="Chery Official Medan | Chery Oriental Group" />
+    <meta property="og:description" content="Selamat datang di situs resmi chery oriental group medan.
+                                             Dealer resmi mobil chery di Medan & Pekanbaru"/>
     <!-- Link Swiper's CSS -->
     <link
       rel="stylesheet"
@@ -30,13 +44,13 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/chery_template/assets/logo/favicon-32x32.png"
+      href="<?= BASE_URL; ?>assets/logo/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/chery_template/assets/logo/favicon-32x32.png"
+      href="<?= BASE_URL; ?>assets/logo/favicon-32x32.png"
     />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,11 +60,10 @@
     <!-- Font Awesome Version 6 Plugins -->
     <link rel="stylesheet" 
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-
   </head>
   <body>
     <header class="header-area header-sticky">
-        <?php readfile("header.php"); ?>
+        <?php require_once "header.php"; ?>
     </header>
     <main>
         <section>
@@ -75,9 +88,9 @@
         </section>    
     </main>
     <footer class="relative footer-border px-3 py-4">
-        <?php readfile("footer.php"); ?>
+        <?php require_once "footer.php"; ?>
     </footer>
-
+    
     <!-- jQuery -->
     <script src="assets/js/jquery-3.6.1.min.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
@@ -169,7 +182,7 @@
                         })).append().html(data[i].preview),
                         $('<a>').attr({
                           class: 'btn news-button text-center font-work',
-                          href: "/chery_template/berita/detail.php?title=" + data[i].slug
+                          href: "<?= BASE_URL; ?>berita/detail.php?title=" + data[i].slug
                         }).html("Lebih lanjut...")
                       )
                     )
@@ -190,7 +203,7 @@
                 // $(date).eq(i).append().html(data[i].date);
                 // $(content).eq(i).append().html(data[i].preview);
                 // // $(news).eq(i).attr('href', data[i].ref);
-                // $(news).eq(i).append().attr('href', "/chery_template/berita/detail.php?title=" + data[i].slug);
+                // $(news).eq(i).append().attr('href', "<?= BASE_URL; ?>berita/detail.php?title=" + data[i].slug);
             }
         }
         

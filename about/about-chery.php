@@ -1,13 +1,26 @@
+<?php
+    require_once __DIR__ . '/../config.php'; 
+?>
 <!-- About Chery pages -->
 <!DOCTYPE html>
 <html lang="id">
     <head>
         <meta charset="utf-8">
-        <title>About Chery Page</title>
+        <title>Tentang Chery</title>
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
         />
+        <meta name="keyword" content="Tentang Chery"/>
+        <meta name="description" content="Chery adalah brand otomotif di kelas premium yang sudah melayani lebih dari 10 juta 
+                                            pelanggan di seluruh dunia dengan tagline 'Fun to Drive'."/>
+        <meta name="robots" content="index, follow"/>
+        <meta property="og:site_name" content="Tentang Chery" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://cheryorientalgroup.co.id/about/about-chery.php" />
+        <meta property="og:title" content="Tentang Chery" />
+        <meta property="og:description" content="Chery adalah brand otomotif di kelas premium yang sudah melayani lebih dari 10 juta 
+                                            pelanggan di seluruh dunia dengan tagline 'Fun to Drive'."/>
         <!-- Link Swiper's CSS -->
         <link
             rel="stylesheet"
@@ -30,13 +43,13 @@
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/chery_template/assets/logo/favicon-32x32.png"
+            href="../assets/logo/favicon-32x32.png"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/chery_template/assets/logo/favicon-32x32.png"
+            href="../assets/logo/favicon-32x32.png"
         />
         <!-- Simple Pagination CSS -->
         <link 
@@ -101,7 +114,7 @@
 
     <body>
         <header class="header-area header-sticky">
-            <?php readfile("../header.php"); ?>
+            <?php require_once ("../header.php"); ?>
         </header>
 
         <main>
@@ -168,7 +181,7 @@
                             </p>
                         </div>
                         <div class="mt-5">
-                            <img class="img-fluid lazyload" data-src="assets/img/chery-joint.jpeg"> 
+                            <img class="w-100 lazyload" data-src="assets/img/chery-joint.jpeg"> 
                         </div>
                     </div>
                 </div>
@@ -177,7 +190,7 @@
         </main>
 
         <footer class="relative footer-border px-3 py-4">
-            <?php readfile("../footer.php"); ?>
+            <?php require_once ("../footer.php"); ?>
         </footer>
 
         <!-- jQuery -->
