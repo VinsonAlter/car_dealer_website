@@ -1167,9 +1167,12 @@ html,
           left: 0;
           bottom: 0;
           padding: 5px 10px 5px;
+          /* background: rgb(2, 18, 243); */
           background: rgb(192, 11, 32);
           z-index: 99999;
-          border-top: 4px solid rgb(192, 11, 32);
+          border-top: 6px solid rgb(192, 11, 32);
+          border-left: 6px solid rgb(192, 11, 32);
+          border-right: 6px solid rgb(192, 11, 32);
           border-radius: 15px 15px 0 0;
         }
         

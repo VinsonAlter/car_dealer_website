@@ -23,7 +23,7 @@
         </ul>
     </div>
 
-    <div class="relative row row-cols-1 row-cols-md-3 mt-4 centered">
+    <div class="relative row row-cols-1 row-cols-md-2 mt-4 centered">
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane show active" id="pills-medan" role="tabpanel" aria-labelledby="pills-medan-tab">
                 <div>

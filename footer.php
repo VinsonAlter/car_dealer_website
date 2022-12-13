@@ -93,25 +93,25 @@
             </ul>
         </div>
     </div>
-    <div class="copyright text-center">
-        © 2022 Chery Oriental Group. All rights reserved
-    </div>
+</div>
+<div class="copyright text-center">
+    © 2022 Chery Oriental Group. All rights reserved
 </div>
 <div class="container-fluid media-mobile">
     <div class="row work-font text-white cp">
-        <div class="col-4 text-center">
+        <div class="col-4 text-center" onclick="window.location='<?=BASE_URL?>price-list/index.php'">
             <i class="fas fa-dollar-sign"></i>
             <p class="p-0 m-0 fs-bold-600">
                 Price List
             </p>
         </div>
-        <div class="col-4 text-center">
+        <div class="col-4 text-center" onclick="window.location='<?=BASE_URL?>price-list/index.php'">
             <i class="fas fa-book-reader"></i>
             <p class="p-0 m-0 fs-bold-600">
                 Brosur
             </p>
         </div>
-        <div class="col-4 text-center">
+        <div class="col-4 text-center" onclick="window.open('https://forms.gle/nh9R9RwHzGug2MeF9', '_blank')">
             <i class="fas fa-comments"></i>
             <p class="p-0 m-0 fs-bold-600">
                 Contact Us
