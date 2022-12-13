@@ -838,11 +838,12 @@ html,
       }
 
       .card-opening-soon {
-        font-family: Audiowide Regular, sans-serif;
-        font-size: 1.5rem !important;
+        font-family: segoesc, sans-serif !important;
+        font-size: 3.75rem !important;
+        font-weight: 900;
         color:rgb(192, 11, 32);
         margin-bottom: .125rem !important;
-        line-height: 1.25rem !important;
+        line-height: 1.5rem !important;
       }
 
       .card-subtitle-font {
@@ -935,8 +936,8 @@ html,
         border-bottom-right-radius: 15px;
         border-bottom-left-radius: 15px;
         margin: 0 20px;
-        font-weight: 700;
-        font-size: 18px;
+        font-weight: 900;
+        font-size: 20px;
         /* border-right: 6px solid rgb(192, 11, 32);
         border-radius: 15px 15px 0 0; */
       }
@@ -1033,6 +1034,7 @@ html,
       }
       
       @media (max-width: 1024px) {
+        
 
         .desktop-nav {
           display: none;
@@ -1078,6 +1080,11 @@ html,
           margin: 0;
           font-weight: 700;
           font-size: 15px;
+        }
+
+        .card-opening-soon {
+          font-size: 2.25rem !important;
+          font-weight: 700;
         }
 
         /* .footer-wrapper {
