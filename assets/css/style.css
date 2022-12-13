@@ -205,6 +205,10 @@ html,
         right: 1rem;
       }
 
+      .gap-4 {
+        gap: 1rem;
+      }
+
       .left-20 {
         left: 5rem;
       }
@@ -815,9 +819,18 @@ html,
 
       .card-title-font {
         font-family: Audiowide Regular, sans-serif;
-        font-size: 18.5px;
+        font-size: 1.5rem !important;
         color:rgb(192, 11, 32);
         margin-bottom: .25rem !important;
+        line-height: 2rem !important;
+      }
+
+      .card-opening-soon {
+        font-family: Audiowide Regular, sans-serif;
+        font-size: 1.5rem !important;
+        color:rgb(192, 11, 32);
+        margin-bottom: .125rem !important;
+        line-height: 1.25rem !important;
       }
 
       .card-subtitle-font {
@@ -1212,8 +1225,8 @@ html,
       }
 
       .tab-pane div p {
-        font-size: 1.125rem !important;
-        line-height: 1.75rem !important; 
+        font-size: 1.125rem;
+        line-height: 1.75rem; 
       }
 
       .mobile-nav {

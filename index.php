@@ -83,7 +83,7 @@
         </section>
         <section class="bg-section">
             <div>
-              <?php require_once "locations.php"; ?>
+              <?php require_once "dealer-location.php"; ?>
             </div>
         </section>    
     </main>
