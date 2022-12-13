@@ -70,6 +70,10 @@ html,
         margin-top: 120px;
       }
 
+      .mr-2 {
+        margin-right: .5rem;
+      }
+
       .mr-4 {
         margin-right: 1rem;
       }
@@ -85,6 +89,10 @@ html,
       .mx-auto {
         margin-left: auto;
         margin-right: auto;
+      }
+
+      .mt-up-6 {
+        margin-top: -6px;
       }
 
       .mt-up-8 {
@@ -105,6 +113,10 @@ html,
 
       .p-0 {
         padding: 0 !important;
+      }
+
+      .pl-0 {
+        padding-left: 0 !important;
       }
 
       .p-10 {
@@ -914,9 +926,28 @@ html,
         height: 100px;
       }
 
-      .media-mobile {
-        display: none;
+      .tiggo-nav {
+        display: block;
+        position: relative;
+        padding: 2.5px 5px 2.5px;
+        background: rgb(192, 11, 32);
+        border: 6px solid rgb(192, 11, 32);
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        margin: 0 20px;
+        font-weight: 700;
+        font-size: 18px;
+        /* border-right: 6px solid rgb(192, 11, 32);
+        border-radius: 15px 15px 0 0; */
       }
+
+      /* .hide-fa {
+        display: block !important;
+      } */
+
+      /* .media-mobile {
+        display: none;
+      } */
 
       @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
         .footer-logo-small {
@@ -1030,6 +1061,23 @@ html,
 
         .pane-text-mobile {
           display: block !important;
+        }
+
+        /* .hide-fa {
+          display: none !important;
+        } */
+
+        .tiggo-nav {
+          display: block;
+          position: relative;
+          padding: 0.5px 1.5px 0.5px;
+          background: rgb(192, 11, 32);
+          border: 6px solid rgb(192, 11, 32);
+          border-bottom-right-radius: 15px;
+          border-bottom-left-radius: 15px;
+          margin: 0;
+          font-weight: 700;
+          font-size: 15px;
         }
 
         /* .footer-wrapper {
@@ -1161,20 +1209,19 @@ html,
           height: 250px;
         }
 
-        .media-mobile {
+        /* .media-mobile {
           display: block;
           position: fixed;
           left: 0;
           bottom: 0;
           padding: 5px 10px 5px;
-          /* background: rgb(2, 18, 243); */
           background: rgb(192, 11, 32);
           z-index: 99999;
           border-top: 6px solid rgb(192, 11, 32);
           border-left: 6px solid rgb(192, 11, 32);
           border-right: 6px solid rgb(192, 11, 32);
           border-radius: 15px 15px 0 0;
-        }
+        } */
         
       }
       
