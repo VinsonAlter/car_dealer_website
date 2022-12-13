@@ -998,7 +998,7 @@ html,
 
       .footer-desktop-padding {
         padding-right: 2rem !important;
-        padding-left: 2.8rem !important;
+        padding-left: 1rem !important;
       }
       
       @media (max-width: 1024px) {
