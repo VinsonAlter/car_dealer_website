@@ -152,6 +152,10 @@ html,
         padding-top: 6rem; 
       }
 
+      .pr-1 {
+        padding-right: .25rem;
+      }
+
       .pr-10 {
         padding-right: 2.5rem;
       }
@@ -327,6 +331,10 @@ html,
 
       .fs-bold-400 {
         font-weight: 400;
+      }
+
+      .fs-bold-550 {
+        font-weight: 550;
       }
 
       .fs-bold-600 {
@@ -1408,5 +1416,23 @@ html,
       .required::after {
         content: ' * ';
         color: red;
+      }
+
+      .form-label-text {
+        font-size: 14px;
+      }
+
+      .disclamer-font {
+        font-size: 12px;
+      }
+
+      .form-resize {
+        padding: .125rem .5rem !important;
+        font-size: 14px !important;
+      }
+
+      .form-select-resize {
+        padding: 0.225rem 2.25rem 0.225rem 0.75rem !important;
+        font-size: 14px !important;
       }
       

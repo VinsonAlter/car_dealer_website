@@ -75,12 +75,23 @@
 
            ol li {
             list-style-type: number;
-            text-align: justify;
            }
 
            .form-check-flex {
             display: flex !important;
            }
+
+           @media (max-width:768px) {
+            .form-title-font {
+                font-size: 1.125rem !important;
+            }
+
+            .form-mobile-font {
+                font-size:14px;
+                text-align:justify;
+            }
+           }
+
         </style>
 
     </head>
@@ -98,7 +109,7 @@
                             <div class="panel-section px-4 py-3">
                                 <div class="panel-blue"></div>
                                 <h3 class="fs-bold-650">Permintaan Test Drive</h3>
-                                <p class="m-0">
+                                <p class="m-0 form-mobile-font">
                                     Berminat dengan mobil Chery? Jika Anda ingin
                                     merasakan impresi berkendara ala Chery yang elegan
                                     dengan fitur-fiturnya yang premium dan futuristik,
@@ -109,13 +120,13 @@
                             </div>
 
                             <div class="panel-section px-4 py-3">
-                                <h5 class="fs-bold-600">
+                                <h5 class="fs-bold-600 form-title-font">
                                     TIGGO 8 PRO - Enjoy Your First Class
                                 </h5>
-                                <p class="m-0">
+                                <p class="m-0 form-mobile-font fs-bold-550">
                                     The all new luxury and first class SUV!
                                 </p>
-                                <p>
+                                <p class="form-mobile-font">
                                     Fitur keamanan berkelas dan design yang premium dari 
                                     Chery Tiggo 8 Pro siap menemani setiap perjalanan
                                     berharga Chery Family bersama keluarga!
@@ -124,13 +135,13 @@
                             </div>
 
                             <div class="panel-section px-4 py-3">
-                                <h5 class="fs-bold-600">
+                                <h5 class="fs-bold-600 form-title-font">
                                     TIGGO 7 PRO - Build For Elite
                                 </h5>
-                                <p class="m-0">
+                                <p class="m-0 form-mobile-font fs-bold-550">
                                     Combine between technology and design!
                                 </p>
-                                <p>
+                                <p class="form-mobile-font">
                                     Fitur dan teknologi canggih berpadu 
                                     dengan design yang mewah, Chery Tiggo 7 Pro 
                                     akan membawa kesan berkendara premium 
@@ -144,37 +155,37 @@
                                     PENDAFTARAN TEST DRIVE
                                 </h5>
                                 <hr/>
-                                <div class="mb-3">
+                                <div class="mb-3 form-label-text">
                                     <label for="exampleInputNama" class="form-label required">1. Nama</label>
-                                    <input type="text" class="form-control" id="exampleInputNama">
+                                    <input type="text" class="form-control form-resize" id="exampleInputNama">
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3 form-label-text">
                                     <label for="exampleInputHP" class="form-label required">2. Nomor HP</label>
-                                    <input type="text" class="form-control" id="exampleInputHP">
+                                    <input type="text" class="form-control form-resize" id="exampleInputHP">
                                 </div>
-                                <div class="mb-4">
+                                <div class="mb-4 form-label-text">
                                     <label class="form-label required">3. Model Kendaraan</label>
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select class="form-select form-select-resize" aria-label="Default select example">
                                         <option selected>Choose</option>
                                         <option value="Tiggo 8 Pro">Tiggo 8 Pro</option>
                                         <option value="Tiggo 7 Pro">Tiggo 7 Pro</option>
                                     </select>
                                 </div>
-                                <div class="mb-3 row g-3 align-items-center">
+                                <div class="mb-3 row g-3 align-items-center form-label-text">
                                     <div class="col-auto required">
                                         <label class="col-form-label">4. Upload SIM</label>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" id="btn-sim" class="btn btn-success">
+                                        <button type="button" id="btn-sim" class="btn btn-sm btn-success">
                                             <i class="fas fa-image"></i>
-                                                Upload Gambar SIM
+                                                Pilih Gambar
                                         </button>
                                     </div>
                                 </div>
                             </div>
                             <hr/>
                             <div class="row">
-                                <div class="col-md-10 offset-md-1">
+                                <div class="col-md-10 offset-md-1 disclamer-font">
                                     <h5>Peraturan Test Drive:</h5>
                                     <ol>
                                         <li>
@@ -227,8 +238,8 @@
                                 <hr/>
                                 <div class="d-flex centered">
                                     <div class="mb-3">
-                                        <button type="button" class="btn btn-danger">
-                                            <i class="fa fa-paper-plane mr-2"></i>
+                                        <button type="button" class="btn btn-sm btn-danger">
+                                            <i class="fa fa-paper-plane pr-1"></i>
                                                 Kirim
                                         </button>
                                     </div>
