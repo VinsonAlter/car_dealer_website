@@ -1063,7 +1063,7 @@ html,
 
       .footer-desktop-padding {
         padding-right: 2rem !important;
-        padding-left: 1rem !important;
+        padding-left: 2.125rem !important;
       }
       
       @media (max-width: 1024px) {
@@ -1259,6 +1259,10 @@ html,
       @media (max-width: 768px) {
         .teaser-video {
           height: 250px;
+        }
+
+        .card-title-font {
+          font-size: 1.125rem !important;
         }
 
         .body {
