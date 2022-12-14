@@ -2,10 +2,12 @@
     <div class ="row">
         <div class = "col-12">
             <nav class="main-nav">
-                <a href = "http://chery.co.id/id" target="_blank">
-                    <img src="<?= BASE_URL; ?>assets/logo/Chery_logo.png"
-                     class="logo">
-                </a>
+                <div class="d-inline-flex col-md-4 col-7 centered">
+                    <a href = "http://chery.co.id/id" target="_blank">
+                        <img src="<?= BASE_URL; ?>assets/logo/Chery_logo.png"
+                        class="logo">
+                    </a>
+                </div>
                 <ul class="nav">
                     <li class="scroll-to-section">
                         <a href="<?= BASE_URL; ?>" class="active">Home</a>

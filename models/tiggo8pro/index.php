@@ -901,17 +901,45 @@
         </div>
         
         <div class="bg-wireframe w-100">
+            <div class="container-fluid pl-0">
+                <div class="d-flex work-font text-white cp">
+                    <div class="col-3 col-md-4 mr-2">
+                        <div class = "text-center tiggo-nav" onclick="window.open('https://forms.gle/csGRdsmUEcbmxdxF8', '_blank')">
+                            <i class="fa-solid fa-car-on"></i>
+                            <p class="p-0 m-0 fs-bold-600">
+                                Test Drive
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-5 col-md-4 mr-2">
+                        <div class = "text-center tiggo-nav" onclick="window.open('<?=BASE_URL?>price-list/assets/price-list/tiggo8pro-pricelist.png', '_blank')">
+                            <i class="fas fa-book-reader"></i> 
+                            <p class="p-0 m-0 fs-bold-600">
+                                Unduh Price List
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-4">
+                        <div class = "text-center tiggo-nav" onclick="window.open('https://forms.gle/nh9R9RwHzGug2MeF9', '_blank')">
+                            <i class="fas fa-comments"></i>                 
+                            <p class="p-0 m-0 fs-bold-600">
+                                Kontak Kami
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class = "d-flex flex-column relative tiggo8-text-bottom centered models-font">
                 <h1 class="chery-red text-center mb-4">Tiggo 8 Pro</h1>
                 <div class="d-flex gap-row mb-5 centered">
-                    <a class="col-9 col-md-6 my-3 button-padding border-rounded bg-light
+                    <a class="col-12 my-3 button-padding border-rounded bg-light
                             models-font btn" href="../../price-list/assets/brosur/Tiggo8Pro-brosur.pdf" target="_blank">
                         <h5 class="text-center">Unduh Brosur</h5>
-                    </a>                     
-                    <a class="col-9 col-md-6 my-3 button-padding border-rounded bg-light
+                    </a>                         
+                    <!-- <a class="col-9 col-md-6 my-3 button-padding border-rounded bg-light
                             models-font btn" href="../../price-list/assets/price-list/tiggo8pro-pricelist.png" target="_blank">
                         <h5 class="text-center">Unduh Price List</h5>
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </div>

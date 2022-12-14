@@ -13,11 +13,23 @@ html,
       }
 
       .bg-section {
-        background: url('/assets/img/banner-desktop.png') no-repeat center center;
+        background: url('../../assets/img/banner-desktop.png') no-repeat center center;
         background-size: cover;
         opacity: 1;
         background-blend-mode: darken;
         background-color: rgba(2, 18, 243, 0.5);
+      }
+
+      .bg-exhibition {
+        background: url('../../assets/img/exhibition-desktop.jpg') no-repeat center center;
+        background-size: cover;
+        opacity: 1;
+        background-blend-mode: darken;
+        background-color: rgba(32,32,32, 0.5);
+      }
+
+      .exhibition-color {
+        color: rgb(192, 11, 32);
       }
 
       .bg-blue {
@@ -27,6 +39,15 @@ html,
 
       .bg-transparent {
         background-color: transparent !important;
+      }
+
+      .body {
+        height: 200px;
+        text-transform: uppercase;
+        text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.4);
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 80px;
+        font-weight: 700;
       }
 
       @font-face {
@@ -54,6 +75,10 @@ html,
         text-decoration: none !important;
       }
 
+      .cp {
+        cursor: pointer;
+      }
+
       .chery-red {
         color:rgb(192, 11, 32);
       }
@@ -64,6 +89,10 @@ html,
 
       .mt-top-header {
         margin-top: 120px;
+      }
+
+      .mr-2 {
+        margin-right: .5rem;
       }
 
       .mr-4 {
@@ -83,6 +112,10 @@ html,
         margin-right: auto;
       }
 
+      .mt-up-6 {
+        margin-top: -6px;
+      }
+
       .mt-up-8 {
         margin-top: -8px;
       }
@@ -95,12 +128,20 @@ html,
         margin-top: -25px;
       }
 
+      .mt-up-50 {
+        margin-top: -50px;
+      }
+
       .mt-up-65 {
         margin-top: -65px;
       }
 
       .p-0 {
         padding: 0 !important;
+      }
+
+      .pl-0 {
+        padding-left: 0 !important;
       }
 
       .p-10 {
@@ -201,6 +242,10 @@ html,
         right: 1rem;
       }
 
+      .gap-4 {
+        gap: 1rem;
+      }
+
       .left-20 {
         left: 5rem;
       }
@@ -220,6 +265,10 @@ html,
 
       .mb-6 {
         margin-bottom: 1.5rem;
+      }
+
+      .fs30-scaled {
+        font-size: 20px;
       }
 
       .fs40-scaled {
@@ -263,6 +312,10 @@ html,
       }
 
       @media (min-width: 576px) {
+        .fs30-scaled {
+          font-size: 30px;
+        }
+
         .fs40-scaled {
           font-size: 40px;
         }
@@ -274,6 +327,10 @@ html,
 
       .fs-bold-400 {
         font-weight: 400;
+      }
+
+      .fs-bold-600 {
+        font-weight: 500;
       }
 
       .fs-bold-700 {
@@ -302,10 +359,10 @@ html,
       /* Chery Logo */
       .logo {
         position: relative;
-        left: 10px;
         margin-top: 10px;
         width: auto;
         height: 60px;
+        /* left: 12px; */
       }
 
       .header-area.header-sticky .nav {
@@ -422,9 +479,9 @@ html,
 
       /* Header Mobile Navbar */
       @media (max-width: 920px) {
-        .logo {
+        /* .logo {
           left: 35px;
-        }
+        } */
 
         .header-area.header-sticky .nav {
           margin-top: 10px !important;
@@ -807,9 +864,19 @@ html,
 
       .card-title-font {
         font-family: Audiowide Regular, sans-serif;
-        font-size: 18.5px;
+        font-size: 1.25rem !important;
         color:rgb(192, 11, 32);
         margin-bottom: .25rem !important;
+        line-height: 2rem !important;
+      }
+
+      .card-opening-soon {
+        font-family: segoesc, sans-serif !important;
+        font-size: 3.75rem !important;
+        font-weight: 900;
+        color:rgb(192, 11, 32);
+        margin-bottom: .125rem !important;
+        line-height: 1.5rem !important;
       }
 
       .card-subtitle-font {
@@ -893,6 +960,29 @@ html,
         height: 100px;
       }
 
+      .tiggo-nav {
+        display: block;
+        position: relative;
+        padding: 2.5px 5px 2.5px;
+        background: rgb(192, 11, 32);
+        border: 6px solid rgb(192, 11, 32);
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        margin: 0 20px;
+        font-weight: 900;
+        font-size: 20px;
+        /* border-right: 6px solid rgb(192, 11, 32);
+        border-radius: 15px 15px 0 0; */
+      }
+
+      /* .hide-fa {
+        display: block !important;
+      } */
+
+      /* .media-mobile {
+        display: none;
+      } */
+
       @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
         .footer-logo-small {
           width: 150px;
@@ -929,7 +1019,7 @@ html,
         } */
 
         .footer-wrapper > div {
-          padding-left: 12rem !important;
+          padding-left: 10rem !important;
         }
 
         /* .footer-wrapper > div:nth-of-type(4) {
@@ -973,7 +1063,7 @@ html,
 
       .footer-desktop-padding {
         padding-right: 2rem !important;
-        padding-left: 2rem !important;
+        padding-left: 2.125rem !important;
       }
       
       @media (max-width: 1024px) {
@@ -1005,6 +1095,40 @@ html,
 
         .pane-text-mobile {
           display: block !important;
+        }
+
+        /* .hide-fa {
+          display: none !important;
+        } */
+
+        .tiggo-nav {
+          display: block;
+          position: relative;
+          padding: 0.5px 1.5px 0.5px;
+          background: rgb(192, 11, 32);
+          border: 6px solid rgb(192, 11, 32);
+          border-bottom-right-radius: 15px;
+          border-bottom-left-radius: 15px;
+          margin: 0;
+          font-weight: 700;
+          font-size: 15px;
+        }
+
+        .card-opening-soon {
+          font-size: 2.25rem !important;
+          font-weight: 700;
+        }
+
+        .bg-exhibition {
+          background: url('../../assets/img/exhibition-mobile.jpg') no-repeat center center;
+          background-size: cover;
+          opacity: 1;
+          background-blend-mode: darken;
+          background-color: rgba(32,32,32, 0.5);
+        }
+
+        .exhibition-color {
+          color: #fff;
         }
 
         /* .footer-wrapper {
@@ -1135,6 +1259,32 @@ html,
         .teaser-video {
           height: 250px;
         }
+
+        .card-title-font {
+          font-size: 1.125rem !important;
+        }
+
+        .body {
+          padding-top: .5rem;
+          font-size: 24px;
+          line-height: 2.5rem;
+          color: #fff;
+        }
+
+        /* .media-mobile {
+          display: block;
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          padding: 5px 10px 5px;
+          background: rgb(192, 11, 32);
+          z-index: 99999;
+          border-top: 6px solid rgb(192, 11, 32);
+          border-left: 6px solid rgb(192, 11, 32);
+          border-right: 6px solid rgb(192, 11, 32);
+          border-radius: 15px 15px 0 0;
+        } */
+  
       }
       
       /* the pause button */
@@ -1187,8 +1337,8 @@ html,
       }
 
       .tab-pane div p {
-        font-size: 1.125rem !important;
-        line-height: 1.75rem !important; 
+        font-size: 1.125rem;
+        line-height: 1.75rem; 
       }
 
       .mobile-nav {
