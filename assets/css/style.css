@@ -20,6 +20,18 @@ html,
         background-color: rgba(2, 18, 243, 0.5);
       }
 
+      .bg-exhibition {
+        background: url('../../assets/img/exhibition-desktop.jpg') no-repeat center center;
+        background-size: cover;
+        opacity: 1;
+        background-blend-mode: darken;
+        background-color: rgba(32,32,32, 0.5);
+      }
+
+      .exhibition-color {
+        color: rgb(192, 11, 32);
+      }
+
       .bg-blue {
         opacity: 1;
         background-color: rgb(17 24 39);
@@ -27,6 +39,15 @@ html,
 
       .bg-transparent {
         background-color: transparent !important;
+      }
+
+      .body {
+        height: 200px;
+        text-transform: uppercase;
+        text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.4);
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 80px;
+        font-weight: 700;
       }
 
       @font-face {
@@ -105,6 +126,10 @@ html,
 
       .mt-up-25 {
         margin-top: -25px;
+      }
+
+      .mt-up-50 {
+        margin-top: -50px;
       }
 
       .mt-up-65 {
@@ -242,6 +267,10 @@ html,
         margin-bottom: 1.5rem;
       }
 
+      .fs30-scaled {
+        font-size: 20px;
+      }
+
       .fs40-scaled {
         font-size: 25px;
       }
@@ -283,6 +312,10 @@ html,
       }
 
       @media (min-width: 576px) {
+        .fs30-scaled {
+          font-size: 30px;
+        }
+
         .fs40-scaled {
           font-size: 40px;
         }
@@ -831,7 +864,7 @@ html,
 
       .card-title-font {
         font-family: Audiowide Regular, sans-serif;
-        font-size: 1.5rem !important;
+        font-size: 1.25rem !important;
         color:rgb(192, 11, 32);
         margin-bottom: .25rem !important;
         line-height: 2rem !important;
@@ -1087,6 +1120,18 @@ html,
           font-weight: 700;
         }
 
+        .bg-exhibition {
+          background: url('../../assets/img/exhibition-mobile.jpg') no-repeat center center;
+          background-size: cover;
+          opacity: 1;
+          background-blend-mode: darken;
+          background-color: rgba(32,32,32, 0.5);
+        }
+
+        .exhibition-color {
+          color: #fff;
+        }
+
         /* .footer-wrapper {
           display: grid;
           grid-auto-flow: column;
@@ -1214,6 +1259,13 @@ html,
       @media (max-width: 768px) {
         .teaser-video {
           height: 250px;
+        }
+
+        .body {
+          padding-top: .5rem;
+          font-size: 24px;
+          line-height: 2.5rem;
+          color: #fff;
         }
 
         /* .media-mobile {
