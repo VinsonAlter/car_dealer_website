@@ -181,51 +181,54 @@
                                     PENDAFTARAN TEST DRIVE
                                 </h5>
                                 <hr/>
-                                <div class="mb-3 form-label-text">
-                                    <label for="exampleInputNama" class="form-label required">1. Nama</label>
-                                    <input type="text" class="form-control form-resize" id="exampleInputNama">
-                                </div>
-                                <div class="mb-3 form-label-text">
-                                    <label for="exampleInputHP" class="form-label required">2. Nomor HP</label>
-                                    <input type="text" class="form-control form-resize" id="exampleInputHP">
-                                </div>
-                                <div class="mb-4 form-label-text">
-                                    <label class="form-label required">3. Model Kendaraan</label>
-                                    <select class="form-select form-select-resize" aria-label="Default select example">
-                                        <option selected>Choose</option>
-                                        <option value="Tiggo 8 Pro">Tiggo 8 Pro</option>
-                                        <option value="Tiggo 7 Pro">Tiggo 7 Pro</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3 row g-3 align-items-center form-label-text">
-                                    <div class="col-4 col-md-2 required">
-                                        <label class="col-form-label">4. Upload SIM</label>
+                                <form method="post" action="" id="upload_form" name="upload_form" role="form" enctype="multipart/form-data">
+                                    <div class="mb-3 form-label-text">
+                                        <label for="exampleInputNama" class="form-label required">1. Nama</label>
+                                        <input type="text" class="form-control form-resize" id="exampleInputNama">
                                     </div>
-                                    <div class="col-auto">
-                                        <label for="img-upload" class="custom-file-upload">
-                                            <i class="fa fa-image"></i> Pilih Gambar
-                                        </label>
-                                        <input id="img-upload" type="file" onchange="resizeAndRead(this)"/>
-                                        <!-- <div class="cp img-ktp mt-2">
-                                            <figure id="upload-ktp">
-                                                No Image
-                                            </figure>
-                                        </div> -->
-                                        <!-- <button type="button" id="btn-sim" class="btn btn-sm btn-success">
-                                            <i class="fas fa-image"></i>
-                                                Pilih Gambar
-                                        </button> -->
+                                    <div class="mb-3 form-label-text">
+                                        <label for="exampleInputHP" class="form-label required">2. Nomor HP</label>
+                                        <input type="text" class="form-control form-resize" id="exampleInputHP">
                                     </div>
-                                </div>
-                                <div class="mb-3 row g-3 align-items-center form-label-text">
-                                    <div class="offset-4 offset-md-2 col-auto">
-                                        <div class="cp img-sim mt-2">
-                                            <figure id="img-upload-card">
-                                                No Image
-                                            </figure>
+                                    <div class="mb-4 form-label-text">
+                                        <label class="form-label required">3. Model Kendaraan</label>
+                                        <select class="form-select form-select-resize" aria-label="Default select example">
+                                            <option selected>Choose</option>
+                                            <option value="Tiggo 8 Pro">Tiggo 8 Pro</option>
+                                            <option value="Tiggo 7 Pro">Tiggo 7 Pro</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="mb-3 row g-3 align-items-center form-label-text">
+                                        <div class="col-4 col-md-2 required">
+                                            <label class="col-form-label">4. Upload SIM</label>
+                                        </div>
+                                        <div class="col-auto">
+                                            <label for="img-upload" class="custom-file-upload">
+                                                <i class="fa fa-image"></i> Pilih Gambar
+                                            </label>
+                                            <input id="img-upload" type="file" onchange="resizeAndRead(this)"/>
+                                            <!-- <div class="cp img-ktp mt-2">
+                                                <figure id="upload-ktp">
+                                                    No Image
+                                                </figure>
+                                            </div> -->
+                                            <!-- <button type="button" id="btn-sim" class="btn btn-sm btn-success">
+                                                <i class="fas fa-image"></i>
+                                                    Pilih Gambar
+                                            </button> -->
                                         </div>
                                     </div>
-                                </div>
+                                    <div class="mb-3 row g-3 align-items-center form-label-text">
+                                        <div class="offset-4 offset-md-2 col-auto">
+                                            <div class="cp img-sim mt-2">
+                                                <figure id="img-upload-card">
+                                                    No Image
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                             <hr/>
                             <div class="row">
@@ -309,24 +312,84 @@
         <script src="../assets/js/jquery.simplePagination.js"></script>
 
         <script>
+            /* Utility function to convert a canvas to a BLOB */
+            var dataURLToBlob = function(dataURL) {
+                var BASE64_MARKER = ';base64,';
+                if (dataURL.indexOf(BASE64_MARKER) == -1) {
+                    var parts = dataURL.split(',');
+                    var contentType = parts[0].split(':')[1];
+                    var raw = parts[1];
+                    return new Blob([raw], {type: contentType});
+                }
+
+                var parts = dataURL.split(BASE64_MARKER);
+                var contentType = parts[0].split(':')[1];
+                var raw = window.atob(parts[1]);
+                var rawLength = raw.length;
+                var uInt8Array = new Uint8Array(rawLength);
+
+                for (var i = 0; i < rawLength; ++i) {
+                    uInt8Array[i] = raw.charCodeAt(i);
+                }
+                return new Blob([uInt8Array], {type: contentType});
+            }
+            /* End Utility function to convert a canvas to a BLOB      */
+
             function resizeAndRead(input) {
                 // read img
                 var selectedFile = input.files[0];
+                // console.log(selectedFile);
                 var selectedName = selectedFile.name;
                 var element = input.id;
-                var reader = new FileReader();
-                reader.onload = (e) => {
-                    $('.custom-file-upload').html(selectedName);
-                    $(`#${element}-card`).html(
-                        `<img class="file-card__image" id="${element}_preview" src="${e.target.result}" />`
-                    );
-                };
-                
-                reader.readAsDataURL(selectedFile);
+                var card = document.getElementsByClassName("file-card__image");
 
+                if(selectedFile.type.match(/image.*/)) {
+                    // Load the image
+                    var reader = new FileReader();
+                    reader.onload = function (readerEvent) {
+                        $('.custom-file-upload').html(selectedName);
+                        $(`#${element}-card`).html(
+                            `<img class="file-card__image w-100" id="${element}_preview" src="${readerEvent.target.result}" />`
+                        );
+                        var image = new Image();
+                        image.onload = function (imageEvent) {
+                            // Resize the image
+                            var canvas = document.createElement('canvas'),
+                                max_size = 544,// TODO : pull max size from a site config
+                                width = image.width,
+                                height = image.height;
+                            if (width > height) {
+                                if (width > max_size) {
+                                    height *= max_size / width;
+                                    width = max_size;
+                                }
+                            } else {
+                                if (height > max_size) {
+                                    width *= max_size / height;
+                                    height = max_size;
+                                }
+                            }
+                            canvas.width = width;
+                            canvas.height = height;
+                            console.log(canvas);
+                            canvas.getContext('2d').drawImage(image, 0, 0, width, height);
+                            var dataUrl = canvas.toDataURL('image/jpeg');
+                            var resizedImage = dataURLToBlob(dataUrl);
+                            console.log(canvas);
+                            $.event.trigger({
+                                type: "imageResized",
+                                blob: resizedImage,
+                                url: dataUrl
+                            });
+                        }
+                        image.src = readerEvent.target.result;
+                    }
+                    reader.readAsDataURL(selectedFile);
+                }
+            };
                 
-                
-            }
+            /* Handle image resized events */
+            
         
         </script>
 
