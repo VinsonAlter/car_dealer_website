@@ -81,6 +81,28 @@
             display: flex !important;
            }
 
+           input[type="file"] {
+            display: none;
+           }
+
+           /* .img-ktp {
+            margin-left: 15.6%;
+           } */
+
+           .img-ktp figure {
+            display: block;
+            float: left;
+            margin: 0 5px 5px 0;
+            width: 120px;
+            height: 150px;
+            overflow: hidden;
+            background-color: lightgray;
+            text-align: center;
+            line-height: 150px;
+            font-weight: 500;
+            color: white;
+           }
+
            @media (max-width:768px) {
             .form-title-font {
                 font-size: 1.125rem !important;
@@ -90,6 +112,10 @@
                 font-size:14px;
                 text-align:justify;
             }
+
+            /* .img-ktp {
+                margin-left: 25%;
+            } */
            }
 
         </style>
@@ -172,14 +198,32 @@
                                     </select>
                                 </div>
                                 <div class="mb-3 row g-3 align-items-center form-label-text">
-                                    <div class="col-auto required">
+                                    <div class="col-4 col-md-2 required">
                                         <label class="col-form-label">4. Upload SIM</label>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" id="btn-sim" class="btn btn-sm btn-success">
+                                        <label for="img-upload" class="custom-file-upload">
+                                            <i class="fa fa-image"></i> Pilih Gambar
+                                        </label>
+                                        <input id="img-upload" type="file" data-filename-placement="inside"/>
+                                        <!-- <div class="cp img-ktp mt-2">
+                                            <figure id="upload-ktp">
+                                                No Image
+                                            </figure>
+                                        </div> -->
+                                        <!-- <button type="button" id="btn-sim" class="btn btn-sm btn-success">
                                             <i class="fas fa-image"></i>
                                                 Pilih Gambar
-                                        </button>
+                                        </button> -->
+                                    </div>
+                                </div>
+                                <div class="mb-3 row g-3 align-items-center form-label-text">
+                                    <div class="offset-4 offset-md-2 col-auto">
+                                        <div class="cp img-ktp mt-2">
+                                            <figure id="upload-ktp">
+                                                No Image
+                                            </figure>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
