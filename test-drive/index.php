@@ -89,7 +89,7 @@
             margin-left: 15.6%;
            } */
 
-           .img-ktp figure {
+           .img-sim figure {
             display: block;
             float: left;
             margin: 0 5px 5px 0;
@@ -205,7 +205,7 @@
                                         <label for="img-upload" class="custom-file-upload">
                                             <i class="fa fa-image"></i> Pilih Gambar
                                         </label>
-                                        <input id="img-upload" type="file" data-filename-placement="inside"/>
+                                        <input id="img-upload" type="file" onchange="resizeAndRead(this)"/>
                                         <!-- <div class="cp img-ktp mt-2">
                                             <figure id="upload-ktp">
                                                 No Image
@@ -219,8 +219,8 @@
                                 </div>
                                 <div class="mb-3 row g-3 align-items-center form-label-text">
                                     <div class="offset-4 offset-md-2 col-auto">
-                                        <div class="cp img-ktp mt-2">
-                                            <figure id="upload-ktp">
+                                        <div class="cp img-sim mt-2">
+                                            <figure id="img-upload-card">
                                                 No Image
                                             </figure>
                                         </div>
@@ -309,7 +309,24 @@
         <script src="../assets/js/jquery.simplePagination.js"></script>
 
         <script>
-        
+            function resizeAndRead(input) {
+                // read img
+                var selectedFile = input.files[0];
+                var selectedName = selectedFile.name;
+                var element = input.id;
+                var reader = new FileReader();
+                reader.onload = (e) => {
+                    $('.custom-file-upload').html(selectedName);
+                    $(`#${element}-card`).html(
+                        `<img class="file-card__image" id="${element}_preview" src="${e.target.result}" />`
+                    );
+                };
+                
+                reader.readAsDataURL(selectedFile);
+
+                
+                
+            }
         
         </script>
 
