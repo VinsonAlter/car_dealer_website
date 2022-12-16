@@ -182,7 +182,7 @@
                                     PENDAFTARAN TEST DRIVE
                                 </h5>
                                 <hr/>
-                                <form method="post" action="" id="upload_form" name="upload_form" role="form" enctype="multipart/form-data">
+                                <form action="" id="upload_form" name="upload_form" role="form" enctype="multipart/form-data">
                                     <div class="mb-3 form-label-text">
                                         <label for="exampleInputNama" class="form-label required">1. Nama</label>
                                         <input type="text" class="form-control form-resize" name="namaCust" id="exampleInputNama" required>
@@ -199,7 +199,7 @@
                                             <option value="Tiggo 7 Pro">Tiggo 7 Pro</option>
                                         </select>
                                     </div>
-                               
+                                
                                     <div class="mb-3 row g-3 align-items-center form-label-text">
                                         <div class="col-4 col-md-2 required">
                                             <label class="col-form-label">4. Upload SIM</label>

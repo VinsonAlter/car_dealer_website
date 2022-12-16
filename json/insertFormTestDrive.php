@@ -32,7 +32,7 @@
 
         mysqli_stmt_execute($stmt);
 
-        if( mysqli_stmt_execute($stmt)) {
+        if(mysqli_stmt_affected_rows($stmt) > 0) {
 
             $res['success'] = 1;
 
@@ -46,7 +46,7 @@
 
         }
 
-        $koneksi = null;
+        
 
     } else {
 
@@ -55,6 +55,8 @@
         $res['message'] = 'Mohon pastikan anda sudah memasukkan info anda secara lengkap dan menyetujui peraturan test drive!';
 
     } 
+
+    $koneksi = null;
 
     echo json_encode($res);
     
