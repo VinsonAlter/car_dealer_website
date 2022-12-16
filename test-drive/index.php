@@ -104,6 +104,12 @@
             color: white;
            }
 
+           .error {
+            font-size: 12px;
+            color: red;
+            border-color:red;
+           }
+
            @media (max-width:768px) {
             .form-title-font {
                 font-size: 1.125rem !important;
@@ -176,24 +182,25 @@
                                 </p>
                                 <img class="w-100" src="<?=BASE_URL?>assets/img/tiggo7prodekstop.jpg">
                             </div>
-
+                        
+                        <form action="javascript:insertForm()" id="upload_form" name="upload_form" role="form" enctype="multipart/form-data">
                             <div class="panel-section px-4 py-3">
                                 <h5 class="text-center ">
                                     PENDAFTARAN TEST DRIVE
                                 </h5>
                                 <hr/>
-                                <form action="" id="upload_form" name="upload_form" role="form" enctype="multipart/form-data">
+                               
                                     <div class="mb-3 form-label-text">
                                         <label for="exampleInputNama" class="form-label required">1. Nama</label>
-                                        <input type="text" class="form-control form-resize" name="namaCust" id="exampleInputNama" required>
+                                        <input type="text" class="form-control form-resize" name="namaCust" id="exampleInputNama">
                                     </div>
                                     <div class="mb-3 form-label-text">
                                         <label for="exampleInputHP" class="form-label required">2. Nomor HP</label>
-                                        <input type="text" class="form-control form-resize" name="noHP" id="exampleInputHP" required>
+                                        <input type="text" class="form-control form-resize" name="noHP" id="exampleInputHP">
                                     </div>
                                     <div class="mb-4 form-label-text">
                                         <label class="form-label required">3. Model Kendaraan</label>
-                                        <select class="form-select form-select-resize" name="modelKend" id="modelKend" required>
+                                        <select class="form-select form-select-resize" name="modelKend" id="modelKend">
                                             <option selected="true" disabled="disabled">Choose</option>
                                             <option value="Tiggo 8 Pro">Tiggo 8 Pro</option>
                                             <option value="Tiggo 7 Pro">Tiggo 7 Pro</option>
@@ -205,10 +212,10 @@
                                             <label class="col-form-label">4. Upload SIM</label>
                                         </div>
                                         <div class="col-auto">
-                                            <label for="img-upload" class="custom-file-upload">
+                                            <label id="label-img" for="img-upload" class="custom-file-upload">
                                                 <i class="fa fa-image"></i> Pilih Gambar
                                             </label>
-                                            <input id="img-upload" name="upload" type="file" onchange="resizeAndRead(this)" required/>
+                                            <input id="img-upload" name="upload" type="file" onchange="resizeAndRead(this)"/>
                                             <!-- <div class="cp img-ktp mt-2">
                                                 <figure id="upload-ktp">
                                                     No Image
@@ -286,15 +293,17 @@
                                 <hr/>
                                 <div class="d-flex centered">
                                     <div class="mb-3">
-                                        <button type="button" class="btn btn-sm btn-danger" onclick="insertForm()">
+                                        <!-- <button type="button" class="btn btn-sm btn-danger" onclick="insertForm()">
                                             <i class="fa fa-paper-plane pr-1"></i>
                                                 Kirim
-                                        </button>
+                                        </button> -->
+                                        <input type="submit">
                                     </div>
                                 </div>
-                                </form>
+                                
                             </div>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -319,9 +328,38 @@
         <script>
 
             
-            // $(function(){
-                
-            // })
+            $(function(){
+                $("form[name='upload_form']").validate({
+                    ignore: [],
+                    rules: {
+                        namaCust: "required",
+                        noHP: "required",
+                        modelKend: "required",
+                        upload: "required",
+                        check: "required"
+                    },
+
+                    messages: {
+                        namaCust: "Mohon masukkan nama anda",
+                        noHP: "Mohon masukkan no handphone anda",
+                        modelKend: "Mohon dipilih tipe kendaraan test drive",
+                        upload: "Mohon masukkan gambar kartu sim anda",
+                        check: "Mohon pastikan anda sudah menyetujui persetujuan test drive"
+                    },
+
+                    errorPlacement: function(error, element) {
+                        if (element.is(":checkbox")) {
+                            error.appendTo(element.parent().parent());
+                        } else {
+                            error.appendTo(element.parent());
+                        }
+                    },
+
+                    submitHandler: function(form) {
+                        form.submit();
+                    }
+                })
+            })
         
             var resizedImage = "";
 
@@ -407,25 +445,7 @@
                 const fd = new FormData(document.getElementById("upload_form"));
                 fd.append('image_size', resizedImage);
                 /* validate form client-side */
-                $("form[name='upload_form']").validate({
-                    rules: {
-                        namaCust: "required",
-                        noHP: "required",
-                        modelKend: "required",
-                        upload: "required",
-                    },
-
-                    messages: {
-                        namaCust: "Mohon masukkan nama anda",
-                        noHP: "Mohon masukkan no handphone anda",
-                        modelKend: "Mohon dipilih tipe kendaraan test drive",
-                        upload: "Mohon masukkan gambar kartu sim anda",
-                    },
-
-                    submitHandler: function(form) {
-                        form.submit();
-                    }
-                })
+                
                 $.ajax({
                     type: "POST",
                     url: "../json/insertFormTestDrive.php",
