@@ -1,5 +1,6 @@
 <?php
-    require_once __DIR__ . '../../config.php'; 
+    require_once __DIR__ . '../../config.php';
+    require_once __DIR__ . '../../koneksi.php'; 
 ?>
 <!-- Chery Test Drive Page -->
 <!DOCTYPE html>
@@ -181,19 +182,19 @@
                                     PENDAFTARAN TEST DRIVE
                                 </h5>
                                 <hr/>
-                                <form method="post" action="" id="upload_form" name="upload_form" role="form" enctype="multipart/form-data">
+                                <form method="post" action="../json/insertFormTestDrive.php" id="upload_form" name="upload_form" role="form" enctype="multipart/form-data">
                                     <div class="mb-3 form-label-text">
                                         <label for="exampleInputNama" class="form-label required">1. Nama</label>
-                                        <input type="text" class="form-control form-resize" id="exampleInputNama">
+                                        <input type="text" class="form-control form-resize" name="namaCust" id="exampleInputNama" required>
                                     </div>
                                     <div class="mb-3 form-label-text">
                                         <label for="exampleInputHP" class="form-label required">2. Nomor HP</label>
-                                        <input type="text" class="form-control form-resize" id="exampleInputHP">
+                                        <input type="text" class="form-control form-resize" name="noHP" id="exampleInputHP" required>
                                     </div>
                                     <div class="mb-4 form-label-text">
                                         <label class="form-label required">3. Model Kendaraan</label>
-                                        <select class="form-select form-select-resize" aria-label="Default select example">
-                                            <option selected>Choose</option>
+                                        <select class="form-select form-select-resize" name="modelKend" id="modelKend" required>
+                                            <option selected="true" disabled="disabled">Choose</option>
                                             <option value="Tiggo 8 Pro">Tiggo 8 Pro</option>
                                             <option value="Tiggo 7 Pro">Tiggo 7 Pro</option>
                                         </select>
@@ -207,7 +208,7 @@
                                             <label for="img-upload" class="custom-file-upload">
                                                 <i class="fa fa-image"></i> Pilih Gambar
                                             </label>
-                                            <input id="img-upload" type="file" onchange="resizeAndRead(this)"/>
+                                            <input id="img-upload" name="img-upload" type="file" onchange="resizeAndRead(this)" required/>
                                             <!-- <div class="cp img-ktp mt-2">
                                                 <figure id="upload-ktp">
                                                     No Image
@@ -285,7 +286,7 @@
                                 <hr/>
                                 <div class="d-flex centered">
                                     <div class="mb-3">
-                                        <button type="button" class="btn btn-sm btn-danger">
+                                        <button type="button" class="btn btn-sm btn-danger" onclick="insertForm()">
                                             <i class="fa fa-paper-plane pr-1"></i>
                                                 Kirim
                                         </button>
@@ -371,16 +372,14 @@
                             }
                             canvas.width = width;
                             canvas.height = height;
-                            console.log(canvas);
                             canvas.getContext('2d').drawImage(image, 0, 0, width, height);
-                            var dataUrl = canvas.toDataURL('image/jpeg');
-                            var resizedImage = dataURLToBlob(dataUrl);
-                            console.log(canvas);
-                            $.event.trigger({
-                                type: "imageResized",
-                                blob: resizedImage,
-                                url: dataUrl
-                            });
+                            // var dataUrl = canvas.toDataURL('image/jpeg');
+                            // var resizedImage = dataURLToBlob(dataUrl);
+                            // $.event.trigger({
+                            //     type: "imageResized",
+                            //     blob: resizedImage,
+                            //     url: dataUrl
+                            // });
                         }
                         image.src = readerEvent.target.result;
                     }
@@ -388,7 +387,20 @@
                 }
             };
                 
-            /* Handle image resized events */
+            function insertForm() {
+                $.ajax({
+                    type: "POST",
+                    url: "../json/insertFormTestDrive.php",
+                    data: $('#upload_form').serialize(),
+                    success: result => {
+                        const res = $.parseJSON(result);
+                        alert(res.message);
+                    }, 
+                    error: result => {
+                        console.error(err.statusText);
+                    }
+                })
+            }
             
         
         </script>
