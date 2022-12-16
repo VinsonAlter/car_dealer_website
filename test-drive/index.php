@@ -208,7 +208,7 @@
                                             <label for="img-upload" class="custom-file-upload">
                                                 <i class="fa fa-image"></i> Pilih Gambar
                                             </label>
-                                            <input id="img-upload" name="img-upload" type="file" onchange="resizeAndRead(this)" required/>
+                                            <input id="img-upload" name="upload" type="file" onchange="resizeAndRead(this)" required/>
                                             <!-- <div class="cp img-ktp mt-2">
                                                 <figure id="upload-ktp">
                                                     No Image
@@ -280,8 +280,7 @@
                                             </label>
                                         </div>
                                     </div>  
-                                </div>
-                                </form>
+                                </div>   
                             </div>
                             <div class="row">
                                 <hr/>
@@ -293,6 +292,7 @@
                                         </button>
                                     </div>
                                 </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -306,6 +306,9 @@
         <!-- Bootstrap -->
         <script src="../assets/js/popper.js"></script>
         <script src="../assets/js/bootstrap.min.js"></script>
+
+        <!-- Jquery Validation -->
+        <script src="../assets/js/jquery.validate.min.js"></script>
         
         <!-- Lazyload Plugins -->
         <script src=" https://cdn.jsdelivr.net/gh/aFarkas/lazysizes/lazysizes.min.js" async=""></script>
@@ -314,9 +317,12 @@
         <script src="../assets/js/jquery.simplePagination.js"></script>
 
         <script>
-            /* Adding FormData */
-            
 
+            
+            // $(function(){
+                
+            // })
+        
             var resizedImage = "";
 
             /* Utility function to convert a canvas to a BLOB */
@@ -393,13 +399,33 @@
                     }
                     reader.readAsDataURL(selectedFile);
                 } else {
-                    alert('bukan file gambar');
+                    alert('Pastikan file yang diupload merupakan file gambar');
                 }
             };
                 
             function insertForm() {
                 const fd = new FormData(document.getElementById("upload_form"));
                 fd.append('image_size', resizedImage);
+                /* validate form client-side */
+                $("form[name='upload_form']").validate({
+                    rules: {
+                        namaCust: "required",
+                        noHP: "required",
+                        modelKend: "required",
+                        upload: "required",
+                    },
+
+                    messages: {
+                        namaCust: "Mohon masukkan nama anda",
+                        noHP: "Mohon masukkan no handphone anda",
+                        modelKend: "Mohon dipilih tipe kendaraan test drive",
+                        upload: "Mohon masukkan gambar kartu sim anda",
+                    },
+
+                    submitHandler: function(form) {
+                        form.submit();
+                    }
+                })
                 $.ajax({
                     type: "POST",
                     url: "../json/insertFormTestDrive.php",
@@ -424,7 +450,8 @@
                 })
             }
             
-        
+            
+
         </script>
 
     </body>
