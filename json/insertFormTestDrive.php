@@ -2,9 +2,9 @@
     require_once __DIR__ . '../../config.php';
     require_once __DIR__ . '../../koneksi.php';
 
-    if(isset($_POST['check'])) {
-    
-        $res = [];
+    $res = [];
+
+    if(isset($_POST['check']) && isset($_POST["namaCust"]) && isset($_POST["noHP"]) && isset($_POST["modelKend"]) && isset($_FILES["image_size"]["tmp_name"])) {
 
         $nama = $_POST["namaCust"];
 
@@ -52,7 +52,7 @@
 
         $res['success'] = 0;
 
-        $res['message'] = 'Mohon pastikan anda sudah menyetujui peraturan test drive!';
+        $res['message'] = 'Mohon pastikan anda sudah memasukkan info anda secara lengkap dan menyetujui peraturan test drive!';
 
     } 
 
