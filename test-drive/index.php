@@ -182,7 +182,7 @@
                                     PENDAFTARAN TEST DRIVE
                                 </h5>
                                 <hr/>
-                                <form method="post" action="../json/insertFormTestDrive.php" id="upload_form" name="upload_form" role="form" enctype="multipart/form-data">
+                                <form method="post" action="" id="upload_form" name="upload_form" role="form" enctype="multipart/form-data">
                                     <div class="mb-3 form-label-text">
                                         <label for="exampleInputNama" class="form-label required">1. Nama</label>
                                         <input type="text" class="form-control form-resize" name="namaCust" id="exampleInputNama" required>
@@ -199,7 +199,7 @@
                                             <option value="Tiggo 7 Pro">Tiggo 7 Pro</option>
                                         </select>
                                     </div>
-                                    
+                               
                                     <div class="mb-3 row g-3 align-items-center form-label-text">
                                         <div class="col-4 col-md-2 required">
                                             <label class="col-form-label">4. Upload SIM</label>
@@ -229,7 +229,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </form>
+                                
                             </div>
                             <hr/>
                             <div class="row">
@@ -273,14 +273,15 @@
                                     </ol>
                                     <h5>Safety First!</h5>
                                     <div class="mb-3">
-                                        <div class="form-check form-check-flex centered">
-                                            <input class="form-check-input mr-2" type="checkbox" value="" id="defaultCheck1">
+                                        <div class="form-check form-check-flex centered cp">
+                                            <input class="form-check-input mr-2" type="checkbox" value="" name="check" id="defaultCheck1">
                                             <label class="form-check-label" for="defaultCheck1">
                                                 Saya setuju dengan peraturan dan pernyataan diatas
                                             </label>
                                         </div>
-                                    </div>
+                                    </div>  
                                 </div>
+                                </form>
                             </div>
                             <div class="row">
                                 <hr/>
@@ -313,6 +314,11 @@
         <script src="../assets/js/jquery.simplePagination.js"></script>
 
         <script>
+            /* Adding FormData */
+            
+
+            var resizedImage = "";
+
             /* Utility function to convert a canvas to a BLOB */
             var dataURLToBlob = function(dataURL) {
                 var BASE64_MARKER = ';base64,';
@@ -344,6 +350,8 @@
                 var element = input.id;
                 var card = document.getElementsByClassName("file-card__image");
 
+                // console.log(selected.type);
+
                 if(selectedFile.type.match(/image.*/)) {
                     // Load the image
                     var reader = new FileReader();
@@ -373,8 +381,8 @@
                             canvas.width = width;
                             canvas.height = height;
                             canvas.getContext('2d').drawImage(image, 0, 0, width, height);
-                            // var dataUrl = canvas.toDataURL('image/jpeg');
-                            // var resizedImage = dataURLToBlob(dataUrl);
+                            var dataUrl = canvas.toDataURL('image/jpeg');
+                            resizedImage = dataURLToBlob(dataUrl);
                             // $.event.trigger({
                             //     type: "imageResized",
                             //     blob: resizedImage,
@@ -384,16 +392,30 @@
                         image.src = readerEvent.target.result;
                     }
                     reader.readAsDataURL(selectedFile);
+                } else {
+                    alert('bukan file gambar');
                 }
             };
                 
             function insertForm() {
+                const fd = new FormData(document.getElementById("upload_form"));
+                fd.append('image_size', resizedImage);
                 $.ajax({
                     type: "POST",
                     url: "../json/insertFormTestDrive.php",
-                    data: $('#upload_form').serialize(),
+                    data: fd,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
                     success: result => {
                         const res = $.parseJSON(result);
+                        if(res.success == 1) {
+                           // reset form after submission
+                           $('#upload_form').trigger("reset");
+                           $("#img-upload_preview").removeAttr('src');
+                           $("#img-upload-card").html('No Image');
+                           $(".custom-file-upload").html('<i class="fa fa-image"></i> Pilih Gambar');
+                        }
                         alert(res.message);
                     }, 
                     error: result => {
