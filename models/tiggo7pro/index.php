@@ -471,9 +471,9 @@
                     <div class="d-flex work-font text-white cp">
                         <div class="col-3 col-md-4 mr-2">
                             <!-- Temporarily still used the google form test drive -->
-                            <!-- <div class = "text-center tiggo-nav" onclick="window.open('https://forms.gle/csGRdsmUEcbmxdxF8', '_blank')"> -->
+                            <div class = "text-center tiggo-nav" onclick="window.open('https://forms.gle/csGRdsmUEcbmxdxF8', '_blank')">
                             <!-- In future, this test drive form will be used, below is just the template -->
-                            <div class = "text-center tiggo-nav" onclick="window.open('<?=BASE_URL?>test-drive/', '_blank')">    
+                            <!-- <div class = "text-center tiggo-nav" onclick="window.open('<?=BASE_URL?>test-drive/', '_blank')">     -->
                                 <i class="fa-solid fa-car-on"></i>
                                 <p class="p-0 m-0 fs-bold-600">
                                     Test Drive
