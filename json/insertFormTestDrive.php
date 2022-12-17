@@ -4,7 +4,7 @@
 
     $res = [];
 
-    if(isset($_POST['check']) && isset($_POST["namaCust"]) && isset($_POST["noHP"]) && isset($_POST["modelKend"]) && isset($_FILES["image_size"]["tmp_name"])) {
+    if(isset($_POST['check']) && isset($_POST["namaCust"]) && isset($_POST["noHP"]) && isset($_POST["modelKend"]) && isset($_FILES["image_size"]["tmp_name"]) && isset($_POST['g-recaptcha-response'])) {
 
         $nama = $_POST["namaCust"];
 
@@ -12,41 +12,61 @@
 
         $tipe = $_POST["modelKend"];
 
-        // $img_name = $_FILES["image_size"]["name"];
+        $captcha=$_POST['g-recaptcha-response'];
 
-        $uniquesavename=time().uniqid(rand());
+        $secret_key = "6LfPU4cjAAAAAESqqlxBQJxsQxi7N8QfWEqq47MN";
 
-        $target = "../test-drive/sim-img/$uniquesavename.jpg";
+        $ip = $_SERVER['REMOTE_ADDR'];
 
-        $target_name = "$uniquesavename.jpg";
+        $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secret_key) .  '&response=' . urlencode($captcha);
 
-        $tmp = $_FILES["image_size"]["tmp_name"];
+        $response = file_get_contents($url);
 
-        move_uploaded_file($tmp, $target);
+        $responseKeys = json_decode($response, true); 
 
-        $insert = "INSERT INTO test_drive (nama, hp, model, img_path) VALUES (?, ?, ?, ?)";
+        if($responseKeys["success"]) {
+        
+            // $img_name = $_FILES["image_size"]["name"];
 
-        $stmt = mysqli_prepare($koneksi, $insert);
+            $uniquesavename=time().uniqid(rand());
 
-        mysqli_stmt_bind_param($stmt, 'ssss', $nama, $hp, $tipe, $target_name);
+            $target = "../test-drive/sim-img/$uniquesavename.jpg";
 
-        mysqli_stmt_execute($stmt);
+            $target_name = "$uniquesavename.jpg";
 
-        if(mysqli_stmt_affected_rows($stmt) > 0) {
+            $tmp = $_FILES["image_size"]["tmp_name"];
 
-            $res['success'] = 1;
+            move_uploaded_file($tmp, $target);
 
-            $res['message'] = 'Data berhasil disimpan!';
+            $insert = "INSERT INTO test_drive (nama, hp, model, img_path) VALUES (?, ?, ?, ?)";
+
+            $stmt = mysqli_prepare($koneksi, $insert);
+
+            mysqli_stmt_bind_param($stmt, 'ssss', $nama, $hp, $tipe, $target_name);
+
+            mysqli_stmt_execute($stmt);
+
+            if(mysqli_stmt_affected_rows($stmt) > 0) {
+
+                $res['success'] = 1;
+
+                $res['message'] = 'Data berhasil disimpan!';
+
+            } else {
+
+                $res['success'] = 0;
+
+                $res['message'] = 'Data gagal disimpan, mohon coba kembali';
+
+            }
 
         } else {
 
             $res['success'] = 0;
 
-            $res['message'] = 'Data gagal disimpan, mohon coba kembali';
+            $res['message'] = 'Mohon pastikan anda bukan robot';
 
         }
-
-        
 
     } else {
 

@@ -1,6 +1,7 @@
 <?php
     require_once __DIR__ . '../../config.php';
-    require_once __DIR__ . '../../koneksi.php'; 
+    require_once __DIR__ . '../../koneksi.php';
+    define ('RECAPTCHA_PUBLIC_KEY', '6LfPU4cjAAAAAGLskeQP9nqW8CEKM78iAcpL616D'); 
 ?>
 <!-- Chery Test Drive Page -->
 <!DOCTYPE html>
@@ -319,6 +320,12 @@
                                     </div>  
                                 </div>   
                             </div>
+                            <div class="row mb-3">
+                                <div class="d-flex centered">
+                                    <div class="g-recaptcha" data-sitekey="<?=RECAPTCHA_PUBLIC_KEY;?>"></div>
+                                </div> 
+                            </div>
+
                             <div class="row">
                                 <hr/>
                                 <div class="d-flex centered">
@@ -337,6 +344,7 @@
                                 </div>
                                 
                             </div>
+                            
                         </div>
                         </form>
                     </div>
@@ -359,6 +367,9 @@
 
         <!-- Bootpag for Pagination -->
         <script src="../assets/js/jquery.simplePagination.js"></script>
+        
+        <!-- Google Recaptcha -->
+        <script async src="https://www.google.com/recaptcha/api.js"></script>
 
         <script>
 
@@ -371,7 +382,8 @@
                         noHP: "required",
                         modelKend: "required",
                         upload: "required",
-                        check: "required"
+                        check: "required",
+                        captcha: "required"
                     },
 
                     messages: {
@@ -382,7 +394,8 @@
                         },
                         modelKend: "Mohon dipilih tipe kendaraan test drive",
                         upload: "Mohon masukkan gambar kartu sim anda",
-                        check: "Mohon pastikan anda sudah menyetujui persetujuan test drive"
+                        check: "Mohon pastikan anda sudah menyetujui persetujuan test drive",
+                        captcha: "Mohon pastikan anda bukan robot"
                     },
 
                     errorPlacement: function(error, element) {
