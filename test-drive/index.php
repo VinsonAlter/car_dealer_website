@@ -110,6 +110,36 @@
             border-color:red;
            }
 
+           /* .send-icon {
+            position: relative;
+           }
+
+           .send-icon:before {
+            color: #fff;
+            font-family: FontAwesome;
+            content: "\f1d8";
+            font-size: 13px;
+            position: absolute;
+            right: 25px;
+            top: 5px;
+            pointer-events: none;
+           } */
+
+           input[type=submit] {
+            margin: 10px;
+            padding-right: 30px;
+           }
+
+           /*
+           input[type=submit] {
+            padding:5px 15px; 
+            background:#ccc; 
+            border:0 none;
+            cursor:pointer;
+            -webkit-border-radius: 5px;
+            border-radius: 5px; 
+           }*/ 
+
            @media (max-width:768px) {
             .form-title-font {
                 font-size: 1.125rem !important;
@@ -196,7 +226,7 @@
                                     </div>
                                     <div class="mb-3 form-label-text">
                                         <label for="exampleInputHP" class="form-label required">2. Nomor HP</label>
-                                        <input type="text" class="form-control form-resize" name="noHP" id="exampleInputHP">
+                                        <input type="number" class="form-control form-resize" name="noHP" id="exampleInputHP">
                                     </div>
                                     <div class="mb-4 form-label-text">
                                         <label class="form-label required">3. Model Kendaraan</label>
@@ -297,7 +327,12 @@
                                             <i class="fa fa-paper-plane pr-1"></i>
                                                 Kirim
                                         </button> -->
-                                        <input type="submit">
+                                        <!-- <span><i class="fa fa-paper-plane pr-1 glyph"></i></span> -->
+                                        <button type="submit" class="btn btn-sm btn-danger">
+                                            <i class="fa fa-paper-plane pr-1"></i>
+                                            Kirim
+                                        </button>
+                                        
                                     </div>
                                 </div>
                                 
@@ -341,7 +376,10 @@
 
                     messages: {
                         namaCust: "Mohon masukkan nama anda",
-                        noHP: "Mohon masukkan no handphone anda",
+                        noHP: {
+                            required: "Mohon masukkan no handphone anda",
+                            number: "Mohon masukkan nomor angka handphone anda"
+                        },
                         modelKend: "Mohon dipilih tipe kendaraan test drive",
                         upload: "Mohon masukkan gambar kartu sim anda",
                         check: "Mohon pastikan anda sudah menyetujui persetujuan test drive"
