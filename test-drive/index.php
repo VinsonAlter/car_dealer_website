@@ -372,13 +372,21 @@
         <script async src="https://www.google.com/recaptcha/api.js"></script>
 
         <script>
-
             
+
             $(function(){
+                /* jquery validation custom validation tgo accept string only */
+                $.validator.addMethod("lettersonly", function(value, element) 
+                {
+                    return this.optional(element) || /^[a-z ]+$/i.test(value);
+                }, "Mohon masukkan huruf untuk nama anda");
                 $("form[name='upload_form']").validate({
                     ignore: [],
                     rules: {
-                        namaCust: "required",
+                        namaCust: {
+                            required: true,
+                            lettersonly: true
+                        },
                         noHP: "required",
                         modelKend: "required",
                         upload: "required",
@@ -387,7 +395,9 @@
                     },
 
                     messages: {
-                        namaCust: "Mohon masukkan nama anda",
+                        namaCust: {
+                            required: "Mohon masukkan nama anda",
+                        },
                         noHP: {
                             required: "Mohon masukkan no handphone anda",
                             number: "Mohon masukkan nomor angka handphone anda"
@@ -508,6 +518,8 @@
                         const res = $.parseJSON(result);
                         if(res.success == 1) {
                            // reset form after submission
+                           // reset captcha 
+                           grecaptcha.reset();
                            $('#upload_form').trigger("reset");
                            $("#img-upload_preview").removeAttr('src');
                            $("#img-upload-card").html('No Image');
