@@ -4,6 +4,8 @@
 
     $res = [];
 
+    if(isset($_POST['email']) ? $email = $_POST['email'] : $email = ''); 
+
     if(isset($_POST['check']) && isset($_POST["namaCust"]) && isset($_POST["noHP"]) && isset($_POST["modelKend"]) && isset($_FILES["image_size"]["tmp_name"]) && isset($_POST['g-recaptcha-response'])) {
 
         $nama = $_POST["namaCust"];
@@ -18,14 +20,41 @@
 
         $ip = $_SERVER['REMOTE_ADDR'];
 
-        $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secret_key) .  '&response=' . urlencode($captcha);
+        // get function, gak aman
 
-        $response = file_get_contents($url);
+        // $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secret_key) .  '&response=' . urlencode($captcha);
 
-        $responseKeys = json_decode($response, true); 
+        // $response = file_get_contents($url);
 
-        if($responseKeys["success"]) {
-        
+        // $responseKeys = json_decode($response, true); 
+
+        // if($responseKeys["success"]) {
+
+        // post function
+
+        $url = 'https://www.google.com/recaptcha/api/siteverify';
+
+        $data = array(
+            'secret' => $secret_key,
+            'response' => $captcha,
+            'remoteip' => $ip
+        );
+
+        $curlConfig = array(
+            CURLOPT_URL => $url,
+            CURLOPT_POST => true,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_POSTFIELDS => $data
+        );
+
+        $ch = curl_init();
+        curl_setopt_array($ch, $curlConfig);
+        $verify = curl_exec($ch);
+        curl_close($ch);
+        $captcha_success = json_decode($verify, true);
+
+        if($captcha_success['success']) {
+       
             // $img_name = $_FILES["image_size"]["name"];
 
             $uniquesavename=time().uniqid(rand());
@@ -38,11 +67,11 @@
 
             move_uploaded_file($tmp, $target);
 
-            $insert = "INSERT INTO test_drive (nama, hp, model, img_path) VALUES (?, ?, ?, ?)";
+            $insert = "INSERT INTO test_drive (nama, hp, email, model, img_path) VALUES (?, ?, ?, ?, ?)";
 
             $stmt = mysqli_prepare($koneksi, $insert);
 
-            mysqli_stmt_bind_param($stmt, 'ssss', $nama, $hp, $tipe, $target_name);
+            mysqli_stmt_bind_param($stmt, 'sssss', $nama, $hp, $email, $tipe, $target_name);
 
             mysqli_stmt_execute($stmt);
 

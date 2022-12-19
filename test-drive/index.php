@@ -223,24 +223,30 @@
                                
                                     <div class="mb-3 form-label-text">
                                         <label for="exampleInputNama" class="form-label required">1. Nama</label>
-                                        <input type="text" class="form-control form-resize" name="namaCust" id="exampleInputNama">
+                                        <input type="text" class="form-control form-resize" name="namaCust" id="exampleInputNama" placeholder="Masukkan nama anda">
                                     </div>
                                     <div class="mb-3 form-label-text">
                                         <label for="exampleInputHP" class="form-label required">2. Nomor HP</label>
-                                        <input type="number" class="form-control form-resize" name="noHP" id="exampleInputHP">
+                                        <input type="text" class="form-control form-resize" name="noHP" id="exampleInputHP" placeholder="Masukkan nomor HP anda">
+                                    </div>
+                                    <div class="mb-3 form-label-text">
+                                        <label for="exampleInputEmail" class="form-label">3. Email (Opsional)</label>
+                                        <input type="text" class="form-control form-resize" name="email" id="exampleInputEmail" placeholder="Masukkan alamat email anda">
                                     </div>
                                     <div class="mb-4 form-label-text">
-                                        <label class="form-label required">3. Model Kendaraan</label>
+                                        <label class="form-label required">4. Model Kendaraan</label>
                                         <select class="form-select form-select-resize" name="modelKend" id="modelKend">
                                             <option selected="true" disabled="disabled">Choose</option>
-                                            <option value="Tiggo 8 Pro">Tiggo 8 Pro</option>
-                                            <option value="Tiggo 7 Pro">Tiggo 7 Pro</option>
+                                            <option value="Tiggo 8 Pro - Premium">Tiggo 8 Pro - Premium</option>
+                                            <option value="Tiggo 8 Pro - Luxury">Tiggo 8 Pro - Luxury</option>
+                                            <option value="Tiggo 7 Pro - Premium">Tiggo 7 Pro - Premium</option>
+                                            <option value="Tiggo 7 Pro - Luxury">Tiggo 7 Pro - Luxury</option>
+                                            <option value="Tiggo 7 Pro - Comfortable">Tiggo 7 Pro - Comfortable</option>
                                         </select>
                                     </div>
-                                
                                     <div class="mb-3 row g-3 align-items-center form-label-text">
                                         <div class="col-4 col-md-2 required">
-                                            <label class="col-form-label">4. Upload SIM</label>
+                                            <label class="col-form-label">5. Upload SIM</label>
                                         </div>
                                         <div class="col-auto">
                                             <label id="label-img" for="img-upload" class="custom-file-upload">
@@ -272,8 +278,16 @@
                             <hr/>
                             <div class="row">
                                 <div class="col-md-10 offset-md-1 disclamer-font">
-                                    <h5>Peraturan Test Drive:</h5>
-                                    <ol>
+                                    <h5>Kebijakan Privasi:</h5>
+                                    <p class="m-0">
+                                        Dengan mengisi form ini, Anda mengakui bahwa Anda telah mengetahui
+                                        dan setuju atas pengambilan, penggunaan, dan pengungkapan data pribadi
+                                        yang dikirimkan oleh Anda kepada kami.
+                                    </p>
+                                    <p>
+                                        Jangan khawatir, data pribadi anda aman bersama kami.
+                                    </p>
+                                    <!-- <ol>
                                         <li>
                                             Usia pengemudi test drive minimal 17 tahun dan 
                                             maksimal 60 tahun, serta 
@@ -308,12 +322,12 @@
                                             Customer / pengemudi bertanggung jawab terhadap insiden yang terjadi
                                             karena kelalaian dalam mengemudi dan segala tuntutan yang diterima dari pihak ketiga.
                                         </li>
-                                    </ol>
+                                    </ol> -->
                                     <h5>Safety First!</h5>
                                     <div class="mb-3">
-                                        <div class="form-check form-check-flex centered cp">
-                                            <input class="form-check-input mr-2" type="checkbox" value="" name="check" id="defaultCheck1">
-                                            <label class="form-check-label" for="defaultCheck1">
+                                        <div class="form-check form-check-flex centered ">
+                                            <input class="form-check-input mr-2 cp" type="checkbox" value="" name="check" id="defaultCheck1">
+                                            <label class="form-check-label cp" for="defaultCheck1">
                                                 Saya setuju dengan peraturan dan pernyataan diatas
                                             </label>
                                         </div>
