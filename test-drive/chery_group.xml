@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.2.0
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Dec 19, 2022 at 09:50 AM
+- Server version: 10.4.24-MariaDB
+- PHP Version: 7.4.29
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="chery_group" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="test_drive">
+                CREATE TABLE `test_drive` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `nama` varchar(100) NOT NULL,
+                  `hp` varchar(20) NOT NULL,
+                  `email` varchar(50) DEFAULT NULL,
+                  `model` varchar(50) NOT NULL,
+                  `img_path` varchar(100) NOT NULL,
+                  `tanggal_upload` timestamp NOT NULL DEFAULT current_timestamp(),
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=78 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+</pma_xml_export>
