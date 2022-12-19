@@ -79,13 +79,13 @@
 
                 $res['success'] = 1;
 
-                $res['message'] = 'Data berhasil disimpan!';
+                $res['message'] = 'Terima kasih telah mendaftar sebagai peserta test drive, anda akan segera dihubungi oleh tim kami';
 
             } else {
 
                 $res['success'] = 0;
 
-                $res['message'] = 'Data gagal disimpan, mohon coba kembali';
+                $res['message'] = 'Maaf, pendaftaran test drive tidak berhasil, Mohon dicoba kembali';
 
             }
 

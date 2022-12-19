@@ -394,6 +394,10 @@
                 {
                     return this.optional(element) || /^[a-z ]+$/i.test(value);
                 }, "Mohon masukkan huruf untuk nama anda");
+                $.validator.addMethod("numbersonly", function(value, element) 
+                {
+                    return this.optional(element) || /^[0-9 ]+$/i.test(value);
+                }, "Mohon masukkan digits dari 0-9 untuk no handphone anda");
                 $("form[name='upload_form']").validate({
                     ignore: [],
                     rules: {
@@ -401,7 +405,10 @@
                             required: true,
                             lettersonly: true
                         },
-                        noHP: "required",
+                        noHP: {
+                            required: true,
+                            numbersonly: true
+                        },
                         modelKend: "required",
                         upload: "required",
                         check: "required",
