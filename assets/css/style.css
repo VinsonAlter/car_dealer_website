@@ -15,9 +15,9 @@ html,
       .bg-section {
         background: url('../../assets/img/banner-desktop.png') no-repeat center center;
         background-size: cover;
-        opacity: 1;
         background-blend-mode: darken;
         background-color: rgba(2, 18, 243, 0.5);
+        z-index: 1;
       }
 
       .bg-exhibition {
