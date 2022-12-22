@@ -3,7 +3,7 @@
         <img src="<?= BASE_URL; ?>assets/logo/logo chery oriental stars.png" class="footer-logo-small">
     </a>
 </div> -->
-<div class="row container mx-auto py-3 footer-wrapper footer-desktop-padding">
+<div class="row mx-auto py-3 footer-wrapper footer-desktop-padding">
     <div class="col-md-4 col-6 d-flex no-padding mr-sm-10">
         <div class="d-flex flex-column row-gap-4">
             <a href = "<?= BASE_URL; ?>">
@@ -38,7 +38,7 @@
         </p>
     </div> -->
     <div class="col-md-8 col-6 mobile-flex-column">
-        <div class="d-flex flex-column no-padding">
+        <div class="d-flex flex-column no-padding pr-5">
             <p class="footer-header">
                 <a href="<?= BASE_URL; ?>models/">Models</a>
             </p>
@@ -51,7 +51,12 @@
                 </li>
             </ul>
         </div>
-        <div class="d-flex flex-column no-padding">
+        <div class="d-flex flex-column no-padding pr-5">
+            <p class="footer-header">
+                <a href="https://forms.gle/csGRdsmUEcbmxdxF8" target="_blank">Test Drive</a>
+            </p>
+        </div>
+        <div class="d-flex flex-column no-padding pr-5">
             <p class="footer-header">
                 <a href="<?= BASE_URL; ?>price-list/">Price List</a>
             </p>
@@ -74,12 +79,17 @@
                 </li>
             </ul>
         </div> -->
-        <div class="d-flex flex-column no-padding">
+        <div class="d-flex flex-column no-padding pr-5">
             <p class="footer-header">
                 <a href="<?= BASE_URL; ?>berita/">Berita</a>
             </p>
         </div>
-        <div class="d-flex flex-column no-padding">
+        <div class="d-flex flex-column no-padding pr-5">
+            <p class="footer-header">
+                <a href="https://forms.gle/nh9R9RwHzGug2MeF9" target="_blank">Kontak Kami</a>
+            </p>
+        </div>
+        <div class="d-flex flex-column no-padding pr-5">
             <p class="footer-header">
                 <a href="<?= BASE_URL; ?>about/">Mengenal Chery</a>
             </p>

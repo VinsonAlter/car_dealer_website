@@ -1,8 +1,8 @@
-<div class ="container">
-    <div class ="row">
+
+    <div class ="px-5 row">
         <div class = "col-12">
             <nav class="main-nav">
-                <div class="d-inline-flex col-md-4 col-7 centered">
+                <div class="d-inline-flex col-md-3 col-7 centered">
                     <a href = "http://chery.co.id/id" target="_blank">
                         <img src="<?= BASE_URL; ?>assets/logo/Chery_logo.png"
                         class="logo">
@@ -20,6 +20,9 @@
                         </ul>
                     </li>
                     <li class="scroll-to-section">
+                        <a href="https://forms.gle/csGRdsmUEcbmxdxF8" target="_blank">Test Drive</a>
+                    </li>
+                    <li class="scroll-to-section">
                         <a href="<?= BASE_URL; ?>price-list/">Price List</a>
                     </li>
                     <!-- <li class="scroll-to-section">
@@ -35,6 +38,9 @@
                     <li class="scroll-to-section">
                         <a href="<?= BASE_URL; ?>berita/">Berita</a>
                     </li>
+                    <li class="scroll-to-section">
+                        <a href="https://forms.gle/nh9R9RwHzGug2MeF9" target="_blank">Kontak Kami</a>
+                    </li>
                     <li class="scroll-to-section info-click">
                         <a href="javascript:void(0)" class="dropdown-icon">Mengenal Chery</a>
                         <ul class="sub-scroll-info">
@@ -49,4 +55,3 @@
             </nav>
         </div>
     </div>
-</div>

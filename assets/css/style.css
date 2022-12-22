@@ -156,6 +156,18 @@ html,
         padding-right: .25rem;
       }
 
+      .pr-2 {
+        padding-right: .5rem;
+      }
+
+      .pr-3 {
+        padding-right: .75rem;
+      }
+
+      .pr-5 {
+        padding-right: 1.25rem;
+      }
+
       .pr-10 {
         padding-right: 2.5rem;
       }
@@ -1075,7 +1087,7 @@ html,
 
       .footer-desktop-padding {
         padding-right: 2rem !important;
-        padding-left: 2.125rem !important;
+        padding-left: 1.675rem !important;
       }
       
       @media (max-width: 1024px) {

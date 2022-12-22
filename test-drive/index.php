@@ -421,7 +421,6 @@
                         },
                         noHP: {
                             required: "Mohon masukkan no handphone anda",
-                            number: "Mohon masukkan nomor angka handphone anda"
                         },
                         modelKend: "Mohon dipilih tipe kendaraan test drive",
                         upload: "Mohon masukkan gambar kartu sim anda",
