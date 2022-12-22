@@ -4,7 +4,7 @@
             <nav class="main-nav">
                 <div class="d-inline-flex col-md-3 col-7 centered">
                     <a href = "http://chery.co.id/id" target="_blank">
-                        <img src="<?= BASE_URL; ?>assets/logo/Chery_logo.png"
+                        <img src="<?= BASE_URL; ?>assets/logo/Chery_logo_fun.png"
                         class="logo">
                     </a>
                 </div>

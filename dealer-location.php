@@ -27,30 +27,30 @@
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane show active" id="pills-medan" role="tabpanel" aria-labelledby="pills-medan-tab">
                 <div>
-                    <div class="card text-dark mb-3 shadow-lg border-none w-100">
+                    <div class="card text-dark mb-3 shadow-lg border-none w-100" style="min-height:200px;">
                         <div class="card-header bg-transparent">
                             <p class="fs-bold-700 card-title-font">PT. MEDAN ORIENTAL STARS</p>
                             <p class="text-secondary card-subtitle-font">Your Reliable Partner</p>
                         </div>
-                        <div class="card-body d-flex centered">
-                            <div class="card-item">
-                                <p class="fs-bold-700 card-opening-soon mt-2 text-center">Opening Soon!</p>
-                            </div>
+                        <div class="card-body d-flex flex-column">
                             <!-- <div class="card-item">
+                                <p class="fs-bold-700 card-opening-soon mt-2 text-center">Opening Soon!</p>
+                            </div> -->
+                            <div class="card-item">
                                 <i class="fa-sharp fa-solid fa-location-dot"></i>
                                 <p class="ml-4">Jl. Sisingamangaraja Km. 6,5 Harjosari II, Kota Medan 20147</p>
                             </div>
-                            <div class="card-item mt-3">
+                            <!-- <div class="card-item mt-3">
                                 <i class="fa-sharp fa-solid fa-location-dot"></i>
                                 <p class="ml-4">Jl. Sisingamangaraja No.22 A, Mesjid, Kota Medan, 20213</p>
                             </div> -->
-                            <!-- <div class="card-item mt-3">
+                            <div class="card-item mt-3">
                                 <a class="d-flex" href="tel:+62617853300" target="_blank">
                                 <a class="d-flex" href="javascript:void(0)">
                                     <i class="fa-solid fa-phone"></i>
                                     <p class="ml-4">061-7853300</p>
                                 </a>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
