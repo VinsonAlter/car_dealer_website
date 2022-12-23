@@ -15,7 +15,7 @@
             <ul class="d-flex align-center p-0">
                 <li>
                     <a href="https://www.instagram.com/cherymedan/" target="_blank">
-                        <span class="fa-stack">
+                        <span class="fa-stack fa-lg">
                             <i class="fa-solid fa-circle fa-stack-2x"></i>
                             <i class="fa-solid fa-brands fa-instagram fa-stack-1x fa-inverse"></i>
                         </span>
@@ -23,12 +23,21 @@
                 </li>
                 <li>
                     <a href="https://www.facebook.com/profile.php?id=100088285603591&mibextid=ZbWKwL" target="_blank">
-                        <span class="fa-stack">
+                        <span class="fa-stack fa-lg">
                             <i class="fa-solid fa-circle fa-stack-2x"></i>
                             <i class="fa-solid fa-brands fa-facebook-f fa-stack-1x fa-inverse"></i>
                         </span>
                     </a>
                 </li>
+                <li>
+                    <a href="https://www.youtube.com/@cherymedan" target="_blank">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa-solid fa-circle fa-stack-2x"></i>
+                            <i class="fa-solid fa-brands fa-youtube fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+                <!-- https://www.youtube.com/@cherymedan -->
             </ul>
         </div>
     </div>

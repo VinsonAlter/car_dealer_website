@@ -65,7 +65,7 @@
             <div class="relative row row-cols-1 row-cols-md-2 mt-4 centered">
                 <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane show active" id="pills-medan" role="tabpanel" aria-labelledby="pills-medan-tab">
-                        <div class="swiper mySwiper">
+                        <div class="swiper mySwiper2">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="card text-dark shadow-lg border-none w-100" style="min-height:200px;">
@@ -188,7 +188,7 @@
 
         <!-- Initiate Swiper -->
         <script>
-        var swiper = new Swiper(".mySwiper", {
+        var swiper = new Swiper(".mySwiper2", {
             slidesPerView: 1,
             loop: true,
             spaceBetween: 30,
