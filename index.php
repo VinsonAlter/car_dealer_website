@@ -82,6 +82,11 @@
           </div>
         </section>
         <section>
+          <div class="bg-black">
+            <?php require_once "launch.php";?>
+          </div>
+        </section>
+        <section>
           <div>
             <?php require_once "news.php"; ?>
           </div>
