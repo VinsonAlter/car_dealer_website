@@ -4,9 +4,10 @@
         <h1 class="font-work fs40-scaled text-white">CHERY TIGGO 7 PRO & 8 PRO</h1>
     </div>
     <div class="d-flex relative container mt-4 centered">
-        <video class="play-video" controls>    
+        <video class="play-video" poster="assets/img/Tiggo Series KV.webp" controls>    
             <source src="assets/img/grand-launching-tiggo-series.mp4" 
                 type="video/mp4">
         </video>
+        <div class="playpause"></div>
     </div>
 </div>

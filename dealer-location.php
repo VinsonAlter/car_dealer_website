@@ -29,11 +29,11 @@
             border-radius: .5rem !important;
         }
 
-        .swiper-horizontal > .swiper-pagination-bullets, 
+        /* .swiper-horizontal > .swiper-pagination-bullets, 
         .swiper-pagination-bullets.swiper-pagination-horizontal, 
         .swiper-pagination-custom, .swiper-pagination-fraction {
             bottom: 1vh;
-        }
+        } */
     </style>
     </head>
     <body>
@@ -118,7 +118,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-pagination"></div>
+                            <div class="swiper-pagination" style="bottom:1.25vh;"></div>
                         </div>
                     </div>
                     <!-- <div class="col">

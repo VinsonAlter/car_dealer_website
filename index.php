@@ -65,12 +65,20 @@
     <!-- Font Awesome Version 6 Plugins -->
     <link rel="stylesheet" 
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+    <style>
+      .play-video {
+        object-fit:cover;
+      }
+    </style>
+  
   </head>
   <body>
     <header class="header-area header-sticky">
         <?php require_once "header.php"; ?>
     </header>
     <main>
+        <?php require_once "buttons.php"; ?>
         <section>
             <div>
                 <?php require_once "banner.php"; ?>
@@ -249,7 +257,22 @@
         });
       }
 
-      
+      $('.play-video').parent().click(function () {
+        if($(this).children(".play-video").get(0).paused){
+            $(this).children(".play-video").get(0).play();
+            $(this).children(".playpause").fadeOut();
+        }else{
+          $(this).children(".play-video").get(0).pause();
+          $(this).children(".playpause").fadeIn();
+        }
+      });
+
+      var btnKirimWhatsapp = document.getElementById('btnKirimWhatsapp');
+      var konten = document.getElementById('kontenWhatsapp').value;    
+      btnKirimWhatsapp.addEventListener('click', function() {        
+        window.open("https://wa.me/+628116050300?text=" + konten);
+        $('#whatsapp').modal('hide');
+      })
       
     </script>
 

@@ -109,6 +109,10 @@
                 color: #fff;
             }
 
+            .teaser-video {
+                object-fit:cover;
+            }
+
             @media (max-width: 768px) {
                 .tiggo8-text-bottom {
                     top: 30%;
@@ -122,6 +126,8 @@
                 .button-padding h5 {
                     font-size: calc(1rem + .3vw);
                 }
+
+                
             }
         </style>
         
@@ -134,7 +140,11 @@
         </header>
 
         <div class="relative mt-5">
-            <img class="w-100" src="assets/img/Tiggo8Pro.jpg">
+            <video class="teaser-video" poster="assets/img/Tiggo8Pro.jpg" controls="">    
+                <source src="assets/video/T8Pro.mp4" type="video/mp4">
+            </video>
+            <div class="playpause"></div>
+            <!-- <img class="w-100" src="assets/img/Tiggo8Pro.jpg"> -->
         </div>
 
         <div class="relative mt-up-8">

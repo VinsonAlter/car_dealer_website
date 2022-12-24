@@ -195,6 +195,46 @@ html,
         display: block;
       }
 
+      .bottom-nav a{
+        font-family: 'Work Sans', sans-serif; 
+        position: fixed;       
+        bottom: 2.5vh;
+        text-decoration: none;
+        font-size: 20px;
+        width: 150px;
+        align-items:center;
+        z-index:10000;
+        left: 87.5vw;
+      }
+
+      .whatsapp-icon {
+        height: 50px;
+      }
+
+      .whatsapp-container:before {
+        content:'';
+        position: absolute;
+        top:58%;
+        left: 43%;
+        width: 0;
+        height: 0;
+        border-bottom: solid 10px #198754;
+        border-left: solid 10px transparent;
+        border-right: solid 10px transparent;
+      }
+
+      .whatsapp-container {
+        margin-top: 10px;
+        width: 100px;
+        border-radius: 5px;
+        background-color: #198754;
+        color: #fff;
+      }
+
+      .bottom-nav #whatsapp {
+        color: #000;
+      }
+
       .text-center {
         text-align: center;
       }
@@ -441,6 +481,16 @@ html,
         .header-area .main-nav .nav li a {
           font-size: 13px;
         }
+
+        .bottom-nav a{     
+          bottom: 5vh;
+          font-size: 14px;
+          width: 150px;
+          align-items:center;
+          z-index:10000;
+          left: 80vw;
+          font-weight: 600;
+        }
       }
 
       @media (max-width: 768px) {
@@ -533,6 +583,15 @@ html,
         /* .logo {
           left: 35px;
         } */
+        .whatsapp-icon {
+          height: 35px;
+        }
+
+        .whatsapp-container {
+          width: 80px;
+        }
+
+        
 
         .header-area.header-sticky .nav {
           margin-top: 1px !important;
@@ -1317,6 +1376,16 @@ html,
           line-height: 2.5rem;
         }
 
+        .bottom-nav a{     
+          bottom: 2.5vh;
+          font-size: 14px;
+          width: 150px;
+          align-items:center;
+          z-index:10000;
+          left: 65vw;
+          font-weight: 600;
+        }
+
         /* .media-mobile {
           display: block;
           position: fixed;
@@ -1335,7 +1404,7 @@ html,
       
       /* the pause button */
       .playpause {
-          background-image:url('/models/tiggo7pro/assets/img/play_video.png');
+          background-image:url('https://cheryorientalgroup.co.id/models/tiggo7pro/assets/img/play_video.png');
           background-repeat:no-repeat;
           width:100px;
           height:100px;
