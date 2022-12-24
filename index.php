@@ -70,6 +70,10 @@
       .play-video {
         object-fit:cover;
       }
+
+      textarea {
+        resize: none !important;
+      }
     </style>
   
   </head>

@@ -200,10 +200,11 @@ html,
         position: fixed;       
         bottom: 2.5vh;
         text-decoration: none;
-        font-size: 20px;
+        font-size: 16px;
         width: 150px;
         align-items:center;
         z-index:10000;
+        font-weight: 500;
         left: 87.5vw;
       }
 
@@ -214,7 +215,7 @@ html,
       .whatsapp-container:before {
         content:'';
         position: absolute;
-        top:58%;
+        top:62%;
         left: 43%;
         width: 0;
         height: 0;
@@ -231,9 +232,9 @@ html,
         color: #fff;
       }
 
-      .bottom-nav #whatsapp {
+      /* .bottom-nav #whatsapp {
         color: #000;
-      }
+      } */
 
       .text-center {
         text-align: center;
@@ -477,7 +478,7 @@ html,
         letter-spacing: 1px;
       }
 
-      @media (min-width: 768px) and (max-width: 1280px) {
+      @media (min-width: 768px) and (max-width: 1279px) {
         .header-area .main-nav .nav li a {
           font-size: 13px;
         }
@@ -590,8 +591,6 @@ html,
         .whatsapp-container {
           width: 80px;
         }
-
-        
 
         .header-area.header-sticky .nav {
           margin-top: 1px !important;
