@@ -82,7 +82,7 @@
         <?php require_once "header.php"; ?>
     </header>
     <main>
-        <?php require_once "buttons.php"; ?>
+        <?// php require_once "buttons.php"; ?>
         <section>
             <div>
                 <?php require_once "banner.php"; ?>
