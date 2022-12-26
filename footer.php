@@ -104,10 +104,10 @@
             </p>
             <ul>
                 <li>
-                    <a href="<?= BASE_URL; ?>about/chery-love.php">With Chery with love</a>
+                    <a href="<?= BASE_URL; ?>about/chery-love/">With Chery with love</a>
                 </li>
                 <li>
-                    <a href="<?= BASE_URL; ?>about/about-chery.php">Tentang Chery</a>
+                    <a href="<?= BASE_URL; ?>about/about-chery/">Tentang Chery</a>
                 </li>
             </ul>
         </div>

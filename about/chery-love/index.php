@@ -1,5 +1,5 @@
 <?php
-    require_once __DIR__ . '/../config.php'; 
+    require_once __DIR__ . '/../../config.php'; 
 ?>
 <!-- Chery Love pages -->
 <!DOCTYPE html>
@@ -27,7 +27,7 @@
         <link 
             rel="stylesheet"
             type="text/css"
-            href="../assets/css/style.css"
+            href="../../assets/css/style.css"
         />
         <!-- Bootstrap 5 CSS Plugins -->
         <link 
@@ -41,7 +41,7 @@
         <link 
             rel="stylesheet"
             type="text/css"
-            href="../assets/css/simplePagination.css"
+            href="../../assets/css/simplePagination.css"
         />
         <!-- Favicon Icon -->
         <link rel="shortcut icon" href="<?=BASE_URL;?>favicon.ico">
@@ -123,10 +123,10 @@
     </head>
 
     <body>
-        <?php require_once __DIR__ . "/../buttons.php"; ?>
+        <?php require_once __DIR__ . "/../../buttons.php"; ?>
 
         <header class="header-area header-sticky">
-            <?php require_once ("../header.php"); ?>
+            <?php require_once ("../../header.php"); ?>
         </header>
 
         <main>
@@ -144,20 +144,20 @@
                                 <div class="border-red-100 mt-5"></div>
                             </div>
                             <div class="col-12 col-md-6 wcwl-position">
-                                <img class="img-fluid" src="assets/img/wcwl.jpeg">
+                                <img class="img-fluid" src="../assets/img/wcwl.jpeg">
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="relative mt-3">
-                    <img class="w-100" src="assets/img/withcherywithlove.jpeg">
+                    <img class="w-100" src="../assets/img/withcherywithlove.jpeg">
                 </div>
 
                 <div class="bg-blue relative">
                     <div class="container px-5 pt-24 pb-5 work-font">
                         <div class="relative mt-4">
-                            <img class="w-100 lazyload" data-src="assets/img/withcherywithlove2.jpeg">
+                            <img class="w-100 lazyload" data-src="../assets/img/withcherywithlove2.jpeg">
                         </div>
                         <div class="py-5 text-white">
                             <h1 class="h1-custom-big">Mulai Perjalanan Baru dalam Gerakan Global Kami</h1>
@@ -190,7 +190,7 @@
                 </div>
 
                 <div class="relative">
-                    <img class="w-100 lazyload" data-src="assets/img/withcherywithlove3.jpeg">
+                    <img class="w-100 lazyload" data-src="../assets/img/withcherywithlove3.jpeg">
                 </div>
 
                 <div class="relative mt-3">
@@ -220,21 +220,21 @@
         </main>
 
         <footer class="relative footer-border px-3 py-4">
-            <?php require_once ("../footer.php"); ?>
+            <?php require_once ("../../footer.php"); ?>
         </footer>
 
         <!-- jQuery -->
-        <script src="../assets/js/jquery-3.6.1.min.js"></script>
+        <script src="../../assets/js/jquery-3.6.1.min.js"></script>
 
         <!-- Bootstrap -->
-        <script src="../assets/js/popper.js"></script>
-        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../../assets/js/popper.js"></script>
+        <script src="../../assets/js/bootstrap.min.js"></script>
         
         <!-- Lazyload Plugins -->
         <script src=" https://cdn.jsdelivr.net/gh/aFarkas/lazysizes/lazysizes.min.js" async=""></script>
 
         <!-- Bootpag for Pagination -->
-        <script src="../assets/js/jquery.simplePagination.js"></script>
+        <script src="../../assets/js/jquery.simplePagination.js"></script>
 
         <script>
         

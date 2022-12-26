@@ -119,12 +119,12 @@
                         <div class="px-4">
                             <div class="row gap-row mb-5">
                                 <a class="col-12 col-md-6 button-padding border-rounded bg-light
-                                        models-font btn" href="<?=BASE_URL?>about/chery-love.php">
+                                        models-font btn" href="<?=BASE_URL?>about/chery-love/">
                                     <h4>With Chery With Love</h4>
                                 </a>
                                 
                                 <a class="col-12 col-md-6 button-padding border-rounded bg-light
-                                        models-font btn" href="<?=BASE_URL?>about/about-chery.php">
+                                        models-font btn" href="<?=BASE_URL?>about/about-chery/">
                                     <h4>Tentang Chery</h4>
                                 </a>
                             </div>

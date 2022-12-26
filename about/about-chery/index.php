@@ -1,5 +1,5 @@
 <?php
-    require_once __DIR__ . '/../config.php'; 
+    require_once __DIR__ . '/../../config.php'; 
 ?>
 <!-- About Chery pages -->
 <!DOCTYPE html>
@@ -29,7 +29,7 @@
         <link 
             rel="stylesheet"
             type="text/css"
-            href="../assets/css/style.css"
+            href="../../assets/css/style.css"
         />
         <!-- Bootstrap 5 CSS Plugins -->
         <link 
@@ -114,10 +114,10 @@
     </head>
 
     <body>
-        <?php require_once __DIR__ . "/../buttons.php"; ?>
+        <?php require_once __DIR__ . "/../../buttons.php"; ?>
 
         <header class="header-area header-sticky">
-            <?php require_once ("../header.php"); ?>
+            <?php require_once ("../../header.php"); ?>
         </header>
 
         <main>
@@ -138,8 +138,8 @@
                     <div class="container px-5 py-5 work-font">
                         <h1 class="text-white h1-custom-big">Cerita Kami</h1>
                         <div class="relative mt-4">
-                            <video class="teaser-video" poster="assets/img/chery_placeholder.jpeg" controls="">    
-                                <source src="assets/video/about_chery.mp4" type="video/mp4">
+                            <video class="teaser-video" poster="../assets/img/chery_placeholder.jpeg" controls="">    
+                                <source src="../assets/video/about_chery.mp4" type="video/mp4">
                             </video>
                             <div class="playpause"></div>
                         </div>
@@ -184,7 +184,7 @@
                             </p>
                         </div>
                         <div class="mt-5">
-                            <img class="w-100 lazyload" data-src="assets/img/chery-joint.jpeg"> 
+                            <img class="w-100 lazyload" data-src="../assets/img/chery-joint.jpeg"> 
                         </div>
                     </div>
                 </div>
@@ -193,21 +193,21 @@
         </main>
 
         <footer class="relative footer-border px-3 py-4">
-            <?php require_once ("../footer.php"); ?>
+            <?php require_once ("../../footer.php"); ?>
         </footer>
 
         <!-- jQuery -->
-        <script src="../assets/js/jquery-3.6.1.min.js"></script>
+        <script src="../../assets/js/jquery-3.6.1.min.js"></script>
 
         <!-- Bootstrap -->
-        <script src="../assets/js/popper.js"></script>
-        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../../assets/js/popper.js"></script>
+        <script src="../../assets/js/bootstrap.min.js"></script>
         
         <!-- Lazyload Plugins -->
         <script src=" https://cdn.jsdelivr.net/gh/aFarkas/lazysizes/lazysizes.min.js" async=""></script>
 
         <!-- Bootpag for Pagination -->
-        <script src="../assets/js/jquery.simplePagination.js"></script>
+        <script src="../../assets/js/jquery.simplePagination.js"></script>
 
         <script>
         

@@ -44,8 +44,8 @@
                     <li class="scroll-to-section info-click">
                         <a href="javascript:void(0)" class="dropdown-icon">Mengenal Chery</a>
                         <ul class="sub-scroll-info">
-                            <li class="sub-li"><a href="<?= BASE_URL; ?>about/chery-love.php">With Chery with love</a></li>
-                            <li class="sub-li"><a href="<?= BASE_URL; ?>about/about-chery.php">Tentang Chery</a></li>
+                            <li class="sub-li"><a href="<?= BASE_URL; ?>about/chery-love/">With Chery with love</a></li>
+                            <li class="sub-li"><a href="<?= BASE_URL; ?>about/about-chery/">Tentang Chery</a></li>
                         </ul>
                     </li>
                 </ul>
