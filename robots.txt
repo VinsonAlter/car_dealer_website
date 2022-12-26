@@ -1,0 +1,3 @@
+User-agent: *
+Allow : /
+Sitemap: https://cheryorientalgroup.co.id/sitemap/sitemap.xml
