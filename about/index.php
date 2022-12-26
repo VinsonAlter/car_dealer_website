@@ -28,13 +28,6 @@
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
             crossorigin="anonymous"
         />
-
-        <!-- Simple Pagination CSS -->
-        <link 
-            rel="stylesheet"
-            type="text/css"
-            href="../assets/css/simplePagination.css"
-        />
         <!-- Favicon Icon -->
         <link rel="shortcut icon" href="<?=BASE_URL;?>favicon.ico">
         <link
@@ -103,7 +96,7 @@
         <?php require_once __DIR__ . "/../buttons.php"; ?>
 
         <header class="header-area header-sticky">
-            <?php readfile("../header.php"); ?>
+            <?php require_once("../header.php"); ?>
         </header>
             <section>
                 <div class = "bg-wireframe">
@@ -134,7 +127,7 @@
             </section>
 
         <footer class="relative footer-border px-3 py-4">
-            <?php readfile("../footer.php"); ?>
+            <?php require_once("../footer.php"); ?>
         </footer>
 
         <!-- jQuery -->
