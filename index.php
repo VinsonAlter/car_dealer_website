@@ -40,12 +40,7 @@
         crossorigin="anonymous"
     />
     <!-- Favicon Icon -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="48x48"
-      href="<?= BASE_URL; ?>favicon-48x48.png"
-    />
+    <link rel="shortcut icon" href="<?=BASE_URL;?>favicon.ico">
     <link
       rel="icon"
       type="image/png"
@@ -88,7 +83,7 @@
         <?php require_once "header.php"; ?>
     </header>
     <main>
-        <?// php require_once "buttons.php"; ?>
+        <?php require_once "buttons.php"; ?>
         <section>
             <div>
                 <?php require_once "banner.php"; ?>

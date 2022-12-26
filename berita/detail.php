@@ -39,12 +39,7 @@
             crossorigin="anonymous"
         />
         <!-- Favicon Icon -->
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="48x48"
-            href="<?= BASE_URL; ?>favicon-48x48.png"
-        />
+        <link rel="shortcut icon" href="<?=BASE_URL;?>favicon.ico">
         <link
             rel="icon"
             type="image/png"

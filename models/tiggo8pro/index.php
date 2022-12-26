@@ -47,23 +47,18 @@
             crossorigin="anonymous"
         />
         <!-- Favicon Icon -->
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="48x48"
-            href="<?= BASE_URL; ?>assets/logo/favicon-48x48.png"
-        />
+        <link rel="shortcut icon" href="<?=BASE_URL;?>favicon.ico">
         <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="<?= BASE_URL; ?>assets/logo/favicon-32x32.png"
+            href="<?= BASE_URL; ?>favicon-32x32.png"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="<?= BASE_URL; ?>assets/logo/favicon-16x16.png"
+            href="<?= BASE_URL; ?>favicon-16x16.png"
         />
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
