@@ -1,5 +1,5 @@
 <?php
-    require_once __DIR__ . '../config.php'; 
+    require_once __DIR__ . '/../config.php'; 
 ?>
 <!-- About Chery placeholder pages -->
 <!DOCTYPE html>
@@ -100,6 +100,8 @@
     </head>
 
     <body>
+        <?php require_once __DIR__ . "/../buttons.php"; ?>
+
         <header class="header-area header-sticky">
             <?php readfile("../header.php"); ?>
         </header>
@@ -117,12 +119,12 @@
                         <div class="px-4">
                             <div class="row gap-row mb-5">
                                 <a class="col-12 col-md-6 button-padding border-rounded bg-light
-                                        models-font btn" href="chery-love.php">
+                                        models-font btn" href="<?=BASE_URL?>about/chery-love.php">
                                     <h4>With Chery With Love</h4>
                                 </a>
                                 
                                 <a class="col-12 col-md-6 button-padding border-rounded bg-light
-                                        models-font btn" href="about-chery.php">
+                                        models-font btn" href="<?=BASE_URL?>about/about-chery.php">
                                     <h4>Tentang Chery</h4>
                                 </a>
                             </div>
