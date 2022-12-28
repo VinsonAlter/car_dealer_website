@@ -10,6 +10,7 @@ html,
         color: #000;
         margin: 0;
         padding: 0;
+        overflow-x:hidden;
       }
 
       .bg-section {
@@ -219,7 +220,7 @@ html,
         left: 43%;
         width: 0;
         height: 0;
-        border-bottom: solid 10px #198754;
+        border-bottom: solid 10px #00913c;
         border-left: solid 10px transparent;
         border-right: solid 10px transparent;
       }
@@ -228,7 +229,7 @@ html,
         margin-top: 10px;
         width: 100px;
         border-radius: 5px;
-        background-color: #198754;
+        background-color: #00913c;
         color: #fff;
       }
 

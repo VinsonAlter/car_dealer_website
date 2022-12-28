@@ -6,7 +6,7 @@
 <html lang="id">
   <head>
     <meta charset="utf-8"/>
-    <title>Chery Official Medan | Chery Oriental Group</title>
+    <title>Chery Motors Medan | Chery Oriental Group</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
@@ -19,7 +19,7 @@
     <meta property="og:site_name" content="Opening soon dealer Mobil Chery di Medan & Pekanbaru, Dapatkan Chery Tiggo 7 & 8 Pro dengan jaminan bebas service mesin 1 juta km / 10 tahun" />
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://cheryorientalgroup.co.id/" />
-    <meta property="og:title" content="Chery Official Medan | Chery Oriental Group" />
+    <meta property="og:title" content="Chery Motors Medan | Chery Oriental Group" />
     <meta property="og:description" content="Selamat datang di situs resmi chery oriental group medan.
                                              Dealer resmi mobil chery di Medan & Pekanbaru"/>
     <!-- Link Swiper's CSS -->

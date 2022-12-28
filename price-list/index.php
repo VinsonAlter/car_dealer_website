@@ -88,7 +88,7 @@
 
             .button-padding {
                 padding: .625em .25rem;
-                z-index: 9999;
+                z-index: 999;
             }
 
             .border-rounded {
@@ -204,7 +204,7 @@
                                                 <p class="centered-p font-base">Unduh Brosur</p>
                                             </a>
                                             <a class="col-12 col-md-5 button-padding border-rounded bg-light
-                                                btn centered" href="assets/price-list/tiggo7pro-pricelist.png" target="_blank">
+                                                btn centered" href="assets/price-list/tiggo7pro-pricelist-medan.webp" target="_blank">
                                                 <p class="centered-p font-base">Unduh Pricelist</p>
                                             </a>
                                         </div>
@@ -248,7 +248,7 @@
                                                 <p class="centered-p font-base">Unduh Brosur</p>
                                             </a>
                                             <a class="col-12 col-md-5 button-padding border-rounded bg-light
-                                                btn centered" href="assets/price-list/tiggo8pro-pricelist.png" target="_blank">
+                                                btn centered" href="assets/price-list/tiggo8pro-pricelist-medan.webp" target="_blank">
                                                 <p class="centered-p font-base">Unduh Pricelist</p>
                                             </a>
                                         </div>

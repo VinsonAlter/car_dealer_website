@@ -3,7 +3,7 @@
         data-target="#whatsapp" class="d-flex centered flex-column">
         <img class="px-1 whatsapp-icon" src="<?=BASE_URL?>assets/logo/whatsapp.png">
         <!-- <i class="fab fa-2x fa-whatsapp px-1"></i> -->
-        <span class="whatsapp-container px-1">Chat Us</span>
+        <span class="whatsapp-container px-1">Halo Chery</span>
     </a>
 </div>
 
@@ -12,12 +12,12 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Chat with us <i class="fab fa-lg fa-whatsapp ml-1" style="color: green"></i></h5>
+                <h5 class="modal-title" id="exampleModalLabel">Chat with Chery Motors Medan <i class="fab fa-lg fa-whatsapp ml-1" style="color: green"></i></h5>
             </div>
             <div class="modal-body">
                 <form>
                     <div style="margin-bottom: 0;">                    
-                        <textarea class="form-control" id="kontenWhatsapp" rows="3">Halo Chery, Saya ingin bertanya seputar produk Chery.</textarea>
+                        <textarea class="form-control" id="kontenWhatsapp" rows="3">Halo Chery</textarea>
                     </div>
                 </form>
             </div>

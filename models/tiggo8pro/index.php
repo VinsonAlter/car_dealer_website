@@ -70,6 +70,8 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
         <style>
+            
+
             .pane-title {
                 font-size: 2rem !important;
             }
@@ -928,7 +930,7 @@
                         </div>
                     </div>
                     <div class="col-5 col-md-4 mr-2">
-                        <div class = "text-center tiggo-nav" onclick="window.open('<?=BASE_URL?>price-list/assets/price-list/tiggo8pro-pricelist.png', '_blank')">
+                        <div class = "text-center tiggo-nav" onclick="window.open('<?=BASE_URL?>price-list/assets/price-list/tiggo8pro-pricelist-medan.webp', '_blank')">
                             <i class="fas fa-book-reader"></i> 
                             <p class="p-0 m-0 fs-bold-600">
                                 Unduh Price List
