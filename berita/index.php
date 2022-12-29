@@ -143,7 +143,7 @@
                     /* pagination part */
                     var items = $(".list-wrapper .list-item");
                     var numItems = items.length;
-                    var perPage = 3;
+                    var perPage = 6;
                     items.slice(perPage).hide();
                     $('#pagination-container').pagination({
                         cssStyle: 'light-theme',

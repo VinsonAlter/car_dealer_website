@@ -76,6 +76,8 @@
     </head>
 
     <body>
+        <?php require_once __DIR__ . "/../buttons.php"; ?>
+
         <header class="header-area header-sticky">
             <?php require_once ("../header.php"); ?>
         </header>
