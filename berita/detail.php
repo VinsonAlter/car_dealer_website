@@ -66,10 +66,18 @@
                 .news-text {
                     font-size: 13.5px;
                 }
+
+                .justify-text {
+                    text-align:left !important;
+                }
             }
 
             .breadcrumb-item a:hover {
                 color: rgb(192, 11, 32);
+            }
+
+            .justify-text {
+                text-align: justify;
             }
         </style>
 
@@ -104,7 +112,7 @@
                         <!-- Insert img here -->
                     </img>
                 </div>
-                <div class="col-11 col-md-8 mt-4 font-work text-justify news-content">
+                <div class="col-11 col-md-8 mt-4 font-work justify-text news-content">
                     <!-- Insert News Content here -->
                 </div>
             </div>
@@ -136,21 +144,21 @@
         $(document).ready(function(){
             
             $('.models-click').click(function(){
-            $(this).children('ul').toggleClass('visible-scroll-model');
-            $('.layanan-click').find('ul').removeClass('visible-scroll-layanan');
-            $('.info-click').find('ul').removeClass('visible-scroll-info');
+                $(this).children('ul').toggleClass('visible-scroll-model');
+                $('.layanan-click').find('ul').removeClass('visible-scroll-layanan');
+                $('.info-click').find('ul').removeClass('visible-scroll-info');
             }) 
             
             $('.layanan-click').click(function(){
-            $(this).children('ul').toggleClass('visible-scroll-layanan');
-            $('.models-click').find('ul').removeClass('visible-scroll-model');
-            $('.info-click').find('ul').removeClass('visible-scroll-info');
+                $(this).children('ul').toggleClass('visible-scroll-layanan');
+                $('.models-click').find('ul').removeClass('visible-scroll-model');
+                $('.info-click').find('ul').removeClass('visible-scroll-info');
             })
 
             $('.info-click').click(function(){
-            $(this).children('ul').addClass('visible-scroll-info');
-            $('.models-click').find('ul').removeClass('visible-scroll-model');
-            $('.layanan-click').find('ul').removeClass('visible-scroll-layanan');
+                $(this).children('ul').toggleClass('visible-scroll-info');
+                $('.models-click').find('ul').removeClass('visible-scroll-model');
+                $('.layanan-click').find('ul').removeClass('visible-scroll-layanan');
             })
 
             fetch('../news.json')
