@@ -593,6 +593,11 @@ html,
           width: 80px;
         }
 
+        .whatsapp-container:before {
+          top:42.5%;
+          left: 43%;
+        }
+
         .header-area.header-sticky .nav {
           margin-top: 1px !important;
           position: relative;
