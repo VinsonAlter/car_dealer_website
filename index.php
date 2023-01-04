@@ -109,13 +109,18 @@
               <?php require_once "dealer-location.php"; ?>
             </div>
         </section>
-        <section class="bg-exhibition mt-up-50">
+        <!-- <section class="bg-exhibition mt-up-50">
             <div>
+              <?php // require_once "exhibition.php"; ?>
+            </div>
+        </section> -->
+        <section>
+            <div class="bg-black">
               <?php require_once "exhibition.php"; ?>
             </div>
         </section>
     </main>
-    <footer class="relative footer-border px-3 py-4">
+    <footer class="mt-up-6 relative footer-border px-3 py-4">
         <?php require_once "footer.php"; ?>
     </footer>
     
@@ -126,7 +131,8 @@
     <!-- Bootstrap -->
     <script src="assets/js/popper.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-
+    <script src=" https://cdn.jsdelivr.net/gh/aFarkas/lazysizes/lazysizes.min.js" async=""></script>
+    
     <!-- Plugins -->
     <!-- <script src="assets/js/scrollreveal.min.js"></script>
     <script src="assets/js/waypoints.min.js"></script>
