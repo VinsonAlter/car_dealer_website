@@ -20,8 +20,7 @@
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://cheryorientalgroup.co.id/" />
     <meta property="og:title" content="Chery Motors Medan | Chery Oriental Group" />
-    <meta property="og:description" content="Selamat datang di situs resmi chery oriental group medan.
-                                             Dealer resmi mobil chery di Medan & Pekanbaru"/>
+    <meta property="og:description" content="Pameran mobil Chery Tiggo Medan di Sun Plaza dan Deli Park 2023"/>
     <!-- Link Swiper's CSS -->
     <link
       rel="stylesheet"

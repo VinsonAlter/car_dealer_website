@@ -32,32 +32,40 @@
         <div class="swiper-slide">
             <picture>
                 <source media="(min-width: 920px)" 
-                    srcset="assets/img/opening-banner.png">
-                <img src="assets/img/banner-mobile.png" 
+                    srcset="assets/img/exhibition-tabona.webp">
+                <img src="assets/img/exhibition-tabona-mobile.webp" 
+                    alt="Exhibition Coming Soon di Sun Plaza & Deli Park" class="bg-img">
+            </picture>
+        </div>
+        <div class="swiper-slide">
+            <picture>
+                <source media="(min-width: 920px)" 
+                    srcset="assets/img/opening-banner.webp">
+                <img src="assets/img/banner-mobile-edited.webp" 
                     alt="Dealer Mobil Chery Opening Soon di Medan dan Pekanbaru" class="bg-img">
             </picture>
         </div>
         <div class="swiper-slide">
             <picture>
                 <source media="(min-width: 920px)" 
-                    srcset="assets/img/tiggo8prodekstop.jpg">
-                <img src="assets/img/tiggo8profixmobile.jpg" 
+                    srcset="assets/img/tiggo8prodekstop.webp">
+                <img src="assets/img/tiggo8profixmobile.webp" 
                     alt="Chery Tiggo 8 Pro" class="bg-img">
             </picture>
         </div>
         <div class="swiper-slide">
             <picture>
                 <source media="(min-width: 920px)" 
-                    srcset="assets/img/tiggo7prodekstop.jpg">
-                <img src="assets/img/tiggo7profixmobile.jpg" 
+                    srcset="assets/img/tiggo7prodekstop.webp">
+                <img src="assets/img/tiggo7profixmobile.webp" 
                     alt="Chery Tiggo 7 Pro" class="bg-img">
             </picture>
         </div>
         <div class="swiper-slide">
             <picture>
                 <source media="(min-width: 920px)" 
-                    srcset="assets/img/chery_banner2-1.jpeg">
-                <img src="assets/img/chery_mobile3-rev.jpg" 
+                    srcset="assets/img/chery_banner2-1.webp">
+                <img src="assets/img/chery_mobile3-rev.webp" 
                     alt="Chery Banner" class="bg-img">
             </picture>
         </div>

@@ -106,6 +106,10 @@ html,
         margin-top: 120px;
       }
 
+      .mt-5-half {
+        margin-top: 5.5rem;
+      }
+
       .mr-2 {
         margin-right: .5rem;
       }
@@ -351,6 +355,10 @@ html,
         font-size: 30px;
       }
 
+      .fs100-scaled {
+        font-size: 100px;
+      }
+
       .border-none {
         border: 0 !important;
       }
@@ -498,6 +506,10 @@ html,
       @media (max-width: 768px) {
         .header-area .main-nav .nav li a {
           font-size: 14px;
+        }
+
+        .fs100-scaled {
+          font-size: 40px;
         }
       }
 
