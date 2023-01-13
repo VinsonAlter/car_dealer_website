@@ -62,7 +62,7 @@
         </div>
         <div class="d-flex flex-column no-padding pr-5">
             <p class="footer-header">
-                <a href="https://forms.gle/csGRdsmUEcbmxdxF8" target="_blank">Layanan</a>
+                <a href="<?=BASE_URL?>layanan/">Layanan</a>
             </p>
             <ul>
                 <li>

@@ -79,7 +79,7 @@
             </div>
             <div class="row mx-auto centered">
                 <div class="col-12 col-md-6 order-2 order-md-1">
-                    <div class="px-2 font-work">
+                    <div class="px-2 px-md-4 font-work">
                         <h5 class="py-3 fw-bold">
                             Garansi Kendaraan
                         </h5>
@@ -101,7 +101,7 @@
             </div>
             <div class="row mx-auto centered">
                 <div class="col-12 col-md-6 order-2 order-md-2">
-                    <div class="px-3 font-work">
+                    <div class="px-3 px-md-4 font-work">
                         <h5 class="py-3 fw-bold">
                             Garansi Mesin
                         </h5>
@@ -122,7 +122,7 @@
             </div>
             <div class="row mx-auto centered">
                 <div class="col-12 col-md-6 order-2 order-md-1">
-                    <div class="px-2 font-work">
+                    <div class="px-2 px-md-4 font-work">
                         <h5 class="py-3 fw-bold">
                             Gratis Perawatan
                         </h5>
