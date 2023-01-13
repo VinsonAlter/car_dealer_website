@@ -19,21 +19,23 @@
                             <li class="sub-li"><a href="<?= BASE_URL; ?>models/tiggo8pro/">Tiggo 8 Pro</a></li>
                         </ul>
                     </li>
-                    <li class="scroll-to-section">
-                        <a href="https://forms.gle/csGRdsmUEcbmxdxF8" target="_blank">Test Drive</a>
+                    <li class="scroll-to-section layanan-click">
+                        <a href="javascript:void(0)" class="dropdown-icon">Layanan</a>
+                        <ul class="sub-scroll-layanan">
+                            <li class="sub-li">
+                                <a href="https://forms.gle/csGRdsmUEcbmxdxF8" 
+                                    target="_blank">Test Drive</a>
+                            </li>
+                            <li class="sub-li">
+                                <a href="javascript:void(0)">Program Purna Jual</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="scroll-to-section">
                         <a href="<?= BASE_URL; ?>price-list/">Price List</a>
                     </li>
                     <!-- <li class="scroll-to-section">
                         <a href="javascript:void(0)">Promo</a>
-                    </li> -->
-                    <!-- <li class="scroll-to-section layanan-click">
-                        <a class="dropdown-icon">Layanan</a>
-                        <ul class="sub-scroll-layanan">
-                            <li class="sub-li"><a href="javascript:void(0)">Cari Dealer</a></li>
-                            <li class="sub-li"><a href="javascript:void(0)">Sparepart</a></li>
-                        </ul>
                     </li> -->
                     <li class="scroll-to-section">
                         <a href="<?= BASE_URL; ?>berita-chery/">Berita</a>
