@@ -52,12 +52,6 @@
             sizes="16x16"
             href="<?= BASE_URL; ?>favicon-16x16.png"
         />
-        <!-- Simple Pagination CSS -->
-        <link 
-            rel="stylesheet"
-            type="text/css"
-            href="../assets/css/simplePagination.css"
-        />
 
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -205,9 +199,6 @@
         
         <!-- Lazyload Plugins -->
         <script src=" https://cdn.jsdelivr.net/gh/aFarkas/lazysizes/lazysizes.min.js" async=""></script>
-
-        <!-- Bootpag for Pagination -->
-        <script src="../../assets/js/jquery.simplePagination.js"></script>
 
         <script>
         

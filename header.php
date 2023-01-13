@@ -27,7 +27,7 @@
                                     target="_blank">Test Drive</a>
                             </li>
                             <li class="sub-li">
-                                <a href="javascript:void(0)">Program Purna Jual</a>
+                                <a href="<?=BASE_URL;?>program-purna-jual/">Program Purna Jual</a>
                             </li>
                         </ul>
                     </li>

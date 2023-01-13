@@ -106,6 +106,10 @@ html,
         margin-top: 120px;
       }
 
+      .mt-20 {
+        margin-top: 5rem;
+      }
+
       .mt-5-half {
         margin-top: 5.5rem;
       }

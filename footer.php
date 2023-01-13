@@ -62,8 +62,16 @@
         </div>
         <div class="d-flex flex-column no-padding pr-5">
             <p class="footer-header">
-                <a href="https://forms.gle/csGRdsmUEcbmxdxF8" target="_blank">Test Drive</a>
+                <a href="https://forms.gle/csGRdsmUEcbmxdxF8" target="_blank">Layanan</a>
             </p>
+            <ul>
+                <li>
+                    <a href="https://forms.gle/csGRdsmUEcbmxdxF8" target="_blank">Test Drive</a>
+                </li>
+                <li>
+                    <a href="<?=BASE_URL?>program-purna-jual/" target="_blank">Program Purna Jual</a>
+                </li>
+            </ul>
         </div>
         <div class="d-flex flex-column no-padding pr-5">
             <p class="footer-header">

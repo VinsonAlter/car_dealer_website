@@ -36,13 +36,6 @@
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
             crossorigin="anonymous"
         />
-
-        <!-- Simple Pagination CSS -->
-        <link 
-            rel="stylesheet"
-            type="text/css"
-            href="../../assets/css/simplePagination.css"
-        />
         <!-- Favicon Icon -->
         <link rel="shortcut icon" href="<?=BASE_URL;?>favicon.ico">
         <link
@@ -232,9 +225,6 @@
         
         <!-- Lazyload Plugins -->
         <script src=" https://cdn.jsdelivr.net/gh/aFarkas/lazysizes/lazysizes.min.js" async=""></script>
-
-        <!-- Bootpag for Pagination -->
-        <script src="../../assets/js/jquery.simplePagination.js"></script>
 
         <script>
         
