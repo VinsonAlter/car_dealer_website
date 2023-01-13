@@ -36,7 +36,7 @@
                         </ul>
                     </li> -->
                     <li class="scroll-to-section">
-                        <a href="<?= BASE_URL; ?>berita/">Berita</a>
+                        <a href="<?= BASE_URL; ?>berita-chery/">Berita</a>
                     </li>
                     <li class="scroll-to-section">
                         <a href="https://forms.gle/nh9R9RwHzGug2MeF9" target="_blank">Kontak Kami</a>

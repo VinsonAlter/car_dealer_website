@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^berita-chery/([a-zA-Z0-9_-]+)$ berita/detail.php?title=$1
+RewriteRule ^berita-chery/([a-zA-Z0-9_-]+)/$ berita/detail.php?title=$1
+RewriteRule ^berita-chery/$ berita/

@@ -197,7 +197,7 @@
                                 })).append().html(data[i].preview),
                                 $('<a>').attr({
                                 class: 'btn news-button text-center font-work',
-                                href: "<?= BASE_URL; ?>berita/detail.php?title=" + data[i].slug
+                                href: "<?= BASE_URL; ?>berita-chery/" + data[i].slug
                                 }).html("Lebih lanjut..."))
                             )
                         )
