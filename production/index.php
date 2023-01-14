@@ -79,7 +79,7 @@
                                 </button>
                             </div>
                             <div class="d-flex form-group right">
-                                <a class="text-black models-font" href="<?=BASE_URL?>">Back to Home</a>
+                                <a class="text-black models-font fs12" href="<?=BASE_URL?>">Back to Home</a>
                             </div>
                         </form>
                     </div>

@@ -355,6 +355,10 @@ html,
         margin-bottom: 1.5rem;
       }
 
+      .fs12 {
+        font-size: 12px;
+      }
+
       .fs30-scaled {
         font-size: 20px;
       }
