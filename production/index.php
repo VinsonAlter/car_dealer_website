@@ -73,10 +73,13 @@
                                 <input type="password" class="form-control"
                                     placeholder="Please enter your password">
                             </div>
-                            <div class="d-grid">
+                            <div class="d-grid mb-3">
                                 <button type="submit" class="btn btn-block btn-success">
                                     Submit
                                 </button>
+                            </div>
+                            <div class="d-flex form-group right">
+                                <a class="text-black models-font" href="<?=BASE_URL?>">Back to Home</a>
                             </div>
                         </form>
                     </div>
