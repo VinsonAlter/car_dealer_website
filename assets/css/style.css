@@ -14,7 +14,7 @@ html,
       }
 
       .bg-section {
-        background: url('../../assets/img/banner-desktop.png') no-repeat center center;
+        background: url('../../assets/img/banner-desktop.webp') no-repeat center center;
         background-size: cover;
         background-blend-mode: darken;
         background-color: rgba(2, 18, 243, 0.5);
@@ -45,6 +45,10 @@ html,
       .play-video {
         width: 100%;
         height: auto;
+      }
+
+      .h-full {
+        min-height: 100vh;
       }
 
       @media (min-width: 1280px) {
@@ -262,8 +266,8 @@ html,
       }
 
       .centered {
-        align-items: center;
-        justify-content: center;
+        align-items: center !important;
+        justify-content: center !important;
       }
 
       .uppercase {
