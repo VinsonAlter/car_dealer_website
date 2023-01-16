@@ -84,10 +84,10 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">
+            <a href="user/" class="nav-link">
               <i class="nav-icon fas fa-user-circle"></i>
               <p>
-                User profile
+                User
               </p>
             </a>
           </li>
@@ -773,8 +773,6 @@
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
 </body>

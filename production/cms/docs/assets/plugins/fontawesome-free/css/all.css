@@ -3756,9 +3756,6 @@ readers do not read off random characters that represent icons */
 .fa-stethoscope:before {
   content: "\f0f1"; }
 
-.fa-steering-wheel:before {
-  content: "\f622";}
-
 .fa-sticker-mule:before {
   content: "\f3f7"; }
 
