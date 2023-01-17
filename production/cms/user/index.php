@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../dist/css/styles.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -224,7 +226,7 @@
                       <th>Nama</th>
                       <th>Otoritas</th>
                       <th>Status</th>
-                      <th>Ubah Password</th>
+                      <th>Edit User</th>
                       <th>Aktif</th>
                       <th>Tidak Aktif</th>
                     </tr>
@@ -240,7 +242,7 @@
                                 <td>$data[1]</td>
                                 <td>$data[3]</td>
                                 <td>$data[4]</td>
-                                <td><a class='btn btn-block bg-gradient btn-warning'>Ubah Password</a></td>
+                                <td><a class='btn btn-block bg-gradient btn-warning'>Edit User</a></td>
                                 <td><a class='btn btn-block bg-gradient btn-success'>Aktif</a></td>
                                 <td><a class='btn btn-block bg-gradient btn-danger'>Tidak Aktif</a></td>
                             ";
@@ -272,45 +274,51 @@
           <div class="modal-body">
             <form class="form-horizontal" role="form">
               <div class="form-group row">
-                <label class="col-sm-2 col-form-label">
+                <label class="cp col-sm-2 col-form-label" for="nama_user">
                   Nama
                 </label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control">
+                  <input id="nama_user" type="text" class="cp form-control">
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col-sm-2 col-form-label">
+                <label class="cp col-sm-2 col-form-label" for="password_user">
                   Password
                 </label>
                 <div class="col-sm-10">
-                  <input type="password" class="form-control">
+                  <input id="password_user" type="password" class="cp form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-form-label">Otoritas:</label>
                 <div class="custom-control custom-checkbox">
-                  <input id="user-accounts" type="checkbox" class="custom-control-input" value="user-accounts">
-                  <label class="custom-control-label" for="user-accounts">
+                  <input id="user-accounts" type="checkbox" class="cp custom-control-input" value="user-accounts">
+                  <label class="cp custom-control-label" for="user-accounts">
                     User Accounts
                   </label>
                 </div>
                 <div class="custom-control custom-checkbox">
-                  <input id="price-list" type="checkbox" class="custom-control-input" value="price-list">
-                  <label class="custom-control-label" for="price-list">
+                  <input id="price-list" type="checkbox" class="cp custom-control-input" value="price-list">
+                  <label class="cp custom-control-label" for="price-list">
                     Price List
                   </label>
                 </div>
                 <div class="custom-control custom-checkbox">
-                  <input id="test-drive" type="checkbox" class="custom-control-input" value="test-drive">
-                  <label class="custom-control-label" for="test-drive">
+                  <input id="test-drive" type="checkbox" class="cp custom-control-input" value="test-drive">
+                  <label class="cp custom-control-label" for="test-drive">
                     Test Drive
                   </label>
                 </div>
                 <div class="custom-control custom-checkbox">
-                  <input id="berita" type="checkbox" class="custom-control-input" value="berita">
-                  <label class="custom-control-label" for="berita">
+                  <input id="berita" type="checkbox" class="cp custom-control-input" value="berita">
+                  <label class="cp custom-control-label" for="berita">
                     Berita
+                  </label>
+                </div>
+                <div class="offset-10 mt-2 custom-control custom-checkbox">
+                  <input id="aktif" type="checkbox" class="cp custom-control-input" value="aktif">
+                  <label class="cp custom-control-label" for="aktif">
+                    Aktif
                   </label>
                 </div>
               </div>
