@@ -214,7 +214,7 @@
               <div class="card-header">
                 <h3 class="card-title">User Accounts</h3>
               </div>
-              <button class="btn btn-info col-4 col-md-2 p-2 m-3" data-toggle="modal" data-target="#modal_user" type="button">
+              <button class="btn btn-info col-4 col-md-2 p-2 m-3" data-toggle="modal" data-target="#tambah_user" type="button">
                 Tambah User
               </button>
               <!-- /.card-header -->
@@ -242,7 +242,7 @@
                                 <td>$data[1]</td>
                                 <td>$data[3]</td>
                                 <td>$data[4]</td>
-                                <td><a class='btn btn-block bg-gradient btn-warning'>Edit User</a></td>
+                                <td><a class='btn btn-block bg-gradient btn-warning' data-toggle='modal' data-target='#edit_user'>Edit User</a></td>
                                 <td><a class='btn btn-block bg-gradient btn-success'>Aktif</a></td>
                                 <td><a class='btn btn-block bg-gradient btn-danger'>Tidak Aktif</a></td>
                             ";
@@ -261,74 +261,139 @@
     <!-- /.content -->
   </div>
 
-  <!-- Bootstrap Modals -->
-  <div class="modal fade" id="modal_user">
+  <!-- Bootstrap Tambah User Modals -->
+  <div class="modal fade" id="tambah_user">
     <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title">Tambah Akun User</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form class="form-horizontal" role="form">
-              <div class="form-group row">
-                <label class="cp col-sm-2 col-form-label" for="nama_user">
-                  Nama
-                </label>
-                <div class="col-sm-10">
-                  <input id="nama_user" type="text" class="cp form-control">
-                </div>
-              </div>
-              <div class="form-group row">
-                <label class="cp col-sm-2 col-form-label" for="password_user">
-                  Password
-                </label>
-                <div class="col-sm-10">
-                  <input id="password_user" type="password" class="cp form-control">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-form-label">Otoritas:</label>
-                <div class="custom-control custom-checkbox">
-                  <input id="user-accounts" type="checkbox" class="cp custom-control-input" value="user-accounts">
-                  <label class="cp custom-control-label" for="user-accounts">
-                    User Accounts
-                  </label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                  <input id="price-list" type="checkbox" class="cp custom-control-input" value="price-list">
-                  <label class="cp custom-control-label" for="price-list">
-                    Price List
-                  </label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                  <input id="test-drive" type="checkbox" class="cp custom-control-input" value="test-drive">
-                  <label class="cp custom-control-label" for="test-drive">
-                    Test Drive
-                  </label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                  <input id="berita" type="checkbox" class="cp custom-control-input" value="berita">
-                  <label class="cp custom-control-label" for="berita">
-                    Berita
-                  </label>
-                </div>
-                <div class="offset-10 mt-2 custom-control custom-checkbox">
-                  <input id="aktif" type="checkbox" class="cp custom-control-input" value="aktif">
-                  <label class="cp custom-control-label" for="aktif">
-                    Aktif
-                  </label>
-                </div>
-              </div>
-            </form>
-          </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Simpan</button>
-            </div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Tambah Akun User</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
+        <div class="modal-body">
+          <form class="form-horizontal" role="form">
+            <div class="form-group row">
+              <label class="cp col-sm-2 col-form-label" for="nama_user">
+                Nama
+              </label>
+              <div class="col-sm-10">
+                <input id="nama_user" type="text" class="cp form-control">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="cp col-sm-2 col-form-label" for="password_user">
+                Password
+              </label>
+              <div class="col-sm-10">
+                <input id="password_user" type="password" class="cp form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-form-label">Otoritas:</label>
+              <div class="custom-control custom-checkbox">
+                <input id="user-accounts" type="checkbox" class="cp custom-control-input" value="user-accounts">
+                <label class="cp custom-control-label" for="user-accounts">
+                  User Accounts
+                </label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input id="price-list" type="checkbox" class="cp custom-control-input" value="price-list">
+                <label class="cp custom-control-label" for="price-list">
+                  Price List
+                </label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input id="test-drive" type="checkbox" class="cp custom-control-input" value="test-drive">
+                <label class="cp custom-control-label" for="test-drive">
+                  Test Drive
+                </label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input id="berita" type="checkbox" class="cp custom-control-input" value="berita">
+                <label class="cp custom-control-label" for="berita">
+                  Berita
+                </label>
+              </div>
+              <div class="offset-10 mt-2 custom-control custom-checkbox">
+                <input id="aktif" type="checkbox" class="cp custom-control-input" value="aktif">
+                <label class="cp custom-control-label" for="aktif">
+                  Aktif
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Simpan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Edit User Modals -->
+  <div class="modal fade" id="edit_user">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Edit Akun User</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal" role="form">
+            <div class="form-group row">
+              <label class="cp col-sm-2 col-form-label" for="nama_user">
+                Nama
+              </label>
+              <div class="col-sm-10">
+                <input id="nama_user" type="text" class="cp form-control">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="cp col-sm-2 col-form-label" for="password_user">
+                Password
+              </label>
+              <div class="col-sm-10">
+                <input id="password_user" type="password" class="cp form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-form-label">Otoritas:</label>
+              <div class="custom-control custom-checkbox">
+                <input id="user-accounts" type="checkbox" class="cp custom-control-input" value="user-accounts">
+                <label class="cp custom-control-label" for="user-accounts">
+                  User Accounts
+                </label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input id="price-list" type="checkbox" class="cp custom-control-input" value="price-list">
+                <label class="cp custom-control-label" for="price-list">
+                  Price List
+                </label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input id="test-drive" type="checkbox" class="cp custom-control-input" value="test-drive">
+                <label class="cp custom-control-label" for="test-drive">
+                  Test Drive
+                </label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input id="berita" type="checkbox" class="cp custom-control-input" value="berita">
+                <label class="cp custom-control-label" for="berita">
+                  Berita
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Simpan</button>
+        </div>
+      </div>
     </div>
   </div>
 
