@@ -217,9 +217,8 @@
               <button class="btn btn-info col-4 col-md-2 p-2 m-3" data-toggle="modal" data-target="#tambah_user" type="button">
                 Tambah User
               </button>
-              <!-- /.card-header -->
-              <div class="card-body table-responsive p-0" style="height: 350px;">
-                <table class="table table-head-fixed text-nowrap">
+              <div class="table-responsive p-0" style="height: 350px;">
+                <table class="table table-head-fixed text-nowrap" id="table_user">
                   <thead>
                     <tr>
                       <th>No</th>
@@ -272,13 +271,23 @@
           </button>
         </div>
         <div class="modal-body">
-          <form class="form-horizontal" role="form">
+          <form class="form-horizontal" id="add_user" role="form" method="post" action="javascript:initSubmit()">
             <div class="form-group row">
               <label class="cp col-sm-2 col-form-label" for="nama_user">
                 Nama
               </label>
               <div class="col-sm-10">
-                <input id="nama_user" type="text" class="cp form-control" name="nama_user">
+                <input id="nama_user" type="text" class="cp form-control" 
+                  name="nama_user" autocomplete="off" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="cp col-sm-2 col-form-label" for="nama_login">
+                Username
+              </label>
+              <div class="col-sm-10">
+                <input id="nama_login" type="text" class="cp form-control" 
+                  name="nama_login" autocomplete="off" required>
               </div>
             </div>
             <div class="form-group row">
@@ -286,31 +295,32 @@
                 Password
               </label>
               <div class="col-sm-10">
-                <input id="password_user" type="password" class="cp form-control" name="password_user">
+                <input id="password_user" type="text" class="cp form-control" 
+                  name="password_user" autocomplete="off" required>
               </div>
             </div>
             <div class="form-group">
               <label class="col-form-label">Otoritas:</label>
               <div class="custom-control custom-checkbox">
-                <input id="user-accounts" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="user-accounts">
+                <input id="user-accounts" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="user-accounts" required>
                 <label class="cp custom-control-label" for="user-accounts">
                   User Accounts
                 </label>
               </div>
               <div class="custom-control custom-checkbox">
-                <input id="price-list" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="price-list">
+                <input id="price-list" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="price-list" required>
                 <label class="cp custom-control-label" for="price-list">
                   Price List
                 </label>
               </div>
               <div class="custom-control custom-checkbox">
-                <input id="test-drive" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="test-drive">
+                <input id="test-drive" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="test-drive" required>
                 <label class="cp custom-control-label" for="test-drive">
                   Test Drive
                 </label>
               </div>
               <div class="custom-control custom-checkbox">
-                <input id="berita" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="berita">
+                <input id="berita" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="berita" required>
                 <label class="cp custom-control-label" for="berita">
                   Berita
                 </label>
@@ -411,5 +421,37 @@
 <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../dist/js/adminlte.min.js"></script>
+
+<!-- Custom Scripts -->
+<script>
+  $(document).ready(() => {
+    $('#tambah_user').on('show.bs.modal', function() {
+      $("#tambah_user input[type=checkbox]").each(function(){
+        $(this).prop("checked", true);
+      });
+    });
+  })
+
+  function initSubmit() {
+    $.ajax({
+      type: "POST",
+      url: "register.php",
+      data: $('#add_user').serialize(),
+      success: result => {
+        const res = $.parseJSON(result);
+        if(res.success == 1) {
+          // clear the modals inputs after data submission
+          $('#tambah_user .modal-body input[type="text"]').val('');
+          // hide modals after data submission
+          $('#tambah_user').modal('hide');
+          // refresh table after data submission
+          // $('#table_user').html(result);
+        }
+      }
+    })
+  }
+</script>
+
+
 </body>
 </html>
