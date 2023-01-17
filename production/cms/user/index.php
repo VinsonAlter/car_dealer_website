@@ -83,7 +83,7 @@
             <a href="pages/tables/simple.html" class="nav-link">
               <i class="nav-icon fas fa-user-circle"></i>
               <p>
-                User
+                User Accounts
               </p>
             </a>
           </li>
@@ -124,10 +124,7 @@
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>User</h1>
-          </div>
-          <div class="col-sm-6">
+          <div class="offset-sm-6 col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
               <li class="breadcrumb-item active">User</li>
@@ -137,7 +134,7 @@
       </div><!-- /.container-fluid -->
     </section>
 
-    <!-- Main content -->
+    <!-- Main con   tent -->
     <section class="content">
       <div class="container-fluid">
         <!-- /.row -->
@@ -215,7 +212,7 @@
               <div class="card-header">
                 <h3 class="card-title">User Accounts</h3>
               </div>
-              <button class="btn btn-info col-2 p-2 m-3" type="button">
+              <button class="btn btn-info col-4 col-md-2 p-2 m-3" data-toggle="modal" data-target="#modal_user" type="button">
                 Tambah User
               </button>
               <!-- /.card-header -->
@@ -261,6 +258,72 @@
     </section>
     <!-- /.content -->
   </div>
+
+  <!-- Bootstrap Modals -->
+  <div class="modal fade" id="modal_user">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Tambah Akun User</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal" role="form">
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label">
+                  Nama
+                </label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label">
+                  Password
+                </label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-form-label">Otoritas:</label>
+                <div class="custom-control custom-checkbox">
+                  <input id="user-accounts" type="checkbox" class="custom-control-input" value="user-accounts">
+                  <label class="custom-control-label" for="user-accounts">
+                    User Accounts
+                  </label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input id="price-list" type="checkbox" class="custom-control-input" value="price-list">
+                  <label class="custom-control-label" for="price-list">
+                    Price List
+                  </label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input id="test-drive" type="checkbox" class="custom-control-input" value="test-drive">
+                  <label class="custom-control-label" for="test-drive">
+                    Test Drive
+                  </label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input id="berita" type="checkbox" class="custom-control-input" value="berita">
+                  <label class="custom-control-label" for="berita">
+                    Berita
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Simpan</button>
+            </div>
+        </div>
+    </div>
+  </div>
+
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">

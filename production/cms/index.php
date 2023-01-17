@@ -87,7 +87,7 @@
             <a href="user/" class="nav-link">
               <i class="nav-icon fas fa-user-circle"></i>
               <p>
-                User
+                User Accounts
               </p>
             </a>
           </li>
