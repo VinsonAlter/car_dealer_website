@@ -271,7 +271,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form class="form-horizontal" id="add_user" role="form" method="post" action="javascript:initSubmit()">
+        <form class="form-horizontal" id="add_user" role="form" method="post" action="javascript:initSubmit()">
             <div class="form-group row">
               <label class="cp col-sm-2 col-form-label" for="nama_user">
                 Nama
@@ -332,13 +332,13 @@
                 </label>
               </div>
             </div>
-          </form>
         </div>
         <div class="modal-footer justify-content-between">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Simpan</button>
+          <button type="submit" class="btn btn-primary">Simpan</button>
         </div>
       </div>
+      </form>
     </div>
   </div>
 
@@ -446,7 +446,10 @@
           $('#tambah_user').modal('hide');
           // refresh table after data submission
           // $('#table_user').html(result);
-        }
+        } alert(res.message);
+      },
+      error: err => {
+        console.error(res.statusText);
       }
     })
   }
