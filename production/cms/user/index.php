@@ -218,7 +218,7 @@
                 Tambah User
               </button>
               <!-- /.card-header -->
-              <div class="card-body table-responsive p-0" style="height: 300px;">
+              <div class="card-body table-responsive p-0" style="height: 350px;">
                 <table class="table table-head-fixed text-nowrap">
                   <thead>
                     <tr>
@@ -278,7 +278,7 @@
                 Nama
               </label>
               <div class="col-sm-10">
-                <input id="nama_user" type="text" class="cp form-control">
+                <input id="nama_user" type="text" class="cp form-control" name="nama_user">
               </div>
             </div>
             <div class="form-group row">
@@ -286,37 +286,37 @@
                 Password
               </label>
               <div class="col-sm-10">
-                <input id="password_user" type="password" class="cp form-control">
+                <input id="password_user" type="password" class="cp form-control" name="password_user">
               </div>
             </div>
             <div class="form-group">
               <label class="col-form-label">Otoritas:</label>
               <div class="custom-control custom-checkbox">
-                <input id="user-accounts" type="checkbox" class="cp custom-control-input" value="user-accounts">
+                <input id="user-accounts" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="user-accounts">
                 <label class="cp custom-control-label" for="user-accounts">
                   User Accounts
                 </label>
               </div>
               <div class="custom-control custom-checkbox">
-                <input id="price-list" type="checkbox" class="cp custom-control-input" value="price-list">
+                <input id="price-list" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="price-list">
                 <label class="cp custom-control-label" for="price-list">
                   Price List
                 </label>
               </div>
               <div class="custom-control custom-checkbox">
-                <input id="test-drive" type="checkbox" class="cp custom-control-input" value="test-drive">
+                <input id="test-drive" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="test-drive">
                 <label class="cp custom-control-label" for="test-drive">
                   Test Drive
                 </label>
               </div>
               <div class="custom-control custom-checkbox">
-                <input id="berita" type="checkbox" class="cp custom-control-input" value="berita">
+                <input id="berita" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="berita">
                 <label class="cp custom-control-label" for="berita">
                   Berita
                 </label>
               </div>
               <div class="offset-10 mt-2 custom-control custom-checkbox">
-                <input id="aktif" type="checkbox" class="cp custom-control-input" value="aktif">
+                <input id="aktif" type="checkbox" class="cp custom-control-input" value="aktif" name="aktif">
                 <label class="cp custom-control-label" for="aktif">
                   Aktif
                 </label>
@@ -396,14 +396,6 @@
       </div>
     </div>
   </div>
-
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.2.0
-    </div>
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-  </footer>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
