@@ -35,7 +35,11 @@
                     $res['success'] = 0;
                     $res['message'] = 'User gagal dimasukkan! Periksa koneksi anda!';
                 }
-            } 
+                mysqli_stmt_free_result($stmt);
+                mysqli_stmt_close($stmt);
+            }
+            mysqli_stmt_free_result($statement);
+            mysqli_stmt_close($statement);
         }} else {
         $res['success'] = 0;
         $res['message'] = 'Mohon pastikan nama, nama login, dan password sudah terisi!';

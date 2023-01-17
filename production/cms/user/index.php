@@ -234,8 +234,9 @@
                     <?php
                         $tampil = 'select * from user_account';
                         $hasil = mysqli_query($koneksi, $tampil);
-                        $no = 1;
+                        $no = 0;
                         while($data = mysqli_fetch_row($hasil)) {
+                            $no++;
                             echo "<tr>
                                 <td>$no</td>
                                 <td>$data[1]</td>
