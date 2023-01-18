@@ -8,7 +8,7 @@
     $password = $_POST['password_user'];
     $confirm = $_POST['conf_pass'];
     $aktif = isset($_POST['aktif']) ? $_POST['aktif'] : 'tidak aktif';
-    if(isset($nama) && isset($login) && isset($password) && isset($_POST['otoritas'])) {
+    if(isset($nama) && isset($login) && isset($password)) {
         if(checkinput($nama) || checkinput($login) || checkinput($password)) {
             $res['success'] = 0;
             $res['message'] = 'Mohon masukkan angka atau huruf!';
@@ -27,21 +27,27 @@
                     $res['success'] = 0;
                     $res['message'] = 'Username sudah terdaftar di database! Mohon masukkan username lain!';
                 } else {
-                    $password = password_hash($password, PASSWORD_DEFAULT);
-                    $otoritas = implode(' ; ', $_POST['otoritas']);
-                    $insert = "INSERT INTO user_account (nama, password, otoritas, status, nama_login) VALUES (?, ?, ?, ?, ?); ";
-                    $stmt = mysqli_prepare($koneksi, $insert);
-                    mysqli_stmt_bind_param($stmt, 'sssss', $nama, $password, $otoritas, $aktif, $login);
-                    mysqli_stmt_execute($stmt);
-                    if(mysqli_stmt_affected_rows($stmt) > 0) {
-                        $res['success'] = 1;
-                        $res['message'] = 'User baru berhasil dimasukkan!';
+                    if(isset($_POST['otoritas'])) {
+                        $password = password_hash($password, PASSWORD_DEFAULT);
+                        $otoritas = implode(' ; ', $_POST['otoritas']);
+                        $insert = "INSERT INTO user_account (nama, password, otoritas, status, nama_login) VALUES (?, ?, ?, ?, ?); ";
+                        $stmt = mysqli_prepare($koneksi, $insert);
+                        mysqli_stmt_bind_param($stmt, 'sssss', $nama, $password, $otoritas, $aktif, $login);
+                        mysqli_stmt_execute($stmt);
+                        if(mysqli_stmt_affected_rows($stmt) > 0) {
+                            $res['success'] = 1;
+                            $res['message'] = 'User baru berhasil dimasukkan!';
+                        } else {
+                            $res['success'] = 0;
+                            $res['message'] = 'User gagal dimasukkan! Periksa koneksi anda!';
+                        }
+                        mysqli_stmt_free_result($stmt);
+                        mysqli_stmt_close($stmt);
                     } else {
                         $res['success'] = 0;
-                        $res['message'] = 'User gagal dimasukkan! Periksa koneksi anda!';
+                        $res['message'] = 'Mohon centang salah satu checkbox otoritas yang sudah disediakan!';
                     }
-                    mysqli_stmt_free_result($stmt);
-                    mysqli_stmt_close($stmt);
+                    
                 }
                 mysqli_stmt_free_result($statement);
                 mysqli_stmt_close($statement);
