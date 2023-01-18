@@ -1,3 +1,7 @@
 .cp {
     cursor: pointer;
 }
+
+.hidden {
+    display: none;
+}

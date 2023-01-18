@@ -241,8 +241,11 @@
                                 <td>$no</td>
                                 <td>$data[1]</td>
                                 <td>$data[3]</td>
-                                <td>$data[4]</td>
-                                <td><a class='btn btn-block bg-gradient btn-warning' data-toggle='modal' data-target='#edit_user'>Edit User</a></td>
+                                <td>$data[4]</td>";
+                            echo '
+                                <td><a class="btn btn-block bg-gradient btn-warning" data-toggle="modal" data-target="#edit_user"
+                                      onclick="getUser(\''.$data[5].'\')">Edit User</a></td>';
+                            echo "
                                 <td><a class='btn btn-block bg-gradient btn-success'>Aktif</a></td>
                                 <td><a class='btn btn-block bg-gradient btn-danger'>Tidak Aktif</a></td>
                             ";
@@ -273,6 +276,7 @@
         </div>
         <div class="modal-body">
     <form class="form-horizontal" id="add_user" role="form" method="post" action="javascript:initSubmit()">
+          
           <div class="form-group row">
             <label class="cp col-sm-4 col-form-label" for="nama_user">
               Nama
@@ -290,6 +294,9 @@
               <input id="nama_login" type="text" class="cp form-control" 
                 name="nama_login" autocomplete="off" required>
             </div>
+          </div>
+          <div class="hidden">
+            <input type="password"/>
           </div>
           <div class="form-group row">
             <label class="cp col-sm-4 col-form-label" for="password_user">
@@ -365,19 +372,35 @@
         <div class="modal-body">
           <form class="form-horizontal" role="form">
             <div class="form-group row">
-              <label class="cp col-sm-2 col-form-label" for="nama_user">
+              <label class="cp col-sm-4 col-form-label" for="edit_nama_user">
                 Nama
               </label>
-              <div class="col-sm-10">
-                <input id="nama_user" type="text" class="cp form-control">
+              <div class="col-sm-8">
+                <input id="edit_nama_user" type="text" class="cp form-control">
               </div>
             </div>
             <div class="form-group row">
-              <label class="cp col-sm-2 col-form-label" for="password_user">
+              <label class="cp col-sm-4 col-form-label" for="edit_nama_login">
+                Username
+              </label>
+              <div class="col-sm-8">
+                <input id="edit_nama_login" type="text" class="cp form-control">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="cp col-sm-4 col-form-label" for="edit_password_user">
                 Password
               </label>
-              <div class="col-sm-10">
-                <input id="password_user" type="password" class="cp form-control">
+              <div class="col-sm-8">
+                <input id="edit_password_user" type="password" class="cp form-control">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="cp col-sm-4 col-form-label" for="edit_conf_pass">
+                Confirm Password
+              </label>
+              <div class="col-sm-8">
+                <input id="edit_conf_pass" type="password" class="cp form-control">
               </div>
             </div>
             <div class="form-group">
@@ -460,17 +483,30 @@
         else {
           alert(res.message);
         }
-        
       },
-      // complete: () => {
-      //    // refresh table after data submission
-      //    window.location.reload();
-      // },
       error: err => {
         console.error(res.statusText);
       }
     })
   }
+
+  function getUser(username) {
+    $.ajax({
+      type: "POST",
+      url: "getUser.php",
+      data: {username: username},
+      success: result => {
+        const res = $.parseJSON(result);
+        $('#edit_nama_user').val(res.data.nama);
+        $('#edit_nama_login').val(res.data.username);
+      },
+      error: err => {
+        console.error(err.statusText);
+        alert(res.message);
+      }     
+    })
+  }
+
 </script>
 
 
