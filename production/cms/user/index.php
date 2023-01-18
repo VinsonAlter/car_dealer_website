@@ -319,25 +319,25 @@
           <div class="form-group">
             <label class="col-form-label">Otoritas:</label>
             <div class="custom-control custom-checkbox">
-              <input id="user-accounts" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="user-accounts" required>
+              <input id="user-accounts" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="user-accounts">
               <label class="cp custom-control-label" for="user-accounts">
                 User Accounts
               </label>
             </div>
             <div class="custom-control custom-checkbox">
-              <input id="price-list" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="price-list" required>
+              <input id="price-list" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="price-list">
               <label class="cp custom-control-label" for="price-list">
                 Price List
               </label>
             </div>
             <div class="custom-control custom-checkbox">
-              <input id="test-drive" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="test-drive" required>
+              <input id="test-drive" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="test-drive">
               <label class="cp custom-control-label" for="test-drive">
                 Test Drive
               </label>
             </div>
             <div class="custom-control custom-checkbox">
-              <input id="berita" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="berita" required>
+              <input id="berita" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="berita">
               <label class="cp custom-control-label" for="berita">
                 Berita
               </label>
@@ -406,25 +406,29 @@
             <div class="form-group">
               <label class="col-form-label">Otoritas:</label>
               <div class="custom-control custom-checkbox">
-                <input id="user-accounts" type="checkbox" class="cp custom-control-input" value="user-accounts">
+                <input id="user-accounts" type="checkbox" class="cp custom-control-input" value="user-accounts"
+                  name="otoritas[]">
                 <label class="cp custom-control-label" for="user-accounts">
                   User Accounts
                 </label>
               </div>
               <div class="custom-control custom-checkbox">
-                <input id="price-list" type="checkbox" class="cp custom-control-input" value="price-list">
+                <input id="price-list" type="checkbox" class="cp custom-control-input" value="price-list"
+                  name="otoritas[]">
                 <label class="cp custom-control-label" for="price-list">
                   Price List
                 </label>
               </div>
               <div class="custom-control custom-checkbox">
-                <input id="test-drive" type="checkbox" class="cp custom-control-input" value="test-drive">
+                <input id="test-drive" type="checkbox" class="cp custom-control-input" value="test-drive"
+                  name="otoritas[]">
                 <label class="cp custom-control-label" for="test-drive">
                   Test Drive
                 </label>
               </div>
               <div class="custom-control custom-checkbox">
-                <input id="berita" type="checkbox" class="cp custom-control-input" value="berita">
+                <input id="berita" type="checkbox" class="cp custom-control-input" value="berita"
+                  name="otoritas[]">
                 <label class="cp custom-control-label" for="berita">
                   Berita
                 </label>
@@ -499,6 +503,8 @@
         const res = $.parseJSON(result);
         $('#edit_nama_user').val(res.data.nama);
         $('#edit_nama_login').val(res.data.username);
+        const otoritas = res.data.otoritas;
+        $otoritas = $("#edit_user input[name='otoritas[]']").val(otoritas);
       },
       error: err => {
         console.error(err.statusText);

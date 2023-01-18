@@ -14,9 +14,11 @@
             // var_dump($rows);
             // var_dump($result);
             while($fetch = mysqli_fetch_assoc($result)) {
+                $otoritas = explode(' ; ', $fetch['otoritas']);
                 $data = array(
                     'nama' => $fetch['nama'],
                     'username' => $fetch['nama_login'],
+                    'otoritas' => $otoritas
                 );
             }
             $res['success'] = 1;
