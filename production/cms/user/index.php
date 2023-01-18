@@ -274,30 +274,39 @@
         <div class="modal-body">
     <form class="form-horizontal" id="add_user" role="form" method="post" action="javascript:initSubmit()">
           <div class="form-group row">
-            <label class="cp col-sm-2 col-form-label" for="nama_user">
+            <label class="cp col-sm-4 col-form-label" for="nama_user">
               Nama
             </label>
-            <div class="col-sm-10">
+            <div class="col-sm-8">
               <input id="nama_user" type="text" class="cp form-control" 
                 name="nama_user" autocomplete="off" required>
             </div>
           </div>
           <div class="form-group row">
-            <label class="cp col-sm-2 col-form-label" for="nama_login">
+            <label class="cp col-sm-4 col-form-label" for="nama_login">
               Username
             </label>
-            <div class="col-sm-10">
+            <div class="col-sm-8">
               <input id="nama_login" type="text" class="cp form-control" 
                 name="nama_login" autocomplete="off" required>
             </div>
           </div>
           <div class="form-group row">
-            <label class="cp col-sm-2 col-form-label" for="password_user">
+            <label class="cp col-sm-4 col-form-label" for="password_user">
               Password
             </label>
-            <div class="col-sm-10">
-              <input id="password_user" type="text" class="cp form-control" 
+            <div class="col-sm-8">
+              <input id="password_user" type="password" class="cp form-control" 
                 name="password_user" autocomplete="off" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="cp col-sm-4 col-form-label" for="conf_pass">
+              Confirm Password
+            </label>
+            <div class="col-sm-8">
+              <input id="conf_pass" type="password" class="cp form-control"
+                name="conf_pass" autocomplete="off" required>
             </div>
           </div>
           <div class="form-group">
@@ -445,12 +454,18 @@
           $('#tambah_user .modal-body input[type="text"]').val('');
           // hide modals after data submission
           $('#tambah_user').modal('hide');
-        } alert(res.message);
+          alert(res.message);
+          window.location.reload();
+        } 
+        else {
+          alert(res.message);
+        }
+        
       },
-      complete: () => {
-         // refresh table after data submission
-         window.location.reload();
-      },
+      // complete: () => {
+      //    // refresh table after data submission
+      //    window.location.reload();
+      // },
       error: err => {
         console.error(res.statusText);
       }
