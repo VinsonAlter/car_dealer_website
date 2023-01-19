@@ -14,6 +14,7 @@
             while($fetch = mysqli_fetch_assoc($result)) {
                 $otoritas = explode(' ; ', $fetch['otoritas']);
                 $data = array(
+                    'id' => $fetch['id'],
                     'nama' => $fetch['nama'],
                     'username' => $fetch['nama_login'],
                     'otoritas' => $otoritas

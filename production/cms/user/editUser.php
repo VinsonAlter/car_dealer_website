@@ -4,6 +4,7 @@
     require_once '../../../function.php';
     $res = [];
     $nama = $_POST['edit_nama_user'];
+    $id = $_POST['id_user'];
     $login = strtolower($_POST['edit_nama_login']);
     $password = $_POST['edit_password_user'];
     $confirm = $_POST['edit_conf_pass'];
@@ -30,9 +31,10 @@
                         $password = password_hash($password, PASSWORD_DEFAULT);
                         $otoritas = implode(' ; ', $_POST['otoritas']);
                         $update = "UPDATE user_account 
-                                    SET nama=?, password=?, otoritas=?, nama_login=?";
+                                    SET nama=?, password=?, otoritas=?, nama_login=?
+                                    WHERE id=?";
                         $stmt = mysqli_prepare($koneksi, $update);
-                        mysqli_stmt_bind_param($stmt, 'ssss', $nama, $password, $otoritas, $login);
+                        mysqli_stmt_bind_param($stmt, 'ssssi', $nama, $password, $otoritas, $login, $id);
                         mysqli_stmt_execute($stmt);
                         if(mysqli_stmt_affected_rows($stmt) > 0) {
                             $res['success'] = 1;

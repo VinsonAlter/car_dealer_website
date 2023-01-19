@@ -370,77 +370,84 @@
           </button>
         </div>
         <div class="modal-body">
-          <form class="form-horizontal" id="ganti_user" role="form" action="javascript:initEdit()">
-            <div class="form-group row">
-              <label class="cp col-sm-4 col-form-label" for="edit_nama_user">
-                Nama
+    <form class="form-horizontal" id="ganti_user" role="form" method="post" action="javascript:initEdit()">
+          <div class="hidden">
+            <input id="id_user" type="text" class="cp form-control" 
+              name="id_user">
+          </div>
+          <div class="form-group row">
+            <label class="cp col-sm-4 col-form-label" for="edit_nama_user">
+              Nama
+            </label>
+            <div class="col-sm-8">
+              <input id="edit_nama_user" type="text" class="cp form-control" 
+                name="edit_nama_user" autocomplete="off" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="cp col-sm-4 col-form-label" for="edit_nama_login">
+              Username
+            </label>
+            <div class="col-sm-8">
+              <input id="edit_nama_login" type="text" class="cp form-control" 
+                name="edit_nama_login" autocomplete="off" required>
+            </div>
+          </div>
+          <div class="hidden">
+            <input type="password"/>
+          </div>
+          <div class="form-group row">
+            <label class="cp col-sm-4 col-form-label" for="edit_password_user">
+              Password
+            </label>
+            <div class="col-sm-8">
+              <input id="edit_password_user" type="password" class="cp form-control" 
+                name="edit_password_user" autocomplete="off" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="cp col-sm-4 col-form-label" for="edit_conf_pass">
+              Confirm Password
+            </label>
+            <div class="col-sm-8">
+              <input id="edit_conf_pass" type="password" class="cp form-control"
+                name="edit_conf_pass" autocomplete="off" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-form-label">Otoritas:</label>
+            <div class="custom-control custom-checkbox">
+              <input id="edit-user-accounts" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="user-accounts">
+              <label class="cp custom-control-label" for="edit-user-accounts">
+                User Accounts
               </label>
-              <div class="col-sm-8">
-                <input id="edit_nama_user" type="text" class="cp form-control" name="edit_nama_user">
-              </div>
             </div>
-            <div class="form-group row">
-              <label class="cp col-sm-4 col-form-label" for="edit_nama_login">
-                Username
+            <div class="custom-control custom-checkbox">
+              <input id="edit-price-list" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="price-list">
+              <label class="cp custom-control-label" for="edit-price-list">
+                Price List
               </label>
-              <div class="col-sm-8">
-                <input id="edit_nama_login" type="text" class="cp form-control" name="edit_nama_login">
-              </div>
             </div>
-            <div class="form-group row">
-              <label class="cp col-sm-4 col-form-label" for="edit_password_user">
-                Password
+            <div class="custom-control custom-checkbox">
+              <input id="edit-test-drive" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="test-drive">
+              <label class="cp custom-control-label" for="edit-test-drive">
+                Test Drive
               </label>
-              <div class="col-sm-8">
-                <input id="edit_password_user" type="password" class="cp form-control" name="edit_password_user">
-              </div>
             </div>
-            <div class="form-group row">
-              <label class="cp col-sm-4 col-form-label" for="edit_conf_pass">
-                Confirm Password
+            <div class="custom-control custom-checkbox">
+              <input id="edit-berita" name="otoritas[]" type="checkbox" class="cp custom-control-input" value="berita">
+              <label class="cp custom-control-label" for="edit-berita">
+                Berita
               </label>
-              <div class="col-sm-8">
-                <input id="edit_conf_pass" type="password" class="cp form-control" name="edit_conf_pass">
-              </div>
             </div>
-            <div class="form-group">
-              <label class="col-form-label">Otoritas:</label>
-              <div class="custom-control custom-checkbox">
-                <input id="edit-user-accounts" type="checkbox" class="cp custom-control-input" value="user-accounts"
-                  name="otoritas[]">
-                <label class="cp custom-control-label" for="edit-user-accounts">
-                  User Accounts
-                </label>
-              </div>
-              <div class="custom-control custom-checkbox">
-                <input id="edit-price-list" type="checkbox" class="cp custom-control-input" value="price-list"
-                  name="otoritas[]">
-                <label class="cp custom-control-label" for="edit-price-list">
-                  Price List
-                </label>
-              </div>
-              <div class="custom-control custom-checkbox">
-                <input id="edit-test-drive" type="checkbox" class="cp custom-control-input" value="test-drive"
-                  name="otoritas[]">
-                <label class="cp custom-control-label" for="edit-test-drive">
-                  Test Drive
-                </label>
-              </div>
-              <div class="custom-control custom-checkbox">
-                <input id="edit-berita" type="checkbox" class="cp custom-control-input" value="berita"
-                  name="otoritas[]">
-                <label class="cp custom-control-label" for="edit-berita">
-                  Berita
-                </label>
-              </div>
-            </div>
-          </form>
+          </div>
         </div>
         <div class="modal-footer justify-content-between">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           <button type="submit" class="btn btn-primary">Simpan</button>
         </div>
       </div>
+    </form>
     </div>
   </div>
 
@@ -502,6 +509,7 @@
       data: {username: username},
       success: result => {
         const res = $.parseJSON(result);
+        $('#id_user').val(res.data.id);
         $('#edit_nama_user').val(res.data.nama);
         $('#edit_nama_login').val(res.data.username);
         const otoritas = res.data.otoritas;
