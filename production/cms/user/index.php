@@ -402,7 +402,7 @@
             </label>
             <div class="col-sm-8">
               <input id="edit_password_user" type="password" class="cp form-control" 
-                name="edit_password_user" autocomplete="off" required>
+                name="edit_password_user" autocomplete="off">
             </div>
           </div>
           <div class="form-group row">
@@ -411,7 +411,7 @@
             </label>
             <div class="col-sm-8">
               <input id="edit_conf_pass" type="password" class="cp form-control"
-                name="edit_conf_pass" autocomplete="off" required>
+                name="edit_conf_pass" autocomplete="off">
             </div>
           </div>
           <div class="form-group">
