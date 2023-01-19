@@ -226,8 +226,6 @@
                       <th>Otoritas</th>
                       <th>Status</th>
                       <th>Edit User</th>
-                      <th>Aktif</th>
-                      <th>Tidak Aktif</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -241,14 +239,16 @@
                                 <td>$no</td>
                                 <td>$data[1]</td>
                                 <td>$data[3]</td>
-                                <td>$data[4]</td>";
+                                <td><div class='custom-control custom-switch custom-switch-off-danger custom-switch-on-success'>
+                                      <input type='checkbox' class='cp custom-control-input' id='status_switch'>
+                                      <label class='cp custom-control-label' for='status_switch'>
+                                        $data[4]
+                                      </label>
+                                    </div>
+                                </td>";
                             echo '
                                 <td><a class="btn btn-block bg-gradient btn-warning" data-toggle="modal" data-target="#edit_user"
-                                      onclick="getUser(\''.$data[5].'\')">Edit User</a></td>';
-                            echo "
-                                <td><a class='btn btn-block bg-gradient btn-success'>Aktif</a></td>
-                                <td><a class='btn btn-block bg-gradient btn-danger'>Tidak Aktif</a></td>
-                            ";
+                                    onclick="getUser(\''.$data[5].'\')">Edit User</a></td>';
                         }
                     ?>
                   </tbody>
@@ -370,13 +370,13 @@
           </button>
         </div>
         <div class="modal-body">
-          <form class="form-horizontal" role="form">
+          <form class="form-horizontal" id="ganti_user" role="form" action="javascript:initEdit()">
             <div class="form-group row">
               <label class="cp col-sm-4 col-form-label" for="edit_nama_user">
                 Nama
               </label>
               <div class="col-sm-8">
-                <input id="edit_nama_user" type="text" class="cp form-control">
+                <input id="edit_nama_user" type="text" class="cp form-control" name="edit_nama_user">
               </div>
             </div>
             <div class="form-group row">
@@ -384,7 +384,7 @@
                 Username
               </label>
               <div class="col-sm-8">
-                <input id="edit_nama_login" type="text" class="cp form-control">
+                <input id="edit_nama_login" type="text" class="cp form-control" name="edit_nama_login">
               </div>
             </div>
             <div class="form-group row">
@@ -392,7 +392,7 @@
                 Password
               </label>
               <div class="col-sm-8">
-                <input id="edit_password_user" type="password" class="cp form-control">
+                <input id="edit_password_user" type="password" class="cp form-control" name="edit_password_user">
               </div>
             </div>
             <div class="form-group row">
@@ -400,36 +400,36 @@
                 Confirm Password
               </label>
               <div class="col-sm-8">
-                <input id="edit_conf_pass" type="password" class="cp form-control">
+                <input id="edit_conf_pass" type="password" class="cp form-control" name="edit_conf_pass">
               </div>
             </div>
             <div class="form-group">
               <label class="col-form-label">Otoritas:</label>
               <div class="custom-control custom-checkbox">
-                <input id="user-accounts" type="checkbox" class="cp custom-control-input" value="user-accounts"
+                <input id="edit-user-accounts" type="checkbox" class="cp custom-control-input" value="user-accounts"
                   name="otoritas[]">
-                <label class="cp custom-control-label" for="user-accounts">
+                <label class="cp custom-control-label" for="edit-user-accounts">
                   User Accounts
                 </label>
               </div>
               <div class="custom-control custom-checkbox">
-                <input id="price-list" type="checkbox" class="cp custom-control-input" value="price-list"
+                <input id="edit-price-list" type="checkbox" class="cp custom-control-input" value="price-list"
                   name="otoritas[]">
-                <label class="cp custom-control-label" for="price-list">
+                <label class="cp custom-control-label" for="edit-price-list">
                   Price List
                 </label>
               </div>
               <div class="custom-control custom-checkbox">
-                <input id="test-drive" type="checkbox" class="cp custom-control-input" value="test-drive"
+                <input id="edit-test-drive" type="checkbox" class="cp custom-control-input" value="test-drive"
                   name="otoritas[]">
-                <label class="cp custom-control-label" for="test-drive">
+                <label class="cp custom-control-label" for="edit-test-drive">
                   Test Drive
                 </label>
               </div>
               <div class="custom-control custom-checkbox">
-                <input id="berita" type="checkbox" class="cp custom-control-input" value="berita"
+                <input id="edit-berita" type="checkbox" class="cp custom-control-input" value="berita"
                   name="otoritas[]">
-                <label class="cp custom-control-label" for="berita">
+                <label class="cp custom-control-label" for="edit-berita">
                   Berita
                 </label>
               </div>
@@ -438,7 +438,7 @@
         </div>
         <div class="modal-footer justify-content-between">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Simpan</button>
+          <button type="submit" class="btn btn-primary">Simpan</button>
         </div>
       </div>
     </div>
@@ -479,6 +479,7 @@
         if(res.success == 1) {
           // clear the modals inputs after data submission
           $('#tambah_user .modal-body input[type="text"]').val('');
+          $('#tambah_user .modal-body input[type="password"]').val('');
           // hide modals after data submission
           $('#tambah_user').modal('hide');
           alert(res.message);
@@ -510,6 +511,32 @@
         console.error(err.statusText);
         alert(res.message);
       }     
+    })
+  }
+
+  function initEdit() {
+    $.ajax({
+      type: "POST",
+      url: "editUser.php",
+      data: $('#ganti_user').serialize(),
+      success: result => {
+        const res = $.parseJSON(result);
+        if(res.success == 1) {
+          // clear the modals inputs after data submission
+          $('#edit_user .modal-body input[type="text"]').val('');
+          $('#edit_user .modal-body input[type="password"]').val('');
+          // hide modals after data submission
+          $('#edit_user').modal('hide');
+          alert(res.message);
+          window.location.reload();
+        } 
+        else {
+          alert(res.message);
+        }
+      },
+      error: err => {
+        console.error(res.statusText);
+      }
     })
   }
 

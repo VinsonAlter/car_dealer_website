@@ -11,8 +11,6 @@
         mysqli_stmt_execute($stmt);
         $result = mysqli_stmt_get_result($stmt);
         if(mysqli_num_rows($result) > 0) {
-            // var_dump($rows);
-            // var_dump($result);
             while($fetch = mysqli_fetch_assoc($result)) {
                 $otoritas = explode(' ; ', $fetch['otoritas']);
                 $data = array(
@@ -28,9 +26,9 @@
             $res['success'] = 0;
             $res['message'] = "username tidak ditemukan!";
         }  
+        mysqli_stmt_free_result($stmt);
+        mysqli_stmt_close($stmt);
     }
     $koneksi = null;
-    mysqli_stmt_free_result($stmt);
-    mysqli_stmt_close($stmt);
     echo json_encode($res);
 ?>
