@@ -240,7 +240,7 @@
                                 <td>$data[1]</td>
                                 <td>$data[3]</td>
                                 <td><div class='custom-control custom-switch custom-switch-off-danger custom-switch-on-success'>
-                                      <input type='checkbox' class='cp custom-control-input status-switch' id='$data[5]' value=$data[4]>
+                                      <input type='checkbox' class='cp custom-control-input $data[5]' id='$data[5]' value=$data[4]>
                                       <label class='cp custom-control-label' for=$data[5]>
                                         $data[4]
                                       </label>
@@ -468,18 +468,18 @@
 
 <!-- Custom Scripts -->
 <script>
+  $(window).on('load', function(){
+    if($('.custom-control-input').val() == 'aktif') {
+      $('.custom-control-input input[type=checkbox]').prop('checked', true);
+    }
+  })
+
   $(document).ready(() => {
     $('#tambah_user').on('show.bs.modal', function() {
       $("#tambah_user input[type=checkbox]").each(function(){
         $(this).prop("checked", true);
       });
     });
-    
-    if($('.status-switch').val() == 'aktif') {
-        $('.status-switch').prop('checked', true);
-    } else {
-        $('.status-switch').prop('checked', false);
-    }
   })
 
   function initSubmit() {
@@ -568,6 +568,7 @@
           window.location.reload();
         } else {
           alert(res.message);
+          
         }
       },
       error: err => {
