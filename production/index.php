@@ -1,5 +1,40 @@
 <?php
+    session_start();
     require_once __DIR__ . '/../config.php';
+    require_once __DIR__ . '/../koneksi.php';
+    require_once __DIR__ . '/../function.php';
+
+    if(isset($_POST['login'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        if(checkinput($username) || checkinput($password)) {
+            $msg = "<div class='alert alert-danger m-0' role='alert'>Mohon masukkan angka dan huruf!</div>";
+        } else {
+            $query = "SELECT * FROM user_account WHERE nama_login = ?";
+            $stmt = mysqli_prepare($koneksi, $query);
+            mysqli_stmt_bind_param($stmt, 's', $username);
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
+            if(mysqli_num_rows($result) > 0) {
+                while($row = mysqli_fetch_assoc($result)) {
+                  $pass = $row['password'];
+                  $user_login = $row['nama_login'];  
+                    if(password_verify($password, $pass)) {
+                        $_SESSION['user_login'] = $user_login;
+                        header("Location:cms/index.php");
+                    } else {
+                        $msg = "<div class='alert alert-danger m-0' role='alert'>Pastikan password yang diisi benar.</div>";
+                    }
+                    header("Location:cms/index.php");
+                }
+            } else {
+                $msg = "<div class='alert alert-danger m-0' role='alert'>Username tidak terdaftar di database!</div>";
+            }
+        } 
+        $koneksi = null;
+    } else {
+        $msg = '';
+    }
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +89,7 @@
     
     </head>
     <body>
-
+    <?php if ($msg != '') echo $msg; ?>
     <div class="bg-section h-full col d-flex justify-content-center">
         <div class="container d-flex centered">
             <div class="card border-none" style="width:25rem">
@@ -67,14 +102,16 @@
                         <form method="post">
                             <div class="form-group mb-3">
                                 <input type="text" class="form-control" 
-                                    placeholder="Please enter your username">
+                                    placeholder="Please enter your username"
+                                    name="username">
                             </div>
                             <div class="form-group mb-3">
                                 <input type="password" class="form-control"
-                                    placeholder="Please enter your password">
+                                    placeholder="Please enter your password"
+                                    name="password">
                             </div>
                             <div class="d-grid mb-3">
-                                <button type="submit" class="btn btn-block btn-success">
+                                <button type="submit" name="login" class="btn btn-block btn-success">
                                     Submit
                                 </button>
                             </div>

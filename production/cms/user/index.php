@@ -234,9 +234,6 @@
                         $hasil = mysqli_query($koneksi, $tampil);
                         $no = 0;
                         while($data = mysqli_fetch_row($hasil)) {
-                            // if($data[4] === 'aktif') {
-                                
-                            // }
                             $no++;
                             echo '<tr>
                                 <td>'.$no.'</td>

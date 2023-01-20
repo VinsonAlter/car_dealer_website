@@ -60,8 +60,6 @@
                 $res['message'] = 'Mohon centang salah satu checkbox otoritas yang sudah disediakan!';
             }     
         }
-        mysqli_stmt_free_result($statement);
-        mysqli_stmt_close($statement);
     } else {
         $res['success'] = 0;
         $res['message'] = 'Mohon pastikan nama dan nama user sudah terisi!';
