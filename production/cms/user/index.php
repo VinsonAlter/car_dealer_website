@@ -234,19 +234,38 @@
                         $hasil = mysqli_query($koneksi, $tampil);
                         $no = 0;
                         while($data = mysqli_fetch_row($hasil)) {
+                            // if($data[4] === 'aktif') {
+                                
+                            // }
                             $no++;
-                            echo "<tr>
-                                <td>$no</td>
-                                <td>$data[1]</td>
-                                <td>$data[3]</td>
-                                <td><div class='custom-control custom-switch custom-switch-off-danger custom-switch-on-success'>
-                                      <input type='checkbox' class='cp custom-control-input $data[5]' id='$data[5]' value=$data[4]>
-                                      <label class='cp custom-control-label' for=$data[5]>
-                                        $data[4]
-                                      </label>
-                                    </div>
-                                </td>";
-                            echo '
+                            echo '<tr>
+                                <td>'.$no.'</td>
+                                <td>'.$data[1].'</td>
+                                <td>'.$data[3].'</td>
+                                <td>
+                                '; ?>
+                            <?php if($data[4]  === 'aktif') {
+                                echo '
+                                      <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                                        <input type="checkbox" class="cp custom-control-input" id="'.$data[5].'" name="'.$data[5].'" 
+                                          value="'.$data[4].'" onclick="ubahStatus(\''.$data[5].'\')" checked> 
+                                        <label class="cp custom-control-label" for="'.$data[5].'">
+                                        '.$data[4].'
+                                        </label>
+                                      </div>';
+                                } else {
+                                  echo '
+                                      <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                                        <input type="checkbox" class="cp custom-control-input" id="'.$data[5].'" name="'.$data[5].'" 
+                                          value="'.$data[4].'" onclick="ubahStatus(\''.$data[5].'\')">
+                                        <label class="cp custom-control-label" for="'.$data[5].'">
+                                        '.$data[4].'
+                                        </label>
+                                      </div>';
+                                }
+                            ?>
+                            <?php echo '
+                                </td>
                                 <td><a class="btn btn-block bg-gradient btn-warning" data-toggle="modal" data-target="#edit_user"
                                     onclick="getUser(\''.$data[5].'\')">Edit User</a></td>';
                         }
@@ -468,13 +487,39 @@
 
 <!-- Custom Scripts -->
 <script>
-  $(window).on('load', function(){
-    if($('.custom-control-input').val() == 'aktif') {
-      $('.custom-control-input input[type=checkbox]').prop('checked', true);
-    }
-  })
+
+  // function propChecked() {
+  //   $.ajax({
+  //     type: "POST",
+  //     url: "checkStatus.php",
+  //     data: {
+  //       user: $('.custom-control-input').attr("id")
+  //     },
+  //     success: result => {
+  //       const res = $.parseJSON(result);
+  //       if(res.success == 1) {
+  //        $('.custom-control-input').val(res.data.status);
+  //        if($('.custom-control-input input[type=checkbox]').val() == 'aktif'){
+  //             $(this).prop("checked", true);
+  //           } else {
+  //             $(this).prop("checked", false);
+  //         } 
+  //       } 
+  //       else {
+  //         alert(res.message);
+  //       }
+  //     },
+  //   })
+    
+  // }
 
   $(document).ready(() => {
+    // if($('.custom-control-input').val() == 'aktif') {
+    //   $('input[type=checkbox]').prop('checked', true);
+    // }
+
+    // propChecked();
+
     $('#tambah_user').on('show.bs.modal', function() {
       $("#tambah_user input[type=checkbox]").each(function(){
         $(this).prop("checked", true);
@@ -554,13 +599,12 @@
     })
   }
 
-  $('.custom-control-input').click(function () {
+  function ubahStatus(user) {
     $.ajax({
       type: "POST",
       url: "ubahStatus.php",
       data: {
-        user: $(this).attr("id"),
-        status: $(this).val()
+        user: user,
       },
       success: result => {
         const res = $.parseJSON(result);
@@ -568,15 +612,13 @@
           window.location.reload();
         } else {
           alert(res.message);
-          
         }
       },
       error: err => {
         console.error(res.statusText);
       }
     })
-  })
-
+  }
 </script>
 
 
