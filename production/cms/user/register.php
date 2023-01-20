@@ -28,7 +28,7 @@
                     $res['message'] = 'Username sudah terdaftar di database! Mohon masukkan username lain!';
                 } else {
                     if(isset($_POST['otoritas'])) {
-                        // $password = password_hash($password, PASSWORD_DEFAULT);
+                        $password = password_hash($password, PASSWORD_DEFAULT);
                         $otoritas = implode(' ; ', $_POST['otoritas']);
                         $insert = "INSERT INTO user_account (nama, password, otoritas, status, nama_login) VALUES (?, ?, ?, ?, ?); ";
                         $stmt = mysqli_prepare($koneksi, $insert);

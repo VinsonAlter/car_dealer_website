@@ -18,14 +18,13 @@
             if(mysqli_num_rows($result) > 0) {
                 while($row = mysqli_fetch_assoc($result)) {
                   $pass = $row['password'];
-                  $user_login = $row['nama_login'];  
-                    if(password_verify($password, $pass)) {
-                        $_SESSION['user_login'] = $user_login;
-                        header("Location:cms/index.php");
-                    } else {
-                        $msg = "<div class='alert alert-danger m-0' role='alert'>Pastikan password yang diisi benar.</div>";
-                    }
+                  $user_login = $row['nama_login']; 
+                } 
+                if(password_verify($password, $pass)) {
+                    $_SESSION['user_login'] = $user_login;
                     header("Location:cms/index.php");
+                } else {
+                    $msg = "<div class='alert alert-danger m-0' role='alert'>Pastikan password yang diisi benar.</div>";
                 }
             } else {
                 $msg = "<div class='alert alert-danger m-0' role='alert'>Username tidak terdaftar di database!</div>";
