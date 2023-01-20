@@ -240,8 +240,8 @@
                                 <td>$data[1]</td>
                                 <td>$data[3]</td>
                                 <td><div class='custom-control custom-switch custom-switch-off-danger custom-switch-on-success'>
-                                      <input type='checkbox' class='cp custom-control-input' id='status_switch'>
-                                      <label class='cp custom-control-label' for='status_switch'>
+                                      <input type='checkbox' class='cp custom-control-input status-switch' id='$data[5]' value=$data[4]>
+                                      <label class='cp custom-control-label' for=$data[5]>
                                         $data[4]
                                       </label>
                                     </div>
@@ -474,6 +474,12 @@
         $(this).prop("checked", true);
       });
     });
+    
+    if($('.status-switch').val() == 'aktif') {
+        $('.status-switch').prop('checked', true);
+    } else {
+        $('.status-switch').prop('checked', false);
+    }
   })
 
   function initSubmit() {
@@ -547,6 +553,28 @@
       }
     })
   }
+
+  $('.custom-control-input').click(function () {
+    $.ajax({
+      type: "POST",
+      url: "ubahStatus.php",
+      data: {
+        user: $(this).attr("id"),
+        status: $(this).val()
+      },
+      success: result => {
+        const res = $.parseJSON(result);
+        if(res.success == 1) {
+          window.location.reload();
+        } else {
+          alert(res.message);
+        }
+      },
+      error: err => {
+        console.error(res.statusText);
+      }
+    })
+  })
 
 </script>
 
