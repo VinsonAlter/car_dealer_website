@@ -488,38 +488,7 @@
 <!-- Custom Scripts -->
 <script>
 
-  // function propChecked() {
-  //   $.ajax({
-  //     type: "POST",
-  //     url: "checkStatus.php",
-  //     data: {
-  //       user: $('.custom-control-input').attr("id")
-  //     },
-  //     success: result => {
-  //       const res = $.parseJSON(result);
-  //       if(res.success == 1) {
-  //        $('.custom-control-input').val(res.data.status);
-  //        if($('.custom-control-input input[type=checkbox]').val() == 'aktif'){
-  //             $(this).prop("checked", true);
-  //           } else {
-  //             $(this).prop("checked", false);
-  //         } 
-  //       } 
-  //       else {
-  //         alert(res.message);
-  //       }
-  //     },
-  //   })
-    
-  // }
-
   $(document).ready(() => {
-    // if($('.custom-control-input').val() == 'aktif') {
-    //   $('input[type=checkbox]').prop('checked', true);
-    // }
-
-    // propChecked();
-
     $('#tambah_user').on('show.bs.modal', function() {
       $("#tambah_user input[type=checkbox]").each(function(){
         $(this).prop("checked", true);
