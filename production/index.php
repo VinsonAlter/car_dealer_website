@@ -4,6 +4,8 @@
     require_once __DIR__ . '/../koneksi.php';
     require_once __DIR__ . '/../function.php';
 
+    $username = '';
+
     if(isset($_POST['login'])) {
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -102,7 +104,7 @@
                             <div class="form-group mb-3">
                                 <input type="text" class="form-control" 
                                     placeholder="Please enter your username"
-                                    name="username">
+                                    name="username" value="<?=$username?>" autofocus>
                             </div>
                             <div class="form-group mb-3">
                                 <input type="password" class="form-control"
