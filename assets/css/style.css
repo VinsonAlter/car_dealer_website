@@ -84,6 +84,11 @@ html,
         src: url('../font/segoesc.ttf');
       }
 
+      @font-face {
+        font-family: expansiva;
+        src: url('../font/Expansiva.otf');
+      }
+
       ul, li {
         padding: 0;
         margin: 0;
@@ -431,6 +436,10 @@ html,
         .fs70-scaled {
           font-size: 70px;
         }
+      }
+
+      .fs-normal {
+        font-weight: 300 !important;
       }
 
       .fs-bold-400 {
@@ -941,6 +950,10 @@ html,
 
       .models-font {
         font-family: Conthrax Sb, sans-serif;
+      }
+
+      .omoda-font {
+        font-family: expansiva, sans-serif;
       }
 
       .models-font > h3 { 

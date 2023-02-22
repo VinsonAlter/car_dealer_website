@@ -30,7 +30,7 @@
             <div class="d-flex centered models-font flex-column">
                 <img src="<?= BASE_URL; ?>assets/hero/chery_omoda.png" alt="Chery Omoda 5">
                 <h3 class="mt-3">Omoda 5</h3>
-                <a href="<?= BASE_URL; ?>models/tiggo8pro/"
+                <a href="<?= BASE_URL; ?>models/omoda5/"
                     class="uppercase detail-button text-center py-1">
                     Detail
                 </a>
