@@ -126,6 +126,10 @@
                 color: #fff;
             }
 
+            .mt-sm-up-25 {
+                margin-top: 0;
+            }
+
             @media (max-width: 768px) {
                 .gap-row {
                     flex-wrap: wrap !important;
@@ -138,6 +142,10 @@
                 
                 .fs64-scaled {
                     font-size: 24px;
+                }
+
+                .mt-sm-up-25 {
+                    margin-top: -25px;
                 }
             } 
 
@@ -187,10 +195,7 @@
                 <div class="container-fluid pl-0">
                     <div class="d-flex work-font text-white cp">
                         <div class="col-3 col-md-4 mr-2">
-                            <!-- Temporarily still used the google form test drive -->
-                            <div class = "text-center tiggo-nav" onclick="window.open('https://forms.gle/csGRdsmUEcbmxdxF8', '_blank')">
-                                <!-- In future, this test drive form will be used, below is just the template -->
-                                <!-- <div class = "text-center tiggo-nav" onclick="window.open('<?=BASE_URL?>test-drive/', '_blank')">     -->
+                            <div class = "text-center tiggo-nav" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdxAWBTQKyrBYCH743CzKm4Kcv-5G04B8ArHtoPimm_s7bAIA/viewform?usp=sf_link', '_blank')">
                                 <i class="fa-solid fa-car-on"></i>
                                 <p class="p-0 m-0 fs-bold-600">
                                     Test Drive
@@ -227,7 +232,7 @@
             </div>
 
             <!-- Omoda 5 Video -->
-            <div class="w-100 relative">
+            <div class="relative w-100 mt-sm-up-15">
                 <video class="teaser-video" poster="assets/img/omoda-thumbnail.jpg" controls="">    
                     <source src="assets/video/chery-omoda5.mp4" type="video/mp4">
                 </video>
