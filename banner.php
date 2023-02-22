@@ -30,7 +30,15 @@
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <picture>
+          <picture class="pt-5">
+            <source media="(min-width: 920px)" 
+              srcset="assets/img/chery-omoda-5-website.webp">
+            <img src="assets/img/chery-omoda-5-mobile.webp" 
+              alt="Chery Omoda 5 Pricelist" class="bg-img">
+          </picture>
+        </div>
+        <div class="swiper-slide">
+            <picture class="pt-5">
                 <source media="(min-width: 920px)" 
                     srcset="assets/img/Chery-Popup-Website-Banner.webp">
                 <img src="assets/img/Chery-Popup-Mobile-Banner.webp" 
@@ -38,7 +46,7 @@
             </picture>
         </div>
         <div class="swiper-slide">
-            <picture>
+            <picture class="pt-5">
                 <source media="(min-width: 920px)" 
                     srcset="assets/img/opening-banner.webp">
                 <img src="assets/img/banner-mobile-edited.webp" 
@@ -46,7 +54,7 @@
             </picture>
         </div>
         <div class="swiper-slide">
-            <picture>
+            <picture class="pt-5">
                 <source media="(min-width: 920px)" 
                     srcset="assets/img/tiggo8prodekstop.webp">
                 <img src="assets/img/tiggo8profixmobile.webp" 
@@ -54,7 +62,7 @@
             </picture>
         </div>
         <div class="swiper-slide">
-            <picture>
+            <picture class="pt-5">
                 <source media="(min-width: 920px)" 
                     srcset="assets/img/tiggo7prodekstop.webp">
                 <img src="assets/img/tiggo7profixmobile.webp" 
@@ -62,7 +70,7 @@
             </picture>
         </div>
         <div class="swiper-slide">
-            <picture>
+            <picture class="pt-5">
                 <source media="(min-width: 920px)" 
                     srcset="assets/img/chery_banner2-1.webp">
                 <img src="assets/img/chery_mobile3-rev.webp" 
