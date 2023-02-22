@@ -24,7 +24,7 @@
         <meta name="robots" content="index, follow"/>
         <meta property="og:site_name" content="Chery Omoda 5" />
         <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://cheryorientalgroup.co.id/models/tiggo7pro/" />
+        <meta property="og:url" content="https://cheryorientalgroup.co.id/models/omoda5/" />
         <meta property="og:title" content="Chery Omoda 5" />
         <meta property="og:description" content="Chery OMODA 5 adalah SUV 5 Seater yang menawarkan kesan elegan dan kecanggihan. 
                                                 Dengan konsep 'Art in Motion', mobil di segmen crossover ini 
@@ -83,7 +83,7 @@
             }
 
             .omoda-brochure-text {
-                top: 12.5%;
+                top: 7.5%;
             }
 
             .fs64-scaled {
@@ -127,10 +127,6 @@
             }
 
             @media (max-width: 768px) {
-                .tiggo7-text-bottom {
-                    top: 30%;
-                    font-size: 1.875rem !important;
-                } 
                 .gap-row {
                     flex-wrap: wrap !important;
                     gap: .125rem;
@@ -188,52 +184,54 @@
             <img class="w-100 lazyload" data-src="assets/img/omoda-engine-tgdi.jpg" alt="Omoda 5 1.5 TGDI Engine">
             <!-- Omoda 5 Brochure Section -->
             <div class="omoda-brochure">
-            <div class="container-fluid pl-0">
-                <div class="d-flex work-font text-white cp">
-                    <div class="col-3 col-md-4 mr-2">
-                        <!-- Temporarily still used the google form test drive -->
-                        <div class = "text-center tiggo-nav" onclick="window.open('https://forms.gle/csGRdsmUEcbmxdxF8', '_blank')">
-                            <!-- In future, this test drive form will be used, below is just the template -->
-                            <!-- <div class = "text-center tiggo-nav" onclick="window.open('<?=BASE_URL?>test-drive/', '_blank')">     -->
-                            <i class="fa-solid fa-car-on"></i>
-                            <p class="p-0 m-0 fs-bold-600">
-                                Test Drive
-                            </p>
+                <div class="container-fluid pl-0">
+                    <div class="d-flex work-font text-white cp">
+                        <div class="col-3 col-md-4 mr-2">
+                            <!-- Temporarily still used the google form test drive -->
+                            <div class = "text-center tiggo-nav" onclick="window.open('https://forms.gle/csGRdsmUEcbmxdxF8', '_blank')">
+                                <!-- In future, this test drive form will be used, below is just the template -->
+                                <!-- <div class = "text-center tiggo-nav" onclick="window.open('<?=BASE_URL?>test-drive/', '_blank')">     -->
+                                <i class="fa-solid fa-car-on"></i>
+                                <p class="p-0 m-0 fs-bold-600">
+                                    Test Drive
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-5 col-md-4 mr-2">
-                        <div class = "text-center tiggo-nav" onclick="window.open('<?=BASE_URL?>price-list/assets/price-list/tiggo8pro-pricelist-medan.webp', '_blank')">
-                            <i class="fas fa-book-reader"></i> 
-                            <p class="p-0 m-0 fs-bold-600">
-                                Unduh Price List
-                            </p>
+                        <div class="col-5 col-md-4 mr-2">
+                            <div class = "text-center tiggo-nav" onclick="window.open('<?=BASE_URL?>price-list/assets/price-list/tiggo8pro-pricelist-medan.webp', '_blank')">
+                                <i class="fas fa-book-reader"></i> 
+                                <p class="p-0 m-0 fs-bold-600">
+                                    Unduh Price List
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-4 col-md-4">
-                        <div class = "text-center tiggo-nav" onclick="window.open('https://forms.gle/nh9R9RwHzGug2MeF9', '_blank')">
-                            <i class="fas fa-comments"></i>                 
-                            <p class="p-0 m-0 fs-bold-600">
-                                Kontak Kami
-                            </p>
+                        <div class="col-4 col-md-4">
+                            <div class = "text-center tiggo-nav" onclick="window.open('https://forms.gle/nh9R9RwHzGug2MeF9', '_blank')">
+                                <i class="fas fa-comments"></i>                 
+                                <p class="p-0 m-0 fs-bold-600">
+                                    Kontak Kami
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
                 <div class = "px-5 d-flex flex-column relative omoda-font omoda-brochure-text">
-                    <p class="relative text-white mb-2 fw-bold fs64-scaled lh-1half">Download Brosur</p>
-                    <p class="relative text-white mb-3 fw-bold fs64-scaled lh-1half">Omoda 5 Sekarang Juga</p>
+                    <p class="relative text-white fw-bold fs64-scaled lh-1half pb-0">Download Brosur</p>
+                    <p class="relative text-white fw-bold mb-4 fs64-scaled lh-1half pb-0">Omoda 5 Sekarang Juga</p>
                     <a href="javascript:void(0)">
-                        <button class="btn btn-lg fw-bold btn-red text-white">
+                        <button class="mt-1 btn btn-lg fw-bold btn-red text-white">
                             Download Brosur
                         </button>
                     </a>
-                    <!-- <div class="d-flex gap-row mb-5 centered">
-                        <a class="col-12 my-3 button-padding border-rounded bg-light
-                                models-font btn" href="../../price-list/assets/brosur/Tiggo8Pro-brosur.pdf" target="_blank">
-                            <h5 class="text-center">Download Brosur</h5>
-                        </a>                         
-                    </div> -->
                 </div>
+            </div>
+
+            <!-- Omoda 5 Video -->
+            <div class="w-100 relative">
+                <video class="teaser-video" poster="assets/img/omoda-thumbnail.jpg" controls="">    
+                    <source src="assets/video/chery-omoda5.mp4" type="video/mp4">
+                </video>
+                <div class="playpause"></div>
             </div>
         </div>
 
