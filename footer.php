@@ -58,6 +58,9 @@
                 <li>
                     <a href="<?= BASE_URL; ?>models/tiggo8pro/">Tiggo 8 Pro</a>
                 </li>
+                <li>
+                    <a href="<?= BASE_URL; ?>models/omoda5/">Omoda 5</a>
+                </li>
             </ul>
         </div>
         <div class="d-flex flex-column no-padding pr-5">

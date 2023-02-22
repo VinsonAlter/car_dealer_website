@@ -17,6 +17,7 @@
                         <ul class="sub-scroll-model">
                             <li class="sub-li"><a href="<?= BASE_URL; ?>models/tiggo7pro/">Tiggo 7 Pro</a></li>
                             <li class="sub-li"><a href="<?= BASE_URL; ?>models/tiggo8pro/">Tiggo 8 Pro</a></li>
+                            <li class="sub-li"><a href="<?= BASE_URL; ?>models/omoda5/">Omoda 5</a></li>
                         </ul>
                     </li>
                     <li class="scroll-to-section layanan-click">
