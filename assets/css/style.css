@@ -104,7 +104,7 @@ html,
       }
 
       .chery-red {
-        color:rgb(192, 11, 32);
+        color:rgb(192, 11, 32) !important;
       }
 
       .button-padding {
