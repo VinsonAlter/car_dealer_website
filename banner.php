@@ -32,9 +32,9 @@
         <div class="swiper-slide">
             <picture>
                 <source media="(min-width: 920px)" 
-                    srcset="assets/img/exhibition-tabona.webp">
-                <img src="assets/img/exhibition-tabona-mobile.webp" 
-                    alt="Exhibition Coming Soon di Sun Plaza & Deli Park" class="bg-img">
+                    srcset="assets/img/Chery-Popup-Website-Banner.webp">
+                <img src="assets/img/Chery-Popup-Mobile-Banner.webp" 
+                    alt="Chery Motor Medan Pop Up to Mall" class="bg-img">
             </picture>
         </div>
         <div class="swiper-slide">

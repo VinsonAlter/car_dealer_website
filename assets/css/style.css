@@ -118,6 +118,10 @@ html,
         margin-top: 5.5rem;
       }
 
+      .mr-1 {
+        margin-right: .25rem;
+      }
+
       .mr-2 {
         margin-right: .5rem;
       }
@@ -371,6 +375,10 @@ html,
         font-size: 30px;
       }
 
+      .fs70-scaled {
+        font-size: 40px;
+      }
+
       .fs100-scaled {
         font-size: 100px;
       }
@@ -418,6 +426,10 @@ html,
 
         .fs50-scaled {
           font-size: 50px;
+        }
+
+        .fs70-scaled {
+          font-size: 70px;
         }
       }
 

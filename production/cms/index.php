@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    require_once '../../config.php';
+    require_once '../../koneksi.php';
+
+    if(!isset($_SESSION['user_login'])) {
+      header('location:../index.php');
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,29 +44,7 @@
     <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
   </div>
 
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="index.php" class="nav-link">Home</a>
-      </li>
-    </ul>
-
-    <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-      <!-- Notifications Dropdown Menu -->
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <!-- /.navbar -->
+  <?php require_once 'header.php' ?>
 
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
@@ -78,48 +66,7 @@
         </div>
       </div>
 
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item">
-            <a href="user/" class="nav-link">
-              <i class="nav-icon fas fa-user-circle"></i>
-              <p>
-                User Accounts
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">
-              <i class="nav-icon fas fa-money-bill"></i>
-              <p>
-                Price List
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">
-              <i class="nav-icon fas fa-car-alt"></i>
-              <p>
-                Test Drive
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">
-              <i class="nav-icon fas fa-newspaper"></i>
-              <p>
-                Berita
-              </p>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
+      <?php require_once 'sidebar.php'; ?>
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
